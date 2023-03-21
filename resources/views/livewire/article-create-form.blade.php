@@ -8,25 +8,39 @@
                         <div class="col-lg-6">
                             <div class="card-body p-md-5 mx-md-4">
 
+                                <div>
+                                    @if (session()->has('articleCreated'))
+                                        <div class="alert alert-success">
+                                            {{ session('articleCreated') }}
+                                        </div>
+                                    @endif
+                                </div>
+
                                 <div class="text-center">
                                     <img src="/media/logo.png" style="width: 185px;" alt="logo">
                                     <h4 class="mt-1 mb-5 pb-1">Presto.it</h4>
                                 </div>
 
-                                <form method="" action="">
+                                <form wire:submit.prevent="store">
                                     @csrf
-                                    <p>Nuovo Annuncio</p>
+                                    <p class="my-5 text-center">Nuovo Annuncio</p>
 
                                     <div class="form-outline mb-4">
-                                        <input type="title" name="title" id="title"
-                                            class="form-control"/>
                                         <label class="form-label" for="title">Nome articolo</label>
+                                        <input type="title" wire:model="title" id="title"
+                                            class="form-control"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <input type="price" name="title" id="title"
+                                        <label class="form-label" for="price">Prezzo articolo</label>
+                                        <input type="price" wire:model="price" id="price"
                                             class="form-control"/>
-                                        <label class="form-label" for="title">Prezzo articolo</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="description">Descrizione</label>
+                                        <textarea type="text" wire:model="description" id="description"
+                                            class="form-control" cols="7" rows="3"></textarea>
                                     </div>
 
                                     <div class="text-center pt-1 mb-5 pb-1">

@@ -14,6 +14,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="">Indice Prodotti</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('category.create')}}">Crea Categoria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('article.create')}}">Crea Prodotto</a>
+                </li>
             </ul>
             {{-- GUEST --}}
             <div class="nav-item dropdown text-black">
