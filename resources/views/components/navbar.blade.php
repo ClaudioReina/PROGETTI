@@ -12,7 +12,7 @@
                     <a class="nav-link" href="">Lavora con noi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Indice Prodotti</a>
+                    <a class="nav-link" href="{{route('article.index')}}">Indice Prodotti</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('category.create')}}">Crea Categoria</a>

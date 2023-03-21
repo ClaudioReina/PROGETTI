@@ -22,6 +22,7 @@ Route::get('/contattaci', [PublicController::class, 'contact_us'])->name('contac
 // Rotte degli annunci
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
+Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 
 // Rotte delle categorie
 Route::get('/category/index', [CategoryController::class, 'index'])->name('category.index');

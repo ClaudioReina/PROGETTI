@@ -12,7 +12,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('article.index');
+        $articles = Article::all();
+
+        return view('article.index', compact('articles'));
     }
 
     /**
@@ -24,19 +26,11 @@ class ArticleController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      */
     public function show(Article $article)
     {
-        //
+        return view('article.show', compact('article'));
     }
 
     /**
