@@ -16,4 +16,6 @@ use App\Http\Controllers\PublicController;
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/contattaci', [PublicController::class, 'contact_us'])->name('contact_us');
+// Rotte degli annunci
+
 

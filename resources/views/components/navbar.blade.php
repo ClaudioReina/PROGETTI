@@ -20,8 +20,8 @@
           <i class="bi bi-person-fill"></i> 
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="">Registrati</a></li>
-          <li><a class="dropdown-item" href="">Accedi</a></li>
+          <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
+          <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
         </ul>
       </div>
       
