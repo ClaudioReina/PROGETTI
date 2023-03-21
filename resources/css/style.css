@@ -1,0 +1,13 @@
+body{
+    overflow-x: hidden;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+:root{
+    --main-color:#333333;
+    --second-color:#2CCC77;
+    --third-color:#a90d5d;
+    --textfirst-color:#f5f5f5;
+}
