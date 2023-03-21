@@ -10,17 +10,17 @@
   </div>
 @endif
 
-    <section class=" gradient-form">
+    <section>
         <div class="container py-5 ">
             <div class="row d-flex justify-content-center align-items-center ">
-                <div class="col-xl-10">
-                    <div class="card rounded-3 text-black">
+                <div class="col-xl-10 ">
+                    <div class="card rounded-3 text-black shadow">
                         <div class="row g-0">
                             <div class="col-lg-6">
                                 <div class="card-body p-md-5 mx-md-4">
 
                                     <div class="text-center mb-5">
-                                        <img src="/media/logo.png" style="width: 250px;" alt="logo">
+                                        <img src="/media/presto.it__1_-removebg-preview.png" style="width: 100px;" alt="logo">
                                         <h1>Modulo di Registrazione</h1>
                                     </div>
 
@@ -31,7 +31,7 @@
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="form2Example11">Email</label>
                                             <input type="email" id="email" name="email" class="form-control"
-                                                placeholder="Email address" />
+                                                placeholder="Indirizzo Email" />
                                         </div>
 
                                         <div class="form-outline mb-4">

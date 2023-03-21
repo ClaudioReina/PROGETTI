@@ -15,13 +15,13 @@
                 <div class="container py-5 ">
                     <div class="row d-flex justify-content-center align-items-center ">
                         <div class="col-xl-10">
-                            <div class="card rounded-3 text-black">
+                            <div class="card rounded-3 text-black shadow">
                                 <div class="row g-0">
                                     <div class="col-lg-6">
                                         <div class="card-body p-md-5 mx-md-4">
 
                                             <div class="text-center">
-                                                <img src="/media/logo.png" style="width: 185px;" alt="logo">
+                                                <img src="/media/presto.it__1_-removebg-preview.png" style="width: 100px;" alt="logo">
                                                 <h4 class="mt-1 mb-5 pb-1">Presto.it</h4>
                                             </div>
 
