@@ -1,147 +1,136 @@
 body{
-    overflow-x: hidden;
-    margin: 0;
-   /*  src: url('/public/fonts/Ubuntu/Ubuntu-BoldItalic.ttf');
-    font-family: 'Ubuntu-BoldItalic'; */
-}
-
-
-/* @media phone (max-width:575px) {
-    
-} */
-
-@media screen and (min-width: 576px) and (max-width: 767px) {
-    
+  overflow-x: hidden;
+  margin: 0;
 }
 
 *{
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.robotoFont{
-    font-family: 'Roboto Slab', serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 li{
-    list-style: none;
+  list-style: none;
 }
+
+a {
+  text-decoration: none;
+  
+}
+
+.robotoFont{
+  font-family: 'Roboto Slab', serif;
+}
+
 :root{
-    --main-color:#333333;
-    --second-color:#2CCC77;
-    --third-color:#a90d5d;
-    --textfirst-color:#f5f5f5;
+  --main-color:#333333;
+  --second-color:#2CCC77;
+  --third-color:#a90d5d;
+  --textfirst-color:#f5f5f5;
 }
 
 .txMain{
   color: var(--second-color);
 }
 
-
-/*  .nav_custom{
-    background-color: #333333 !important;
-    
-}  */
-
 .gradient-custom-2 {
-    /* fallback for old browsers */
-    background: #fccb90;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    /* background: -webkit-linear-gradient(to right, #2CCC77, #d8363a, #dd3675, #b44593); */
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, #060606, #333333, #5fcf8a, #2CCC77);
-    }
-    
-    @media (min-width: 768px) {
-    }
-    @media (min-width: 769px) {
-    .gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fccb90;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: -webkit-linear-gradient(to right, #2CCC77, #d8363a, #dd3675, #b44593); */
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #060606, #333333, #5fcf8a, #2CCC77);
+}
+
+@media (min-width: 769px) {
+  .gradient-custom-2 {
     border-top-right-radius: .3rem;
     border-bottom-right-radius: .3rem;
-    }
-    }
+  }
+}
 
+.avatar-image {
+  width: 200px; 
+  height: 200px;
+  border: 3px solid black;
+  border-radius: 50%; 
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
 
 /* Motion */
 
-
-
 .hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(0);
-    transition: all 3s;
-  }
-  
-  .hidden-left {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 3s;
-  }
-  .hidden-down {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateY(-100%);
-    transition: all 3s;
-  }
-  
-  .hidden-up {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateY(100%);
-    transition: all 3s;
-  }
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(0);
+  transition: all 3s;
+}
 
-  .hidden-right {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(100%);
-    transition: all 3s;
-  }
-  
-  .show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-  }
-  
+.hidden-left {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 3s;
+}
 
+.hidden-down {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-100%);
+  transition: all 3s;
+}
 
+.hidden-up {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 3s;
+}
 
-  .bg_forNav{
-    background-color: var(--main-color);
-    
-    }
-    
-    
-    .transizione{
-      transition: 0.8s;
-    }
+.hidden-right {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 3s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.bg_forNav{
+  background-color: var(--main-color);
+}
+
+.transizione{
+  transition: 0.8s;
+}
 
 .img-custom{
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
 /* CARD */
 
 .cardCustom{
-
-    width: 35vw;
-
+  width: 35vw;
 }
 
 /* END CARD */
 
 
 .textNav{
-    color: whitesmoke !important;
+  color: whitesmoke !important;
 }
 
 /* Bottone Del Form Contattaci */
-.btn {
+.btn-contact {
   --color: #00A97F;
   --color2: rgb(10, 25, 30);
   padding: 0.8em 1.75em;
@@ -158,9 +147,9 @@ li{
   font-family: 'Roboto', 'Segoe UI', sans-serif;
   text-transform: uppercase;
   color: var(--color);
- }
- 
- .btn::after, .btn::before {
+}
+
+.btn-contact::after, .btn-contact::before {
   content: '';
   display: block;
   height: 100%;
@@ -172,43 +161,43 @@ li{
   z-index: -1;
   transition: .5s ease-out;
   background-color: var(--color);
- }
- 
- .btn::before {
+}
+
+.btn-contact::before {
   top: -50%;
   left: -25%;
   transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
- }
- 
- .btn:hover::before {
+}
+
+.btn-contact:hover::before {
   transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
- }
- 
- .btn:hover::after {
+}
+
+.btn-contact:hover::after {
   transform: skew(45deg) translate(-50%, -50%);
- }
- 
- .btn:hover {
+}
+
+.btn-contact:hover {
   color: var(--color2);
- }
- 
- .btn:active {
+}
+
+.btn-contact:active {
   filter: brightness(.7);
   transform: scale(.98);
- }
-  /* BG HEADER */
-  .form_bg{
-    background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/form_contattaci.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-    padding-top: 6rem;
-    z-index: 1;
-  }
+}
+/* BG HEADER */
+.form_bg{
+  background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/form_contattaci.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding-top: 6rem;
+  z-index: 1;
+}

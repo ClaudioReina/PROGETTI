@@ -26,11 +26,6 @@
                                                     <label class="form-label" for="name">Nome</label>
                                                 </div>
 
-                                                <div class="mb-4">
-                                                <textarea class="form-control" name="description" id="description" rows="3"></textarea>
-                                                    <label class="form-label" for="description">Descrizione</label>
-                                                </div>
-
                                                 <div class="mb-3">
                                                     <label for="cover" class="form-label">Carica Immagine</label>
                                                     <input class="form-control" name="cover" type="file" id="cover">

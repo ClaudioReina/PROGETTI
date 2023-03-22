@@ -34,6 +34,7 @@
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="categories">Categorie</label>
                                         <select wire:model="category" id="categories">
+                                        <option value="">Seleziona Categoria</option>
                                             @foreach ($categories as $category)
                                                 <option value="{{$category->id}}">
                                                     {{$category->name}}
