@@ -14,13 +14,18 @@
                 <p class="display-2">{{$article->price}} €</p>
                 <p class=" text-muted">{{Str::limit($article->description,30)}}</p>
             </div>
+
+            <p>Creato da {{$article->user->name ?? 'Utente sconosciuto'}}, il {{$article->created_at->format('d/m/Y')}}</p>
+
         </div>
         <div class="row justify-content-between py-5">
             <div class="col-8 col-md-2">
                 <a href="{{route('article.edit', compact('article'))}}" class="btn btn-secondary">Modifica</a>
-
             </div>
            
+            {{-- <div class="col-8 col-md-2">
+                <button type="button" class="btn btn-secondary" wire:click="delete({{$article}})">Elimina</button>
+            </div> --}}
 
             <div class="col-4 col-md-2">
                 <a href="{{route('article.index')}}" class="btn btn-secondary">Torna indietro</a>

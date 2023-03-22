@@ -14,5 +14,11 @@ class Article extends Model
         'price',
         'description',
         'category',
+        'user_id',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }
