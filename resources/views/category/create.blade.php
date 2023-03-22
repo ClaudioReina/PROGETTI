@@ -1,17 +1,8 @@
 <x-layout>
-    @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-                
+
     <div class="container-fluid ">
         <div class="row">
-            <section class=" gradient-form" >
+            <section class=" gradient-form">
                 <div class="container py-5 ">
                     <div class="row d-flex justify-content-center align-items-center ">
                         <div class="col-xl-10">
@@ -21,35 +12,34 @@
                                         <div class="card-body p-md-5 mx-md-4">
 
                                             <div class="text-center">
-                                                <img src="/media/presto.it__1_-removebg-preview.png" style="width: 100px;" alt="logo">
+                                                <img src="/media/logo.png" style="width: 185px;" alt="logo">
                                                 <h4 class="mt-1 mb-5 pb-1">Presto.it</h4>
                                             </div>
 
-                                            <form method="POST" action="{{route('login')}}">
+                                            <form method="POST" action="{{route('category.store')}}" enctype="multipart/form-data">
                                                 @csrf
-                                                <p>Login</p>
+                                                <p>Nuova Categoria</p>
 
                                                 <div class="form-outline mb-4">
-                                                    <input type="email" name="email" id="email" class="form-control"
-                                                        placeholder="Indirizzo email" />
-                                                    <label class="form-label" for="email">Email</label>
+                                                    <input type="name" name="name" id="name"
+                                                        class="form-control"/>
+                                                    <label class="form-label" for="name">Nome</label>
                                                 </div>
 
-                                                <div class="form-outline mb-4">
-                                                    <input type="password" name="password" id="password" class="form-control" />
-                                                    <label class="form-label" for="password">Password</label>
+                                                <div class="mb-4">
+                                                <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+                                                    <label class="form-label" for="description">Descrizione</label>
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="cover" class="form-label">Carica Immagine</label>
+                                                    <input class="form-control" name="cover" type="file" id="cover">
                                                 </div>
 
                                                 <div class="text-center pt-1 mb-5 pb-1">
                                                     <button
                                                         class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                                                        type="submit">Log in</button>
-                                                </div>
-
-                                                <div class="d-flex align-items-center justify-content-center pb-4">
-                                                    <p class="mb-0 me-2">Don't have an account?</p>
-                                                    <a href=""></a><button type="button"
-                                                        class="btn btn-outline-danger">Create new</button>
+                                                        type="submit">Crea Categoria</button>
                                                 </div>
 
                                             </form>
@@ -58,7 +48,7 @@
                                     </div>
                                     <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                                         <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                                            <h4 class="mb-4">We are more than just a company</h4>
+                                            <h4 class="mb-4">Inserisci una nuova categoria</h4>
                                             <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing
                                                 elit, sed do eiusmod
                                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

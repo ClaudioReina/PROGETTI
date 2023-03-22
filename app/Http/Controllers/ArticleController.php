@@ -7,12 +7,17 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth')->except('index', 'show');
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('article.index');
+        $articles = Article::all();
+
+        return view('article.index', compact('articles'));
     }
 
     /**
@@ -24,19 +29,11 @@ class ArticleController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      */
     public function show(Article $article)
     {
-        //
+        return view('article.show', compact('article'));
     }
 
     /**
@@ -44,16 +41,12 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        return view('article.edit', compact('article'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Article $article)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.
