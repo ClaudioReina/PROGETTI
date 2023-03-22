@@ -32,11 +32,10 @@ class CategoryController extends Controller
     {
         $category = Category::create([
             'name' => $request->name,
-            'description' => $request->description,
             'cover' => $request->cover ? $request->file('cover')->store('public/covers') : null,
         ]);
 
-        return redirect(route('homepage'))->with('articleCreated', 'Categoria inserita.');
+        return redirect(route('homepage'))->with('categoryCreated', 'Categoria inserita.');
     }
 
     /**
@@ -47,27 +46,27 @@ class CategoryController extends Controller
         return view('category.show', compact('category'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Category $category)
-    {
-        //
-    }
+    // /**
+    //  * Show the form for editing the specified resource.
+    //  */
+    // public function edit(Category $category)
+    // {
+    //     //
+    // }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Category $category)
-    {
-        //
-    }
+    // /**
+    //  * Update the specified resource in storage.
+    //  */
+    // public function update(Request $request, Category $category)
+    // {
+    //     //
+    // }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Category $category)
-    {
-        //
-    }
+    // /**
+    //  * Remove the specified resource from storage.
+    //  */
+    // public function destroy(Category $category)
+    // {
+    //     //
+    // }
 }

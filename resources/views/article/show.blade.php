@@ -3,7 +3,7 @@
     <div class="container-fluid px-5">
         <div class="row py-5">
             <h5 class="display-4 text-center mb-5">{{$article->title}}</h5>             
-            <div class="col-12 col-lg-6 mx-auto">  
+            <div class="col-12 col-lg-3 mx-auto">  
                 @if (!$article->cover)
                     <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top rounded-5" alt="immagine non trovata">
                 @else
@@ -12,10 +12,10 @@
             </div>
             <div class="col-12 col-lg-6 mx-auto">   
                 <p class="display-2">{{$article->price}} €</p>
-                <p class=" text-muted">{{Str::limit($article->description,30)}}</p>
+                <p class=" text-muted">{{$article->description}}</p>
             </div>
 
-            <p>Creato da {{$article->user->name ?? 'Utente sconosciuto'}}, il {{$article->created_at->format('d/m/Y')}}</p>
+            
 
         </div>
         <div class="row justify-content-between py-5">

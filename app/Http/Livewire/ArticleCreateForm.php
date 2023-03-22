@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 
 class ArticleCreateForm extends Component

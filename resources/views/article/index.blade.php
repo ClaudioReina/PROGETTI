@@ -20,7 +20,8 @@
                         <div class="card-body">
                           <h5 class="card-title">{{$article->title}}</h5>
                           <p class="card-text">{{$article->price}} €</p>
-                          <p class="card-text text-muted">{{Str::limit($article->description,30)}}</p>
+                          <p class="card-text text-muted">{{Str::limit($article->description,50)}}</p>
+                          <p>Creato da {{$article->user->name ?? 'Utente sconosciuto'}}, il {{$article->created_at->format('d/m/Y')}}</p>
                           <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">Dettagli</a>
                         </div>
                       </div>

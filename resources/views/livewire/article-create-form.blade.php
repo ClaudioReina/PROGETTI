@@ -32,6 +32,17 @@
                                     </div>
 
                                     <div class="form-outline mb-4">
+                                        <label class="form-label" for="categories">Categorie</label>
+                                        <select wire:model="category" id="categories">
+                                            @foreach ($categories as $category)
+                                                <option value="{{$category->id}}">
+                                                    {{$category->name}}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
                                         <label class="form-label" for="price">Prezzo articolo</label>
                                         <input type="price" wire:model="price" id="price"
                                             class="form-control"/>

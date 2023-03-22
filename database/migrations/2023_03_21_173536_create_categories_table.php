@@ -16,7 +16,9 @@ return new class extends Migration
 
             $table->string('name');
             $table->string('cover')->nullable();
-            $table->string('description');
+
+            $table->unsignedBigInteger('category')->nullable();
+            $table->foreign('article')->references('id')->on('articles');
             
             $table->timestamps();
         });
