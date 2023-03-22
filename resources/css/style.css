@@ -1,7 +1,27 @@
 body{
     overflow-x: hidden;
     margin: 0;
+   /*  src: url('/public/fonts/Ubuntu/Ubuntu-BoldItalic.ttf');
+    font-family: 'Ubuntu-BoldItalic'; */
 }
+
+
+/* @media phone (max-width:575px) {
+    
+} */
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    
+}
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.robotoFont{
+    font-family: 'Roboto Slab', serif;
+}
+
 li{
     list-style: none;
 }
@@ -12,10 +32,10 @@ li{
     --textfirst-color:#f5f5f5;
 }
 
-.nav_custom{
+/*  .nav_custom{
     background-color: #333333 !important;
     
-}
+}  */
 
 .gradient-custom-2 {
     /* fallback for old browsers */
@@ -36,3 +56,81 @@ li{
     border-bottom-right-radius: .3rem;
     }
     }
+
+
+/* Motion */
+
+
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(0);
+    transition: all 3s;
+  }
+  
+  .hidden-left {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 3s;
+  }
+  .hidden-down {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-100%);
+    transition: all 3s;
+  }
+  
+  .hidden-up {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 3s;
+  }
+
+  .hidden-right {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 3s;
+  }
+  
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+  
+
+
+
+  .bg_forNav{
+    background-color: var(--main-color);
+    
+    }
+    
+    
+    .transizione{
+      transition: 0.8s;
+    }
+
+.img-custom{
+    width: 200px;
+    height: 200px;
+}
+
+/* CARD */
+
+.cardCustom{
+
+    width: 35vw;
+
+}
+
+/* END CARD */
+
+
+.textNav{
+    color: whitesmoke !important;
+}

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark nav_custom">
+<nav class="navbar navbar-expand-lg nav_custom bg_forNav sticky-top transizione">
     <div class="container-fluid">
         <a class="navbar-brand ms-5" href="{{route('homepage')}}"><img src="/media/presto.it__1_-removebg-preview.png" style="width: 50px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -6,7 +6,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <a class="nav-link active text-white" aria-current="page" href="{{ route('homepage') }}">Home</a>
+            <a class="nav-link active " aria-current="page" href="{{ route('homepage') }}">Home</a>
             <ul class="navbar-nav  mb-2  mb-lg-0 m-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="">Lavora con noi</a>
@@ -36,9 +36,9 @@
             </ul>
             {{-- GUEST --}}
             <div class="nav-item dropdown text-black">
-                <a class="nav-link dropdown-toggle me-5 text-white" href="#" role="button" data-bs-toggle="dropdown"
+                <a class="nav-link dropdown-toggle me-5 " href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    <i class="bi bi-person-fill text-white display-6"></i>
+                    <i class="bi bi-person-fill  display-6"></i>
                 </a>
                 @guest
                     <ul class="dropdown-menu">
