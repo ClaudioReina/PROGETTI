@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -43,7 +44,13 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        return view('category.show', compact('category'));
+        $articles = Article::all();
+
+        $articles = $articles->filter(function ($articles) use ($category) {
+            return $articles->category == $category->id;
+        });
+        return view('category.show', compact('category', 'articles'));
+
     }
 
     // /**

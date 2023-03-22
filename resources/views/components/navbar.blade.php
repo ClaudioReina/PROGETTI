@@ -14,6 +14,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('article.index')}}">Indice Prodotti</a>
                 </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Categorie
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                     @foreach ($categories as $category)
+                         <li><a class="dropdown-item" href="{{route('category.show', compact('category'))}}">{{($category->name)}}</a></li>
+                         <li><hr class="dropdown-divider"></li>
+                     @endforeach
+                    </ul>
+                  </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('category.create')}}">Crea Categoria</a>
                 </li>
