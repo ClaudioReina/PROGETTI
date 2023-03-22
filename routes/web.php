@@ -23,6 +23,7 @@ Route::get('/contattaci', [PublicController::class, 'contact_us'])->name('contac
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/article/edit/{article}', [ArticleController::class, 'edit'])->name('article.edit');
 
 // Rotte delle categorie
 Route::get('/category/index', [CategoryController::class, 'index'])->name('category.index');

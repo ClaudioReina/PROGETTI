@@ -16,7 +16,10 @@
             </div>
         </div>
         <div class="row justify-content-between py-5">
-            <div class="col-8 col-md-2"></div>
+            <div class="col-8 col-md-2">
+                <a href="{{route('article.edit', compact('article'))}}" class="btn btn-secondary">Modifica</a>
+
+            </div>
             <div class="col-4 col-md-2">
                 <a href="{{route('article.index')}}" class="btn btn-secondary">Torna indietro</a>
             </div>

@@ -16,7 +16,7 @@ return new class extends Migration
 
             $table->string('title');
             $table->string('category')->nullable();
-            $table->decimal('price');
+            $table->decimal('price',8,2);
             $table->text('description');
     
             $table->timestamps();
