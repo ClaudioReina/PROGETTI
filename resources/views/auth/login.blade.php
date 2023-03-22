@@ -48,8 +48,8 @@
 
                                                 <div class="d-flex align-items-center justify-content-center pb-4">
                                                     <p class="mb-0 me-2">Don't have an account?</p>
-                                                    <a href=""></a><button type="button"
-                                                        class="btn btn-outline-danger">Create new</button>
+                                                    <a href="{{route('register')}}"><button type="button"
+                                                        class="btn btn-outline-danger">Create new</button></a>
                                                 </div>
 
                                             </form>
