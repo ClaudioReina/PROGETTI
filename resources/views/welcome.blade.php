@@ -45,5 +45,14 @@
         </div>
     </div>
 
-
+    <div class="container-fluid form_bg">
+        <div class="row">
+        <div class="col-12 col-md-6 text-white">
+            <h4 class="display-4">Vuoi restare informato sui nuovi annunci?</h4>
+            <h5 class="display-6">Clicca sul bottone e compila il form di adesione alla<p class="txMain">newsletter</p></h5>
+            <button class="btn"> Iscriviti alla newsletter
+            </button>
+        </div>
+        </div>
+    </div>
 </x-layout>
