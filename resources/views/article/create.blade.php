@@ -36,7 +36,7 @@
                                                 </div>
 
                                                 <div class="form-outline mb-4">
-                                                    <input type="price" name="title" id="title"
+                                                    <input type="title" name="title" id="title"
                                                         class="form-control"/>
                                                     <label class="form-label" for="title">Prezzo articolo</label>
                                                 </div>
