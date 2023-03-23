@@ -22,9 +22,10 @@ a {
 
 :root{
   --main-color:#333333;
-  --second-color:#2CCC77;
+  --second-color:rgb(44, 204, 119);
   --third-color:#a90d5d;
   --textfirst-color:#f5f5f5;
+  --color: #00A97F;
 }
 
 .txMain{
@@ -103,6 +104,9 @@ a {
   transform: translateX(0);
 }
 
+/* NAVBAR */
+
+
 .bg_forNav{
   background-color: var(--main-color);
 }
@@ -110,6 +114,30 @@ a {
 .transizione{
   transition: 0.8s;
 }
+
+
+
+.linkCustom{
+  position: relative;
+}
+.linkCustom:before{
+  border-bottom: 2px solid black;
+  transition: 0.5s ease-in-out, right 0.5s ease-in-out;
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  
+  
+}
+
+.navbar .linkCustom:hover::before{
+  width: 100%;
+}
+
+
+/* END NAVBAR */
 
 .img-custom{
   width: 200px;
@@ -200,4 +228,175 @@ a {
   min-height: 100vh;
   padding-top: 6rem;
   z-index: 1;
+}
+
+.containerIndexCustom{
+  background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/pexels-nataliya-vaitkevich-6214478.jpg) ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding-top: 6rem;
+  z-index: 1;
+  
+}
+
+/* BUTTON CUSTOM */
+
+
+.buttonCustom {
+  
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 2px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+  bottom: 10px;
+ }
+ 
+ .buttonCustom::before, .buttonCustom::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--second-color);
+  transition: 1.4s ease;
+ }
+ 
+ .buttonCustom::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .buttonCustom::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .buttonCustom:hover::before, .buttonCustom:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .buttonCustom:hover {
+  color: var(--third-color);
+ }
+ 
+ .buttonCustom:active {
+  filter: brightness(.8);
+  
+ }
+ 
+
+ /* FOOTER */
+
+ .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(/public/media/wave.png);
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 6s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 4s linear infinite;
+}
+
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.footer {
+  position: relative;
+  width: 100%;
+  background:rgb(51,204,102);
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+.bg_homepage{
+  background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/pexels-sean-sandoval-971598.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding-top: 6rem;
+  z-index: 1;
+
 }

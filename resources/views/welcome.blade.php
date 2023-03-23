@@ -1,14 +1,14 @@
 <x-layout>
 
-    <div class="container-fluid my-5">
+    <div class="container-fluid  bg_homepage">
         <div class="row">
             <div class="col-12 col-md-6 ps-5 py-5 text-center">
                 @auth
                 <h2>Benvenuto {{Auth::user()->name}}</h2>
-                <a href="{{route('article.create')}}" class="btn btn-primary mt-5" type="button">Inserisci annuncio</a>
+                <a href="{{route('article.create')}}" class="btn btn-contact mt-5" type="button">Inserisci annuncio</a>
                 @endauth
             </div>
-            <div class="col-12 col-md-4 py-5">
+            <div class="col-12 col-md-4 py-5 ps-5">
                 <h1>Presto.it fa al caso tuo!</h1>
                 <h3>Mostra a tutti cos'hai da offrire</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit soluta est, itaque, repellendus vitae
@@ -19,7 +19,7 @@
         </div>
         <div class="row py-5">
             <div class="col-12 py-5 text-center">
-            <h3>Ultimi prodotti caricati</h3>
+            <h3 class="text-white">Ultimi prodotti caricati</h3>
             </div>
             @foreach ($articles as $article)
                 <div class="col-12 col-md-3 mx-auto">

@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid mt-3">
+    <div class="container-fluid containerIndexCustom mt-3">
         <div class="row">
             <div class="col-12 text-center ">
                 <h2 class="robotoFont mt-3">I nostri articoli</h2>
@@ -17,7 +17,7 @@
                         @else
                             <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top" alt="{{$article->name}}">
                         @endif
-                        <div class="card-body ms-4 py-auto">
+                        <div class="card-body ms-3 py-auto">
                           <h5 class="card-title">{{$article->title}}</h5>
                           <p class="card-text">{{$article->price}} €</p>
                           <p class="card-text text-muted">{{Str::limit($article->description,50)}}</p>
