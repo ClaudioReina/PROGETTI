@@ -10,7 +10,7 @@
             <a class="nav-link active linkCustom" aria-current="page" href="{{ route('homepage') }}">Home</a>
             <ul class="navbar-nav mb-2 mb-lg-0 m-auto">
                 <li class="nav-item">
-                    <a class="nav-link linkCustom" href="">Lavora con noi</a>
+                    <a class="nav-link linkCustom" href="{{route('become.revisor')}}">Lavora con noi</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link linkCustom" href="{{ route('article.index') }}">Indice Prodotti</a>
