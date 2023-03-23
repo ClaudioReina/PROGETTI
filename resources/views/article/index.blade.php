@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid containerIndexCustom mt-3">
+    <div class="container-fluid containerIndexCustom mt-3 text-white">
         <div class="row">
             <div class="col-12 text-center ">
                 <h2 class="robotoFont mt-3">I nostri articoli</h2>
@@ -10,7 +10,7 @@
         <div class="row py-5 hidden justify-content-around">
             @if(count($articles))
             @foreach ($articles as $article)
-                <div class="col-12 col-md-4 py-2 divCustom">
+                <div class="col-12 col-md-6 py-2 divCustom">
                     <div class="cardCustom d-flex border ">
                         @if (!$article->cover)
                             <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top img-custom" alt="immagine non trovata">

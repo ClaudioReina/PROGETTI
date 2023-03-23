@@ -1,4 +1,4 @@
-{{-- <!-- Footer -->
+<!-- Footer -->
 <footer class="bg-dark text-center text-white">
   <!-- Grid container -->
   <div class="container p-4">
@@ -76,10 +76,10 @@
   <!-- Copyright -->
 
 </footer>
-<!-- Footer --> --}}
+<!-- Footer -->
 
 
-<footer class="footer pt-5 mt-5">
+{{-- <footer class="footer pt-5 mt-5">
   <div class="waves">
     <div class="wave" id="wave1"></div>
     <div class="wave" id="wave2"></div>
@@ -109,4 +109,4 @@
 </div>
 <p class="small text-center text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maxime repellendus mollitia necessitatibus cupiditate totam nulla, ullam qui dolores nisi? Eius est ullam eaque minus dicta velit, optio itaque molestiae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut quidem voluptates inventore aliquam. Dicta quos voluptate voluptatum quis, praesentium magni voluptatem hic alias dolor asperiores deserunt quae, placeat nesciunt cumque.</p>
 </footer>
-
+ --}}

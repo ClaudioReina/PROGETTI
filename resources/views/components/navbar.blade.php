@@ -7,7 +7,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <a class="nav-link active linkCustom" aria-current="page" href="{{ route('homepage') }}">Home</a>
-            <ul class="navbar-nav  mb-2  mb-lg-0 m-auto">
+            <ul class="navbar-nav mb-2 mb-lg-0 m-auto">
                 <li class="nav-item">
                     <a class="nav-link linkCustom" href="">Lavora con noi</a>
                 </li>
