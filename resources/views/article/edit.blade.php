@@ -8,8 +8,4 @@
     </div>
 </div>
 
-
-
-
-
 </x-layout>

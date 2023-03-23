@@ -43,7 +43,7 @@ Route::put('/category/update/{category}', [CategoryController::class, 'update'])
 Route::delete('/category/destroy/{category}', [CategoryController::class, 'destroy'])->name('category.destroy');
 
 
-// Rotta del REVISORE
+// ROTTA DEL REVISORE
 Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 // accetta annuncio
 Route::patch('/accetta/articolo/{article}', [RevisorController::class, 'acceptArticle'])->middleware('isRevisor')->name('revisor.accept_article');
@@ -53,4 +53,6 @@ Route::patch('/rifiuta/articolo/{article}', [RevisorController::class, 'rejectAr
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 // rendi utente revisore
 Route::get('/richiesta/revisore{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+//Lista degli articoli (only moderator)
+Route::get('/revisor/list', [ArticleController::class, 'listArticle'])->middleware('isRevisor')->name('revisor.list');
 

@@ -22,6 +22,13 @@ class ArticleController extends Controller
         return view('article.index', compact('articles'));
     }
 
+    public function listArticle(){
+        
+        $articles = Article::all();
+
+        return view ('revisor.list');
+    }
+
     /**
      * Show the form for creating a new resource.
      */

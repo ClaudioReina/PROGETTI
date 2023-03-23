@@ -427,3 +427,27 @@ a {
   padding-top: 6rem;
   z-index: 1;
 }
+
+/* REVISORE */
+
+.revisione {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #f1f1f1;
+}
+
+.btn_rev {
+  padding: 10px;
+  margin: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn_rev:hover {
+  background-color: #3e8e41;
+}

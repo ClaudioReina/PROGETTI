@@ -71,4 +71,6 @@
             </div>
         </div>
     @endif
+    <div class="container-fluid spaced">
+    </div>
 </x-layout>

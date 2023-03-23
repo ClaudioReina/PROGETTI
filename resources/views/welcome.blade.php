@@ -1,5 +1,7 @@
 <x-layout>
     
+    <x-messages />
+
     <div class="container-fluid  bg_homepage">
         <div class="row">
             <div class="col-12 col-md-6 ps-5 py-5 text-center text-white ">

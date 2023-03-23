@@ -11,7 +11,7 @@
             <ul class="navbar-nav mb-2 mb-lg-0 m-auto">
                 <li class="nav-item">
                     <a class="nav-link linkCustom" href="{{route('become.revisor')}}">Lavora con noi</a>
-                </li>
+                </li>           
                 <li class="nav-item">
                     <a class="nav-link linkCustom" href="{{ route('article.index') }}">Indice Prodotti</a>
                 </li>
@@ -29,14 +29,10 @@
                         @endforeach
                     </ul>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link linkCustom" href="{{ route('category.create') }}">Crea Categoria</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link linkCustom" href="{{ route('article.create') }}">Crea Prodotto</a>
                 </li>
-                @auth
+                {{-- @auth
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item">
                             <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page"
@@ -49,7 +45,7 @@
                             </a>
                         </li>
                     @endif
-                @endauth
+                @endauth --}}
             </ul>
             {{-- GUEST --}}
             <div class="nav-item dropdown text-black">

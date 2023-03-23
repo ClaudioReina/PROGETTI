@@ -2,6 +2,7 @@
     
     <div class="container py-5">
         <div class="row">
+            
             <div class="col-md-10 d-flex align-items-center pt-4">
                 <img class="avatar-image" src="{{ Storage::url(Auth::user()->avatar) }}" onclick="document.getElementById('avatar-input').click();" id="avatar-image">
                 <form action="{{ route('changeAvatar', ['user' => Auth::user()]) }}" method="POST" enctype="multipart/form-data" id="avatar-form">
@@ -20,6 +21,22 @@
                 </div>
             </div>
         </div>
+        @auth
+            @if (Auth::user()->is_revisor)
+                <div class="revisione">
+                    <a href="{{route('revisor.list')}}" class="btn_rev">Lista articoli da revisionare</a >
+                        <a class="nav-link btn_rev position-relative" aria-current="page"
+                        href="{{ route('revisor.index') }}">Zona Revisore
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{ App\Models\Article::toBeRevisionedCount() }}
+                            <span class="visually-hidden">Messaggi non letti</span>
+                        </span>
+                    </a>
+                </div>
+            @endif
+        @endauth
+        {{-- SEZIONE ARTICOLI --}}
         <div class="row">
             <div class="col-12 text-center">
                 <h3 class="display-3 py-5">Prodotti in Vendita</h3>
@@ -40,14 +57,14 @@
                                 <div class="d-flex justify-content-between"><h3>Prezzo:</h3><p>{{$article->price}} €</p></div>
                                 <form action="{{route('article.show', $article)}}" method="GET" class="d-inline-block">
                                     @csrf
-                                    <button type="submit" class="btn btn-outline-primary">View</button>
+                                    <button type="submit" class="btn btn-outline-primary">Visualizza</button>
                                 </form>
                                 @if(Auth::user() && Auth::id() == $article->user_id)
-                                <a href="{{ route('article.edit', $article) }}" class="btn btn-outline-dark">Edit</a>
+                                <a href="{{ route('article.edit', $article) }}" class="btn btn-outline-dark">Modifica</a>
                                 <form action="{{ route('article.destroy', $article) }}" method="POST" class="d-inline-block">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit" class="btn btn-outline-danger">Delete</button>
+                                    <button type="submit" class="btn btn-outline-danger">Cancella</button>
                                 </form>
                                 @endif
                             </div>
@@ -65,44 +82,49 @@
         {{-- SEZIONE CATEGORIE --}}
         @auth
         @if(auth()->user()->id == 1)
-            <div class="row py-5">
-                <div class="col-12 text-center">
-                    <h3 class="display-3 py-5">Categorie</h3>
-                </div>
-                <div class="col-12">
-                    <div class="row justify-content-center">
-                        @if(count(Auth::user()->categories))
-                        @foreach(Auth::user()->categories as $category)
-                        <div class="col-12 col-md-4 pb-5">
-                            <div class="card shadow">
-                                <div class="card-body p-2">
-                                    <h3>{{$category->name}}</h3>
-                                    <form action="{{route('category.show', $category)}}" method="POST" class="d-inline-block">
-                                        @csrf
-                                        <button type="submit" class="btn btn-outline-primary">View</button>
-                                    </form>
-                                    @if(Auth::user() && Auth::id() == $category->user_id)
-                                    <a href="{{route('category.edit', $category)}}" class="btn btn-outline-dark">Edit</a>
-                                    <form action="{{route('category.destroy', $category)}}" method="POST" class="d-inline-block">
-                                        @csrf
-                                        @method('delete')
-                                        <button type="submit" class="btn btn-outline-danger">Delete</button>
-                                    </form>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-                        @else
-                        <div class="col-12 ms-5 ps-5">
-                            Non hai caricato nessuna categoria.
-                        </div>
-                        @endif
-                    </div>
+        <div class="row py-5">
+            <div class="col-12 mb-5 d-flex justify-content-center">
+                <h3 class="display-3 mb-3">Categorie</h3>
+                <div class="pt-4 ms-5">
+                    <a class="btn btn-warning linkCustom" href="{{ route('category.create') }}">Crea Categoria</a>
                 </div>
             </div>
+            <div class="col-12">
+                <div class="row justify-content-center">
+                    @if(count(Auth::user()->categories))
+                    @foreach(Auth::user()->categories as $category)
+                    <div class="col-12 col-md-4 pb-5">
+                        <div class="card shadow">
+                            <div class="card-body p-2">
+                                <h3>{{$category->name}}</h3>
+                                <form action="{{route('category.show', $category)}}" method="POST" class="d-inline-block">
+                                    @csrf
+                                    <button type="submit" class="btn btn-outline-primary">Visualizza</button>
+                                </form>
+                                @if(Auth::user() && Auth::id() == $category->user_id)
+                                <a href="{{route('category.edit', $category)}}" class="btn btn-outline-dark">Modifica</a>
+                                <form action="{{route('category.destroy', $category)}}" method="POST" class="d-inline-block">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-outline-danger">Cancella</button>
+                                </form>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                    @else
+                    <div class="col-12 ms-5 ps-5">
+                        Non hai caricato nessuna categoria.
+                    </div>
+                    @endif
+                </div>
+            </div>
+        </div>
         @endif
         @endauth
     </div> 
+    
+    
     
 </x-layout>
