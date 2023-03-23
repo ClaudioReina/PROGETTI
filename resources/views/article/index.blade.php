@@ -6,7 +6,6 @@
                 <h2 class="robotoFont mt-3">I nostri articoli</h2>
             </div>
         </div>
-        
         {{-- CARD ARTICOLO --}}
         <div class="row py-5 hidden justify-content-around">
             @if(count($articles))
