@@ -27,17 +27,17 @@
 
                                             <form method="POST" action="{{route('login')}}">
                                                 @csrf
-                                                <p>Login</p>
+                                                <p class="text-center display-6">Login</p>
 
                                                 <div class="form-outline mb-4">
+                                                    <label class="form-label" for="email">Email</label>
                                                     <input type="email" name="email" id="email" class="form-control"
                                                         placeholder="Indirizzo email" />
-                                                    <label class="form-label" for="email">Email</label>
                                                 </div>
 
                                                 <div class="form-outline mb-4">
-                                                    <input type="password" name="password" id="password" class="form-control" />
                                                     <label class="form-label" for="password">Password</label>
+                                                    <input type="password" name="password" id="password" class="form-control" />
                                                 </div>
 
                                                 <div class="text-center pt-1 mb-5 pb-1">
@@ -47,9 +47,9 @@
                                                 </div>
 
                                                 <div class="d-flex align-items-center justify-content-center pb-4">
-                                                    <p class="mb-0 me-2">Don't have an account?</p>
+                                                    <p class="mb-0 me-2">Non sei registrato?</p>
                                                     <a href="{{route('register')}}"><button type="button"
-                                                        class="btn btn-outline-danger">Create new</button></a>
+                                                        class="btn btn-outline-danger">Registrati!</button></a>
                                                 </div>
 
                                             </form>
@@ -74,6 +74,8 @@
                 </div>
             </section>
         </div>
+    </div>
+    <div class="container-fluid spaced">
     </div>
 
 

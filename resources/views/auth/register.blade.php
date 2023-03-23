@@ -77,5 +77,8 @@
         </div>
     </section>
 
+    <div class="container-fluid spaced">
+        
+    </div>
 
 </x-layout>
