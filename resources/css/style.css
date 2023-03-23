@@ -48,7 +48,9 @@ a {
   /* background: -webkit-linear-gradient(to right, #2CCC77, #d8363a, #dd3675, #b44593); */
   
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, rgb(6, 6, 6) 2%, #333333fb 10%, #5fcf8a 24%, #2CCC77 100%);
+  /* background: linear-gradient(to right, rgb(6, 6, 6) 2%, #333333fb 10%, #5fcf8a 24%, #2CCC77 100%); */
+  background: rgb(2,153,116);
+background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba(0,0,0,0.9052871148459384) 95%);
 }
 
 @media (min-width: 769px) {
