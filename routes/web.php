@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RevisorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PublicController;
@@ -40,3 +41,11 @@ Route::get('/category/show/{category}', [CategoryController::class, 'show'])->na
 Route::get('/category/edit/{category}', [CategoryController::class, 'edit'])->name('category.edit');
 Route::put('/category/update/{category}', [CategoryController::class, 'update'])->name('category.update');
 Route::delete('/category/destroy/{category}', [CategoryController::class, 'destroy'])->name('category.destroy');
+
+
+// Rotta del REVISORE
+Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
+// accetta annuncio
+Route::patch('/accetta/articolo/{article}', [RevisorController::class, 'acceptArticle'])->name('revisor.accept_article');
+// rifiuta annuncio
+Route::patch('/rifiuta/articolo/{article}', [RevisorController::class, 'rejectArticle'])->name('revisor.reject_article');
