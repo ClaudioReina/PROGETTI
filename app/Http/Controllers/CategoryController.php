@@ -60,7 +60,11 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        if($category->user_id != Auth::id()){
+            return redirect(route('homepage'))->with('accessDenied', 'You are not authorized to perform this operation.');
+        }
+
+        return view('category.edit', compact('category'));
     }
 
     /**
@@ -68,7 +72,17 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        if($request->cover){
+            $category->update([
+                'name' => $request->name,
+                'cover' => $request->file('cover')->store('public/covers'),
+            ]);
+        } else {
+            $category->update([
+                'name' => $request->name,
+            ]);
+        }
+        return redirect(route('homepage'))->with('categoryUpdated', "Categoria aggiornata.");
     }
 
     /**

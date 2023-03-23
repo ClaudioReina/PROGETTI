@@ -31,14 +31,13 @@
         <div class="col-12 col-md-4 pb-5">
             <div class="card shadow">
                 @if(!$article->cover)
-                <img src="https://picsum.photos/300/200" class="img-card object-fit-cover" alt="...">
+                <img src="/media/ImmagineSalvaposto.jpg" class="img-card object-fit-cover" alt="...">
                 @else
                 <img src="{{Storage::url($article->cover)}}" class="img-fluid" alt="...">
                 @endif
                 <div class="card-body p-2">
-                <h3>Name:</h3><p>{{$article->title}}</p>
-
-                    <h3>Price:</h3><p>{{$article->price}} €</p>
+                    <div class="d-flex justify-content-between"><h3>Nome:</h3><p>{{$article->title}}</p></div>
+                    <div class="d-flex justify-content-between"><h3>Prezzo:</h3><p>{{$article->price}} €</p></div>
                     <form action="{{route('article.show', $article)}}" method="GET" class="d-inline-block">
                         @csrf
                         <button type="submit" class="btn btn-outline-primary">View</button>
@@ -57,11 +56,13 @@
         @endforeach
         @else
             <div class="col-12 ms-5 ps-5">
-            You haven't posted any advertisement yet.
+            Non hai caricato nessun prodotto.
             </div>
         @endif
     </div>
         </div>
+    @auth
+    @if(auth()->user()->id == 1)
     </div>
     <div class="row py-5">
         <div class="col-12 text-center">
@@ -75,10 +76,18 @@
             <div class="card shadow">
                 <div class="card-body p-2">
                 <h3>{{$category->name}}</h3>
-                    <form action="{{route('category.show', $category)}}" method="GET" class="d-inline-block">
+                    <form action="{{route('category.show', $category)}}" method="POST" class="d-inline-block">
                         @csrf
                         <button type="submit" class="btn btn-outline-primary">View</button>
                     </form>
+                    @if(Auth::user() && Auth::id() == $category->user_id)
+                    <a href="{{route('category.edit', $category)}}" class="btn btn-outline-dark">Edit</a>
+                        <form action="{{route('category.destroy', $category)}}" method="POST" class="d-inline-block">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-outline-danger">Delete</button>
+                        </form>
+                    @endif
                 </div>
             </div>
         </div>
@@ -90,6 +99,8 @@
         @endif
     </div>
 </div>
+@endif
+@endauth
 
 
 </x-layout>
