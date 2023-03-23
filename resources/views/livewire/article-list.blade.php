@@ -1,6 +1,4 @@
 <div>
-    {{-- In work, do what you enjoy. --}}
-    
     <table class="table table-striped">
         <thead>
             <tr>
@@ -15,12 +13,10 @@
             <tr>
                 <th scope="row">{{$article->id}}</th>
                 <td>{{$article->title}}</td>
-                <td>{{$article->price}}</td>
+                <td>{{$article->price}} €</td>
                 <td>{{$article->created_at}}</td>
             </tr>
             @endforeach
         </tbody>
     </table>
-
-
 </div>

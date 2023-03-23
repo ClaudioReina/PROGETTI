@@ -29,25 +29,10 @@
                         @endforeach
                     </ul>
                 </li>
-<<<<<<< HEAD
                 <li class="nav-item">
                     <a class="nav-link linkCustom" href="{{ route('article.create') }}">Crea Prodotto</a>
                 </li>
                 {{-- @auth
-=======
-
-                @auth
-                <li class="nav-item">
-                    <a class="nav-link linkCustom" href="{{ route('category.create') }}">Crea Categoria</a>
-                </li>
-
-                
-                <li class="nav-item">
-                    <a class="nav-link linkCustom" href="{{ route('article.create') }}">Crea Prodotto</a>
-                </li>
-                @endauth
-                @auth
->>>>>>> 92b6c991c8718b6fef488cbf0360527d1f1239b7
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item">
                             <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page"
