@@ -32,6 +32,14 @@ a {
   color: var(--second-color);
 }
 
+.bgMain{
+  background-color: var(--second-color);
+}
+
+.bgSec{
+  background-color:  var(--main-color);
+}
+
 .gradient-custom-2 {
   /* fallback for old browsers */
   background: #fccb90;
@@ -158,22 +166,22 @@ a {
 
 /* Bottone Del Form Contattaci */
 .btn-contact {
-  --color: #00A97F;
+ 
   --color2: rgb(10, 25, 30);
   padding: 0.8em 1.75em;
   background-color: transparent;
   border-radius: 6px;
-  border: .3px solid var(--color);
+  border: .3px solid var(--second-color);
   transition: .5s;
   position: relative;
   overflow: hidden;
   cursor: pointer;
   z-index: 1;
-  font-weight: 300;
-  font-size: 17px;
+  font-weight: 600;
+  font-size: 19px;
   font-family: 'Roboto', 'Segoe UI', sans-serif;
   text-transform: uppercase;
-  color: var(--color);
+  color: var(--second-color);
 }
 
 .btn-contact::after, .btn-contact::before {
@@ -187,7 +195,7 @@ a {
   left: 25%;
   z-index: -1;
   transition: .5s ease-out;
-  background-color: var(--color);
+  background-color: var(--second-color);
 }
 
 .btn-contact::before {
@@ -384,7 +392,7 @@ a {
 }
 
 .bg_homepage{
-  background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/pexels-sean-sandoval-971598.jpg);
+  background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/pexels-nataliya-vaitkevich-6214472.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -402,4 +410,20 @@ a {
 
 .spaced{
   height: 30vh;
+}
+
+.backWelcome2{
+  background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/HomePage1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding-top: 6rem;
+  z-index: 1;
 }
