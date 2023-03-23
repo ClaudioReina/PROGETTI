@@ -30,12 +30,16 @@
                     </ul>
                 </li>
 
+                @auth
                 <li class="nav-item">
                     <a class="nav-link linkCustom" href="{{ route('category.create') }}">Crea Categoria</a>
                 </li>
+
+                
                 <li class="nav-item">
                     <a class="nav-link linkCustom" href="{{ route('article.create') }}">Crea Prodotto</a>
                 </li>
+                @endauth
                 @auth
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item">
