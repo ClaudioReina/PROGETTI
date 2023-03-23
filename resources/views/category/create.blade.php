@@ -1,5 +1,5 @@
 <x-layout>
-
+    
     <div class="container-fluid ">
         <div class="row">
             <section class=" gradient-form">
@@ -10,35 +10,35 @@
                                 <div class="row g-0">
                                     <div class="col-lg-6">
                                         <div class="card-body p-md-5 mx-md-4">
-
+                                            
                                             <div class="text-center">
                                                 <img src="/media/logo.png" style="width: 185px;" alt="logo">
                                                 <h4 class="mt-1 mb-5 pb-1">Presto.it</h4>
                                             </div>
-
+                                            
                                             <form method="POST" action="{{route('category.store')}}" enctype="multipart/form-data">
                                                 @csrf
                                                 <p>Nuova Categoria</p>
-
+                                                
                                                 <div class="form-outline mb-4">
                                                     <input type="name" name="name" id="name"
-                                                        class="form-control"/>
+                                                    class="form-control"/>
                                                     <label class="form-label" for="name">Nome</label>
                                                 </div>
-
+                                                
                                                 <div class="mb-3">
                                                     <label for="cover" class="form-label">Carica Immagine</label>
                                                     <input class="form-control" name="cover" type="file" id="cover">
                                                 </div>
-
+                                                
                                                 <div class="text-center pt-1 mb-5 pb-1">
                                                     <button
-                                                        class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                                                        type="submit">Crea Categoria</button>
+                                                    class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                                    type="submit">Crea Categoria</button>
                                                 </div>
-
+                                                
                                             </form>
-
+                                            
                                         </div>
                                     </div>
                                     <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
@@ -60,7 +60,8 @@
             </section>
         </div>
     </div>
-
-
-
+    
+    <div class="container-fluid spaced">
+    </div>
+    
 </x-layout>

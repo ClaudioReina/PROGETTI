@@ -40,7 +40,7 @@ a {
   /* background: -webkit-linear-gradient(to right, #2CCC77, #d8363a, #dd3675, #b44593); */
   
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, #060606, #333333, #5fcf8a, #2CCC77);
+  background: linear-gradient(to right, rgb(6, 6, 6) 2%, #333333fb 10%, #5fcf8a 24%, #2CCC77 100%);
 }
 
 @media (min-width: 769px) {
@@ -398,4 +398,8 @@ a {
   padding-top: 6rem;
   z-index: 1;
 
+}
+
+.spaced{
+  height: 30vh;
 }
