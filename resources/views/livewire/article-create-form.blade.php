@@ -8,35 +8,29 @@
                         <div class="col-lg-6">
                             <div class="card-body p-md-5 mx-md-4">
 
-                                <div>
-                                    @if (session()->has('articleCreated'))
-                                        <div class="alert alert-success">
-                                            {{ session('articleCreated') }}
-                                        </div>
-                                    @endif
-                                </div>
+                                <x-messages />
 
                                 <div class="text-center">
-                                    <img src="/media/logo.png" style="width: 185px;" alt="logo">
+                                    <img src="/media/presto.it__1_-removebg-preview.png" style="width: 100px;" alt="logo">
                                     <h4 class="mt-1 mb-5 pb-1">Presto.it</h4>
                                 </div>
 
                                 <form wire:submit.prevent="store">
                                     @csrf
-                                    <p class="my-5 text-center">Nuovo Annuncio</p>
+                                    <h4 class="my-5 text-center">Crea Nuovo Annuncio</h4>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="title">Nome articolo</label>
+                                        <label class="form-label" for="title">Nome</label>
                                         <input type="title" wire:model="title" id="title"
                                             class="form-control"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="categories">Categorie</label>
+                                        <label class="form-label" for="categories">Categoria:</label>
                                         <select wire:model="category" id="categories">
                                         <option value="">Seleziona Categoria</option>
                                             @foreach ($categories as $category)
-                                                <option value="{{$category->id}}">
+                                                <option value="{{$category->name}}">
                                                     {{$category->name}}
                                                 </option>
                                             @endforeach
@@ -44,13 +38,13 @@
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="price">Prezzo articolo</label>
+                                        <label class="form-label" for="price">Prezzo</label>
                                         <input type="price" wire:model="price" id="price"
                                             class="form-control"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="description">Descrizione</label>
+                                        <label class="form-label" for="description">Descrizione annuncio</label>
                                         <textarea type="text" wire:model="description" id="description"
                                             class="form-control" cols="7" rows="3"></textarea>
                                     </div>

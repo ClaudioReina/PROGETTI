@@ -29,10 +29,10 @@ public function store(){
        'category' => $this->category,
        'description' => $this->description,
        'price' => $this->price,
-       'user_id'=>Auth::id(),
+       'user_id' => Auth::id(),
     ]);
 
-     session()->flash('articleCreated', 'Hai postato con successo il tuo articolo!');
+     session()->flash('articleCreated', 'Hai caricato con successo il tuo prodotto!');
     $this->cleanForm(); 
 }
 

@@ -15,8 +15,9 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
+        $articles = Article::all();
 
-        return view('category.index', compact('categories'));
+        return view('category.index', compact('categories', 'articles'));
     }
 
     /**
@@ -24,6 +25,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
+        $articles = Article::all();
+
         return view('category.create');
     }
 
@@ -38,7 +41,7 @@ class CategoryController extends Controller
             'user_id' => Auth::user()->id,
         ]);
 
-        return redirect(route('homepage'))->with('categoryCreated', 'Categoria inserita.');
+        return redirect(route('homepage'))->with('categoryCreated', 'Categoria inserita con successo.');
     }
 
     /**
@@ -60,10 +63,6 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        if($category->user_id != Auth::id()){
-            return redirect(route('homepage'))->with('accessDenied', 'You are not authorized to perform this operation.');
-        }
-
         return view('category.edit', compact('category'));
     }
 
@@ -82,7 +81,7 @@ class CategoryController extends Controller
                 'name' => $request->name,
             ]);
         }
-        return redirect(route('homepage'))->with('categoryUpdated', "Categoria aggiornata.");
+        return redirect(route('homepage'))->with('categoryUpdated', "Categoria aggiornata con successo.");
     }
 
     /**
@@ -92,6 +91,6 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return redirect(route('homepage'))->with('categoryDeleted', "Categoria eliminata");
+        return redirect(route('homepage'))->with('categoryDeleted', "Categoria eliminata con successo.");
     }
 }

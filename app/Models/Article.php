@@ -23,6 +23,10 @@ class Article extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function categories(){
+        return $this->hasMany(Category::class);
+    }
+
     public function category(){
         return $this->belongsTo(Category::class);
     }

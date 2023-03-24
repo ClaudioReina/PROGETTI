@@ -9,18 +9,7 @@
             </div>
         </div>
     </div>
-    <div>
-        @if (session()->has('revisionAccepted'))
-            <div class="alert alert-success">
-                {{ session('revisionAccepted') }}
-            </div>
-        @endif
-        @if (session()->has('revisionDeleted'))
-            <div class="alert alert-danger">
-                {{ session('revisionDeleted') }}
-            </div>
-        @endif
-    </div>
+    <x-messages />
     @if ($article_to_check)
         <div class="container pt-5">
             <div class="row">

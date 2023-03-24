@@ -54,5 +54,5 @@ Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->
 // rendi utente revisore
 Route::get('/richiesta/revisore{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 //Lista degli articoli (only moderator)
-Route::get('/revisor/list', [ArticleController::class, 'listArticle'])->middleware('isRevisor')->name('revisor.list');
+Route::get('/revisor/list', [ArticleController::class, 'listArticle'])->name('revisor.list');
 
