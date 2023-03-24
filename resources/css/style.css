@@ -453,3 +453,32 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
 .btn_rev:hover {
   background-color: #3e8e41;
 }
+
+.personal_icon{
+  background-color: var(--second-color);
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  border: solid 2px white;
+}
+
+.personal_icon img{
+  width: 50px;
+  margin-top: 8px;
+}
+
+.personal{
+  background-color: rgb(229, 117, 12);
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  border: solid 2px white;
+}
+
+.icon{
+  background-color: rgb(16, 117, 194);
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  border: solid 2px white;
+}
