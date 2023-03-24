@@ -56,3 +56,8 @@ Route::get('/richiesta/revisore{user}', [RevisorController::class, 'makeRevisor'
 //Lista degli articoli (only moderator)
 Route::get('/revisor/list', [ArticleController::class, 'listArticle'])->name('revisor.list');
 
+
+//ROTTA RICERCA 
+Route::get('ricerca/articolo', [PublicController::class, 'searchArticle'])->name('articles.search');
+
+

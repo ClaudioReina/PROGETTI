@@ -10,7 +10,7 @@
             <a class="nav-link active linkCustom" aria-current="page" href="{{ route('homepage') }}">Home</a>
             <ul class="navbar-nav mb-2 mb-lg-0 m-auto">
                 <li class="nav-item">
-                    <a class="nav-link linkCustom" href="{{route('become.revisor')}}">Lavora con noi</a>
+                    <a class="nav-link linkCustom" href="{{route('become.revisor')}}">Diventa revisore</a>
                 </li>           
                 <li class="nav-item">
                     <a class="nav-link linkCustom" href="{{ route('article.index') }}">Indice Prodotti</a>
@@ -32,20 +32,6 @@
                 <li class="nav-item">
                     <a class="nav-link linkCustom" href="{{ route('article.create') }}">Crea Prodotto</a>
                 </li>
-                {{-- @auth
-                    @if (Auth::user()->is_revisor)
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page"
-                                href="{{ route('revisor.index') }}">Zona Revisore
-                                <span
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    {{ App\Models\Article::toBeRevisionedCount() }}
-                                    <span class="visually-hidden">Messaggi non letti</span>
-                                </span>
-                            </a>
-                        </li>
-                    @endif
-                @endauth --}}
             </ul>
             {{-- GUEST --}}
             <div class="nav-item dropdown text-black">
@@ -70,6 +56,10 @@
                     </ul>
                 @endguest
             </div>
+            <form action="{{route('articles.search')}}" method="GET" class="d-flex">
+                <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
         </div>
     </div>
 </nav>

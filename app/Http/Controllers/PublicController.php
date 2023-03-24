@@ -17,4 +17,12 @@ class PublicController extends Controller
         return view('contact_us');
     }
 
+
+public function searchArticle (Request $request){
+
+    $articles = Article::search($request->searched)->where('is_accepted', true)->paginate(10);
+    return view ('article.index', compact('articles'));
+
+}
+
 }

@@ -3,7 +3,7 @@
     <div class="container-fluid px-5">
         <div class="row py-5 mt-5">
             
-            <div class="col-12 col-lg-3 mx-auto">  
+            <div class="col-12 col-lg-3 ms-5">  
                 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -47,7 +47,7 @@
             </div>
             
         </div>            
-            <div class="col-4 col-md-2">
+            <div class="col-4 col-md-2 ms-5">
                 <a href="{{route('article.index')}}" class="btn btn-secondary">Torna indietro</a>
             </div>
         </div>
