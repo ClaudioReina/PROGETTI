@@ -31,7 +31,7 @@ Route::get('/article/index', [ArticleController::class, 'index'])->name('article
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('/article/edit/{article}', [ArticleController::class, 'edit'])->name('article.edit');
-Route::get('/article/destroy/{article}', [ArticleController::class, 'destroy'])->name('article.destroy');
+Route::delete('/article/destroy/{article}', [ArticleController::class, 'destroy'])->name('article.destroy');
 
 // Rotte delle categorie
 Route::get('/category/index', [CategoryController::class, 'index'])->name('category.index');
