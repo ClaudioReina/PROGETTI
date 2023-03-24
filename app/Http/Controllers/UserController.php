@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Article;
 use App\Models\User;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -15,10 +15,25 @@ class UserController extends Controller
         //$this->middleware('verified');
     }
 
-    public function profile() {
-        // metodo 1: sfruttare la relazione
-        $categories = Category::where('user_id', Auth::id())->orderBy('name')->get();
-        return view('profile', compact('categories'));
+    public function profile(User $user = NULL) {
+
+        if(!$user){
+            $articles = Article::where('user_id', Auth::id())->orderBy('created_at', 'DESC')->get();
+          
+       } else {
+            $articles = Article::where('user_id', $user->id)->orderBy('created_at', 'DESC')->get();
+            // metodo 1: sfruttare la relazione
+       
+       }
+
+       $categories = Category::where('user_id', Auth::id())->orderBy('name')->get();
+
+    return view('profile', compact('categories','articles','user'));
+       
+
+
+        
+        
     }
 
     public  function changeAvatar(User $user, Request $request) {

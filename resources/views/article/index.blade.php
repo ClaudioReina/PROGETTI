@@ -22,7 +22,7 @@
                             <p class="card-text">{{$article->price}} €</p>     
                             <p>{{$article->category}}</p>                  
                             {{-- <p class="card-text text-muted">{{Str::limit($article->description,50)}}</p> --}}
-                            <p>Creato da {{$article->user->name ?? 'Utente sconosciuto'}}, il {{$article->created_at->format('d/m/Y')}}</p>
+                            <a href="{{route('profile',['user' => $article->user->id])}}"><p>Creato da {{$article->user->name ?? 'Utente sconosciuto'}}, il {{$article->created_at->format('d/m/Y')}}</p></a>
                             <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary buttonCustom ">Dettagli</a>
                         </div>
                     </div>

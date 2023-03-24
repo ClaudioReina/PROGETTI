@@ -35,7 +35,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('articleCreated'))
-                <div class="alert alert-success alert-dismissible fade show border-start border-end" role="alert">
+                <div class="alert alert-warning alert-dismissible fade show border-start border-end" role="alert">
                     {{session('articleCreated')}}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>

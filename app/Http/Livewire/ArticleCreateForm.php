@@ -32,7 +32,7 @@ public function store(){
        'user_id' => Auth::id(),
     ]);
 
-     session()->flash('articleCreated', 'Hai caricato con successo il tuo prodotto!');
+     session()->flash('articleCreated', 'Annuncio creato, è tra le mani dei nostri revisori!');
     $this->cleanForm(); 
 }
 

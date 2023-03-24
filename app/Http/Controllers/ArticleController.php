@@ -63,6 +63,6 @@ class ArticleController extends Controller
     {
         $article->delete();
 
-        return redirect(route('profile'))->with('articleDeleted', 'Hai cancellato l\'articolo');
+        return redirect(route('profile'))->with('articleDeleted', 'Hai cancellato l\'annuncio');
     }
 }

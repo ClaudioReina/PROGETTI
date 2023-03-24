@@ -12,7 +12,14 @@
                 </form>
                 
                 <div class="col-12 col-md-6">
+                    {{-- <h1 class="ms-5">{{Auth::user()->name}}</h1> --}}
+
+                    @if(Auth::user()->name == $user->name)
                     <h1 class="ms-5">{{Auth::user()->name}}</h1>
+                @else
+                    <h1 class="ms-5">{{$user->name}}</h1>
+                @endif
+
                     <form method="POST" action="{{route('user.destroy')}}">
                         @csrf
                         @method('delete')
@@ -44,7 +51,7 @@
             <div class="col-12">
                 <div class="row justify-content-center">
                     @if(count(Auth::user()->articles))
-                    @foreach(Auth::user()->articles as $article)
+                    @foreach($articles as $article)
                     <div class="col-12 col-md-4 pb-5">
                         <div class="card shadow">
                             @if(!$article->cover)
