@@ -8,31 +8,30 @@
         </div>
         {{-- CARD PRODOTTO --}}
         <div class="row py-5 hidden justify-content-around">
-           {{--  @if(count($articles)) --}}
-            @forelse ($articles as $article)
-                <div class="col-12 col-md-6 py-2 divCustom">
-                    <div class="cardCustom d-flex border mx-auto">
-                        @if (!$article->cover)
-                            <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top img-custom" alt="immagine non trovata">
-                        @else
-                            <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top" alt="{{$article->name}}">
-                        @endif
-                        <div class="card-body ms-3 py-auto">
-                            <h5 class="card-title">{{$article->title}}</h5>
-                            <p class="card-text">{{$article->price}} €</p>     
-                            <p>{{$article->category}}</p>                  
-                            {{-- <p class="card-text text-muted">{{Str::limit($article->description,50)}}</p> --}}
-                            <a href="{{route('profile', ['user' => $article->user->id])}}"><p>Creato da {{$article->user->name ?? 'Utente sconosciuto'}}</a>, il {{$article->created_at->format('d/m/Y')}}</p>
-                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary buttonCustom ">Dettagli</a>
+            {{--  @if(count($articles)) --}}
+                @forelse ($articles as $article)
+                    <div class="col-12 col-md-6 py-2 divCustom">
+                        <div class="cardCustom d-flex border mx-auto">
+                            @if (!$article->cover)
+                                <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top img-custom" alt="immagine non trovata">
+                            @else
+                                <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top" alt="{{$article->name}}">
+                            @endif
+                            <div class="card-body ms-3 py-auto">
+                                <h5 class="card-title">{{$article->title}}</h5>
+                                <p class="card-text">{{$article->price}} €</p>     
+                                <p>{{$article->category}}</p>                  
+                                {{-- <p class="card-text text-muted">{{Str::limit($article->description,50)}}</p> --}}
+                                <a href="{{route('profile', ['user' => $article->user->id])}}"><p>Creato da {{$article->user->name ?? 'Utente sconosciuto'}}</a>, il {{$article->created_at->format('d/m/Y')}}</p>
+                                <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary buttonCustom ">Dettagli</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            @empty
+                @empty
             <div class="col-12 text-center mt-5">
                 <p>Non ci sono prodotti!</p>
             </div>
             @endforelse
-           
         </div>
     </div>
 
