@@ -1,0 +1,51 @@
+{
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
+    "file": "assets/bootstrap-icons-c6569d46.woff",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-966620f9.woff2",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+  },
+  "public/media/HomePage1.jpg": {
+    "file": "assets/HomePage1-a44eb898.jpg",
+    "src": "public/media/HomePage1.jpg"
+  },
+  "public/media/form_contattaci.jpg": {
+    "file": "assets/form_contattaci-e5606a3e.jpg",
+    "src": "public/media/form_contattaci.jpg"
+  },
+  "public/media/pexels-nataliya-vaitkevich-6214472.jpg": {
+    "file": "assets/pexels-nataliya-vaitkevich-6214472-7b31630d.jpg",
+    "src": "public/media/pexels-nataliya-vaitkevich-6214472.jpg"
+  },
+  "public/media/pexels-nataliya-vaitkevich-6214478.jpg": {
+    "file": "assets/pexels-nataliya-vaitkevich-6214478-9a597815.jpg",
+    "src": "public/media/pexels-nataliya-vaitkevich-6214478.jpg"
+  },
+  "public/media/wave.png": {
+    "file": "assets/wave-23a91d2c.png",
+    "src": "public/media/wave.png"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-7610c4a7.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-3df8c8d7.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "assets": [
+      "assets/bootstrap-icons-966620f9.woff2",
+      "assets/bootstrap-icons-c6569d46.woff"
+    ],
+    "css": [
+      "assets/app-3df8c8d7.css"
+    ],
+    "file": "assets/app-1264a36c.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}

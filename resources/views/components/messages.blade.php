@@ -16,9 +16,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            @if (session()->has('accessDenied'))
+            @if (session()->has('deleteArticle'))
             <div class="alert alert-danger alert-dismissible fade show border-start border-end" role="alert">
-                {{session('accessDenied')}}
+                {{session('deleteArticle')}}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             @endif

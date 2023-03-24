@@ -23,13 +23,13 @@
         </div>
         @auth
             @if (Auth::user()->is_revisor)
-                <div class="revisione">
-                    <a href="{{route('revisor.list')}}" class="btn_rev">Lista articoli da revisionare</a >
+                <div class="revisione mt-5">
+                    <a href="{{route('revisor.list')}}" class="nav-link btn_rev">Lista articoli da revisionare</a >
                         <a class="nav-link btn_rev position-relative" aria-current="page"
-                        href="{{ route('revisor.index') }}">Zona Revisore
+                        href="{{route('revisor.index')}}">Zona Revisore
                         <span
                             class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            {{ App\Models\Article::toBeRevisionedCount() }}
+                            {{ App\Models\Article::toBeRevisionedCount()}}
                             <span class="visually-hidden">Messaggi non letti</span>
                         </span>
                     </a>
