@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if(\Illuminate\Support\Facades\Schema::hasTable('categories'){
+        if(\Illuminate\Support\Facades\Schema::hasTable('categories')){
             View::share('categories', Category::All());
         }
     }
