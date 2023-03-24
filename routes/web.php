@@ -58,6 +58,6 @@ Route::get('/revisor/list', [ArticleController::class, 'listArticle'])->name('re
 
 
 //ROTTA RICERCA 
-Route::get('ricerca/articolo', [PublicController::class, 'searchArticle'])->name('articles.search');
+Route::get('ricerca/articolo', [PublicController::class, 'searchArticle'])->middleware('isRevisor')->name('articles.search');
 
 

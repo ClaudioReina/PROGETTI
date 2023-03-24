@@ -130,7 +130,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('revisionDeleted'))
-                <div class="alert alert-danger alert-dismissible fade show border-start border-end" role="alert">
+                <div class="alert alert-success alert-dismissible fade show border-start border-end" role="alert">
                     {{session('revisionDeleted')}}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>

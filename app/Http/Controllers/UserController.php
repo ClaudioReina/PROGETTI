@@ -19,30 +19,36 @@ class UserController extends Controller
 
         if(!$user){
             $articles = Article::where('user_id', Auth::id())->orderBy('created_at', 'DESC')->get();
-          
-       } else {
+            $categories = Category::where('user_id', Auth::id())->orderBy('name')->get();
+            
+        } else {
             $articles = Article::where('user_id', $user->id)->orderBy('created_at', 'DESC')->get();
-            // metodo 1: sfruttare la relazione
-       
-       }
-
-       $categories = Category::where('user_id', Auth::id())->orderBy('name')->get();
-
-    return view('profile', compact('categories','articles','user'));
-       
-
-
+            $categories = Category::where('user_id', $user->id)->orderBy('name')->get();
+        }
         
-        
+        return view('profile', compact('categories', 'articles', 'user'));
     }
 
     public  function changeAvatar(User $user, Request $request) {
         $user->update([
-          'avatar' => $request->file('avatar')->store('public/avatars')
+            'avatar' => $request->file('avatar')->store('public/avatars')
         ]);
         return redirect()->back();
     }
 
+    public function show($id)
+    {
+        $user = User::findOrFail($id);
+        $avatar = $user->avatar; // ottieni l'avatar dell'utente
+        $imageUrl = asset('path/to/default/image.jpg'); // imposta un'immagine predefinita in caso di avatar non disponibile
+    
+        if ($avatar) {
+            $imageUrl = asset($avatar); // imposta l'URL dell'avatar dell'utente
+        }
+    
+        return view('profile', ['user' => $user, 'imageUrl' => $imageUrl]);
+    }
+    
     public function destroy() {
 
         Auth::user()->delete();

@@ -46,7 +46,7 @@
                     </ul>
                 @else
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('profile') }}">Profilo</a></li>
+                        <li><a class="dropdown-item" href="{{ route('profile', 1)}}">Profilo</a></li>
                         <li>
                             <button class="dropdown-item"
                                 onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Esci

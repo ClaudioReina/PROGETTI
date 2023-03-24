@@ -4,33 +4,36 @@
         <div class="row">
             
             <div class="col-md-10 d-flex align-items-center pt-4">
-                <img class="avatar-image" src="{{ Storage::url(Auth::user()->avatar) }}" onclick="document.getElementById('avatar-input').click();" id="avatar-image">
-                <form action="{{ route('changeAvatar', ['user' => Auth::user()]) }}" method="POST" enctype="multipart/form-data" id="avatar-form">
+                <img class="avatar-image" src="{{ Storage::url($user->avatar) }}" onclick="document.getElementById('avatar-input').click();" id="avatar-image">
+                @if(Auth::user()->id == $user->id)
+                <form action="{{ route('changeAvatar', ['user' => $user]) }}" method="POST" enctype="multipart/form-data" id="avatar-form">
                     @csrf
                     @method('put')
                     <input type="file" name="avatar" id="avatar-input" style="display:none;" onchange="document.getElementById('avatar-form').submit();">
                 </form>
+                @endif
                 
                 <div class="col-12 col-md-6">
-                    {{-- <h1 class="ms-5">{{Auth::user()->name}}</h1> --}}
-
-                    @if(Auth::user()->name == $user->name)
+                @if(Auth::user()->name == $user->name)
                     <h1 class="ms-5">{{Auth::user()->name}}</h1>
                 @else
                     <h1 class="ms-5">{{$user->name}}</h1>
                 @endif
 
+                @if(Auth::user()->id == $user->id)
                     <form method="POST" action="{{route('user.destroy')}}">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn btn-danger ms-5 mt-3">Delete Account</button>
                     </form>
+                @endif
                 </div>
             </div>
         </div>
         @auth
             @if (Auth::user()->is_revisor)
                 <div class="revisione mt-5">
+                        <h4 class="display-3 py-5">Sezione Revisore</h4>
                     <a href="{{route('revisor.list')}}" class="nav-link btn_rev">Lista articoli da revisionare</a >
                         <a class="nav-link btn_rev position-relative" aria-current="page"
                         href="{{route('revisor.index')}}">Zona Revisore
@@ -88,7 +91,7 @@
         </div>
         {{-- SEZIONE CATEGORIE --}}
         @auth
-        @if(auth()->user()->id == 1)
+        @if(Auth::user()->id == $user->id && Auth()->user()->user_id == 1)
         <div class="row py-5">
             <div class="col-12 mb-5 d-flex justify-content-center">
                 <h3 class="display-3 mb-3">Categorie</h3>
