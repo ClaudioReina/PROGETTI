@@ -18,7 +18,6 @@ class ArticleController extends Controller
     {
         $articles = Article::latest()->get();
 
-
         return view('article.index', compact('articles'));
     }
 

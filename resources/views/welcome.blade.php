@@ -2,21 +2,29 @@
     
     <x-messages />
 
-    <div class="container-fluid  bg_homepage">
+    <div class="container-fluid bg_homepage">
         <div class="row">
-            <div class="col-12 col-md-6 ps-5 py-5 text-center text-white ">
+            <div class="col-12 col-md-6 ps-5 text-center text-white ">
                 @auth
                 <h2>Benvenuto {{Auth::user()->name}}</h2>
                 <a href="{{route('article.create')}}" class="btn btn-contact mt-5 shadow" type="button">Inserisci annuncio</a>
                 @endauth
             </div>
-            <div class="col-12 col-md-4 py-5 ps-5 text-white">
+            <div class="col-12 col-md-4 py-5 text-white text-center">
                 <h1>Presto.it fa al caso tuo!</h1>
                 <h3>Mostra a tutti cos'hai da offrire</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit soluta est, itaque, repellendus vitae
-                    alias nostrum praesentium laboriosam incidunt dolore maxime ducimus fuga natus, totam placeat
-                    dolorum optio illum delectus.
+                <p>Nato nel 2023, Presto.it si differenzia dai competitors per la sua accessibilità.
+                    Puoi immergerti tra gli annunci di varie categorie, acquistare il prodotto che più desideri 
+                    o caricare quello che non ti serve più. E non è finita qui!
+                    Vuoi unirti al team di Presto.it? Compila il form e attendi l'accettazione
+                    dell'admin. 
+                    E' tutto così semplice? Sì, noi siamo PRESTO.IT!
                 </p>
+                <div class="d-flex justify-content-around mx-auto text-center">
+                    <a href="{{route('article.index')}}"><div class="personal_icon personal"><img src="https://img.icons8.com/color/48/null/search--v1.png"/></div></a> 
+                    <a href="{{route('article.index')}}"><div class="personal_icon"><img src="https://img.icons8.com/ios/50/000000/cash-in-hand.png"/> </div></a> 
+                    <a href="{{route('login')}}"> <div class="personal_icon icon"><img src="https://img.icons8.com/ios-glyphs/30/000000/working-with-a-laptop.png"/></div></a>
+                </div>
             </div>
         </div>
         
