@@ -233,8 +233,6 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
   transform: scale(.98);
 }
 
-
-
 /* BOTTONE PER CARD */
 
 .btn-contact2 {
@@ -292,11 +290,6 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
   filter: brightness(.7);
   transform: scale(.98);
 }
-
-
-
-
-
 
 
 /* BG HEADER */
@@ -574,6 +567,10 @@ text-shadow: 3px 3px 8px rgb(96, 95, 95);
 
 .cardCust img{
 padding: 15px;
+}
+
+.title_custom{
+  color: rgb(51,204,102);
 }
 
 
