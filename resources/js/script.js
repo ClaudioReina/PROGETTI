@@ -48,11 +48,21 @@ document.addEventListener('scroll', () => {
 let testi = ["Personalizzato!", "Originale!", "Accessibile!", "Sicuro!"];
         var indice = 0;
         
-        setInterval(function() {
+        /* setInterval(function() {
             document.getElementById("testo-cambiante").innerHTML = testi[indice];
             indice++;
             if (indice == testi.length) {
                 indice = 0;
+            }
+        }, 1750); */
+        setInterval(function() {
+            var el = document.getElementById("testo-cambiante");
+            if (el) {
+                el.innerHTML = testi[indice];
+                indice++;
+                if (indice == testi.length) {
+                    indice = 0;
+                }
             }
         }, 1750);
 

@@ -1,21 +1,21 @@
 <x-layout>
 
-    <div class="container-fluid bg_homepage">
+    <div class="container-fluid bg_homepage centerMod">
         <div>
             <h1 class="text-center titolo-animato title_custom"><span class="display-1 fw-bold">
                 Presto.it</span><br><span>shop online</span>
             </h1>
         </div>
-        <div class="row">
+        <div class="row ">
             <div class="col-12 col-md-6 ps-5 py-5 text-center text-white ">
                 <x-messages />
                 @auth
-                    <h2>Benvenuto {{ Auth::user()->name }}</h2>
-                    <a href="{{ route('article.create') }}" class="btn btn-contact mt-5 shadow" type="button">Inserisci
+                    <h2 class="centerModPlus mt-2 fs-1">Benvenuto {{ Auth::user()->name }}</h2>
+                    <a href="{{ route('article.create') }}" class="btn btn-contact mt-5 shadow centerModPlus" type="button">Inserisci
                         annuncio</a>
                 @endauth
             </div>
-            <div class="col-12 col-md-4 py-5 text-white text-center">
+            <div class="col-12 col-md-4 py-5 text-white text-center centerMod">
                 <h1>Presto.it fa al caso tuo!</h1>
                 <h3>Mostra a tutti cos'hai da offrire</h3>
                 <p>Nato nel 2023, Presto.it si differenzia dai competitors per la sua accessibilità.
@@ -122,7 +122,7 @@
             </div>
             @foreach ($articles as $article)
                 <div class="col-12 col-md-3 mx-auto ">
-                    <div class="card cardCust shadow cardElements ">
+                    <div class="card cardCust shadow cardElements marginForMobile">
                         @if (!$article->cover)
                             <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top"
                                 alt="immagine non trovata">

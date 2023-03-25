@@ -59,7 +59,7 @@
 
                             </div>
                         </div>
-                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2 marginForMobile">
                             <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                                 <h4 class="mb-4">Qualche consiglio dal Team Presto.it</h4>
                                 <ol>
