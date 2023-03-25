@@ -146,8 +146,12 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
 }
 
 .navbar .linkCustom:hover::before{
-  width: 100%;
-  /* border-bottom:rgb(235, 230, 230) !important ; */
+  width: 100%; 
+ /* border-bottom:rgb(235, 230, 230) !important ; */
+}  
+
+.textNav {
+  color: rgb(235, 230, 230) !important;
 }
 
 
@@ -167,9 +171,6 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
 /* END CARD */
 
 
-.textNav {
-  color: rgb(235, 230, 230) !important;
-}
 
 /* Bottone Del Form Contattaci */
 .btn-contact {
@@ -309,7 +310,14 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
   min-height: 100vh;
   padding-top: 6rem;
   z-index: 1;
+
 }
+
+/* @media (max : 775px){
+  .writeheder{
+  margin-left: 50px;
+  }
+} */
 
 .containerIndexCustom{
   background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/pexels-nataliya-vaitkevich-6214478.jpg) ;
@@ -563,3 +571,11 @@ text-shadow: 3px 3px 8px rgb(96, 95, 95);
 .cardCust img{
 padding: 15px;
 }
+
+
+
+
+
+
+
+

@@ -123,8 +123,8 @@
     </div>
     
     <div class="container-fluid form_bg">
-        <div class="row">
-            <div class="col-12 col-md-6 text-white ms-5">
+        <div class="row writeheder">
+            <div class="col-12 col-md-6 text-white ms-5 ">
                 <h4 class="display-4">Vuoi restare informato sui nuovi annunci?</h4>
                 <h5 class="display-6">Clicca sul bottone e compila il form di adesione alla<p class="txMain">newsletter</p></h5>
                 <button class="btn-contact"> Iscriviti alla newsletter
