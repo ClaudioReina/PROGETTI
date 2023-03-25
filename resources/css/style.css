@@ -59,6 +59,12 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
     border-bottom-right-radius: .3rem;
   }
 }
+@media (min-width: 769px) {
+  .cardCustom{
+    width: 35vw;
+  }
+}
+
 
 .avatar-image {
   width: 200px; 
@@ -146,8 +152,12 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
 }
 
 .navbar .linkCustom:hover::before{
-  width: 100%;
-  /* border-bottom:rgb(235, 230, 230) !important ; */
+  width: 100%; 
+ /* border-bottom:rgb(235, 230, 230) !important ; */
+}  
+
+.textNav {
+  color: rgb(235, 230, 230) !important;
 }
 
 
@@ -160,16 +170,11 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
 
 /* CARD */
 
-.cardCustom{
-  width: 35vw;
-}
+
 
 /* END CARD */
 
 
-.textNav {
-  color: rgb(235, 230, 230) !important;
-}
 
 /* Bottone Del Form Contattaci */
 .btn-contact {
@@ -227,8 +232,6 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
   filter: brightness(.7);
   transform: scale(.98);
 }
-
-
 
 /* BOTTONE PER CARD */
 
@@ -289,11 +292,6 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
 }
 
 
-
-
-
-
-
 /* BG HEADER */
 .form_bg{
   background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/form_contattaci.jpg);
@@ -309,6 +307,13 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
   min-height: 100vh;
   padding-top: 6rem;
   z-index: 1;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .centerMod{
+   justify-content: center;
+  }
 }
 
 .containerIndexCustom{
@@ -563,3 +568,15 @@ text-shadow: 3px 3px 8px rgb(96, 95, 95);
 .cardCust img{
 padding: 15px;
 }
+
+.title_custom{
+  color: rgb(51,204,102);
+}
+
+
+
+
+
+
+
+

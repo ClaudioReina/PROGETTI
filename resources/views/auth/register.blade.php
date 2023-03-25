@@ -57,6 +57,12 @@
                                                 type="submit">Registrati
                                             </button>
                                         </div>
+
+                                        <div class="d-flex align-items-center justify-content-center pb-4">
+                                            <p class="mb-0 me-2">Hai già un profilo?</p>
+                                            <a href="{{route('login')}}"><button type="button"
+                                                class="btn btn-outline-danger">Accedi!</button></a>
+                                        </div>
                                     </form>
                                 </div>
                             </div>

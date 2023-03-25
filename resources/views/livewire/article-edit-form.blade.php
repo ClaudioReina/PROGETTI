@@ -8,14 +8,7 @@
                             <div class="col-lg-6">
                                 <div class="card-body p-md-5 mx-md-4">
                                     
-                                    <div>
-                                        @if (session()->has('articleUpdated'))
-                                        <div class="alert alert-success">
-                                            {{ session('articleUpdated') }}
-                                        </div>
-                                        @endif
-                                    </div>
-                                    
+                                   
                                     <div class="text-center">
                                         <img src="/media/logo.png" style="width: 185px;" alt="logo">
                                         <h4 class="mt-1 mb-5 pb-1">Presto.it</h4>
