@@ -28,7 +28,9 @@ public function update(Article $article){
         'description'=>$this->description,
     ]);
 
-    return redirect(route('article.index'))->with('articleUpdated','Hai aggiornato l\'articolo');
+
+    session()->flash('articleUpdated', 'Annuncio modificato con successo!');
+    return redirect(route('article.index'));
 
 }
 
