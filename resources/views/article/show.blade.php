@@ -3,17 +3,15 @@
     <div class="container-fluid px-5">
         <div class="row py-5 mt-5">
             
-            <div class="col-12 col-lg-3 ms-5">  
+            <div class="col-12 col-lg-3 centerMod">  
                 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                           {{--  @foreach() --}}
                                 @if (!$article->cover)
                                 <img src="https://picsum.photos/300" class="img-fluid card-img-top rounded-5" alt="immagine non trovata">
                                 @else
                                 <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top rounded-5" alt="{{$article->name}}">
                                 @endif
-                           {{--  @endforeach --}}
                         </div>
                          <div class="carousel-item">
                             @if (!$article->cover)
@@ -47,7 +45,7 @@
             </div>
             
         </div>            
-            <div class="col-4 col-md-2 ms-5">
+            <div class="col-4 col-md-2 ">
                 <a href="{{route('article.index')}}" class="btn btn-secondary">Torna indietro</a>
             </div>
         </div>
