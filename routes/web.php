@@ -49,6 +49,8 @@ Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('is
 Route::patch('/accetta/articolo/{article}', [RevisorController::class, 'acceptArticle'])->middleware('isRevisor')->name('revisor.accept_article');
 // rifiuta annuncio
 Route::patch('/rifiuta/articolo/{article}', [RevisorController::class, 'rejectArticle'])->middleware('isRevisor')->name('revisor.reject_article');
+// ripristina annucio
+Route::patch('/ripristina/articolo/{article}', [RevisorController::class, 'undoArticle'])->middleware('isRevisor')->name('revisor.undo_article');
 // richiedi di diventare revisore
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 // rendi utente revisore

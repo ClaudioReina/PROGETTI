@@ -3,7 +3,7 @@
     <div class="container py-5">
         <div class="row">
             
-        {{-- AVATAR SECTION --}}
+            {{-- AVATAR SECTION --}}
             <div class="col-md-10 d-flex align-items-center pt-4">
                 <img class="avatar-image" src="{{ Storage::url($user->avatar) }}" onclick="document.getElementById('avatar-input').click();" id="avatar-image">
                 @if(Auth::user()->id == $user->id)
@@ -31,47 +31,41 @@
                             <ul class="dropdown-menu">
                                 {{-- <li><a class="dropdown-item" href="#">Scrivere qui</a></li> --}}
                                 {{-- <li><hr class="dropdown-divider"></li> --}}
-                                <li><a class="dropdown-item" href="#">
-                                    @if(Auth::user()->id == $user->id)
-                                    <form method="POST" action="{{route('user.destroy')}}">
-                                        @csrf
-                                        @method('delete')
-                                        <button type="submit" class="btn btn-danger mx-auto mt-3">Elimina Profilo</button>
-                                    </form>
-                                    @endif</a></li>
-                                </ul>
-                            </li>
-                        </div>
-                        
-                        {{-- <form method="POST" action="{{route('user.destroy')}}">
-                            @csrf
-                            @method('delete')
-                            <button type="submit" class="btn btn-danger ms-5 mt-3">Delete Account</button>
-                        </form> --}}
-                        @endif
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        @if(Auth::user()->id == $user->id)
+                                        <form method="POST" action="{{route('user.destroy')}}">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="btn btn-danger mx-auto mt-3">Elimina Profilo</button>
+                                        </form>
+                                        @endif
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </div>
+                    @endif
                 </div>
             </div>
-        {{-- END AVATAR SECTION --}}
-            <x-messages />
+        </div>
+
+        <x-messages />
             
-            @auth
-            @if(Auth::user()->id == $user->id && Auth::user()->is_revisor)
-            <h4 class="display-6 text-center py-3">Sezione Revisore</h4>
-            <div class="revisione">
-                <a href="{{route('revisor.list')}}" class="nav-link btn_rev">Lista articoli da revisionare</a >
-                    <a class="nav-link btn_rev position-relative" aria-current="page"
-                    href="{{route('revisor.index')}}">Zona Revisore
-                    <span
-                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    {{ App\Models\Article::toBeRevisionedCount()}}
-                    <span class="visually-hidden">Messaggi non letti</span>
-                </span>
+        @auth
+        @if(Auth::user()->id == $user->id && Auth::user()->is_revisor)
+        <h4 class="display-6 text-center py-3">Sezione Revisore</h4>
+        <div class="revisione">
+            <a href="{{route('revisor.list')}}" class="nav-link btn_rev">Lista articoli da revisionare</a>
+            <a class="nav-link btn_rev position-relative" aria-current="page" href="{{route('revisor.index')}}"> Zona Revisore
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{ App\Models\Article::toBeRevisionedCount()}}</span>
+                <span class="visually-hidden">Messaggi non letti</span>
             </a>
         </div>
         @endif
         @endauth
-        {{-- SEZIONE ARTICOLI --}}
+        {{-- SEZIONE ANNUNCI --}}
         <div class="row">
             <div class="col-12 text-center">
                 <h3 class="display-3 py-5">Annunci caricati</h3>
@@ -158,7 +152,9 @@
         </div>
         @endif
         @endauth
-    </div> 
+    </div>
+     
     <div class="container-fluid spaced">
     </div>
+
 </x-layout>

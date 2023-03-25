@@ -10,4 +10,10 @@
         </div>
     </div>
 
+    <script>
+        Livewire.on('refresh', () => {
+            // aggiorna la lista di articoli
+            Livewire.emit('refresh');
+        });
+    </script>
 </x-layout>

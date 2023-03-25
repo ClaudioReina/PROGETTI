@@ -7,9 +7,8 @@
                 <th scope="col">Categoria</th>
                 <th scope="col">Prezzo</th>
                 <th scope="col">Creato il</th>
-                <th scope="col">Accettate</th>
-                <th scope="col">Rifiutare</th>
-                <th scope="col">####</th>
+                <th scope="col">Stato annuncio</th>
+                <th scope="col">######</th>
 
             </tr>
         </thead>
@@ -22,16 +21,28 @@
                 <td>{{$article->price}} €</td>
                 <td>{{$article->created_at}}</td>
                 <td>
-                    <span class="btn btn-success">Approva</span>
+                    @if($article->is_accepted == 1)
+                    <span class="label text-success">Accettata</span>
+                    @elseif ($article->is_accepted === 0)
+                    <span class="label text-danger">Rifiutata</span>
+                    @else
+                    <span class="label text-warning">In corso</span>
+                    @endif
                 </td>
                 <td>
-                    <span class="btn btn-danger">Rifiuta</span>
-                </td>
-                <td>
-                    <span class="btn btn-warning">Annulla</span>
+                    @if ($article->is_accepted !== null)
+                    <form action="{{ route('revisor.undo_article', ['article' => $article]) }}"
+                        method="POST" class="mx-auto">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" class="btn btn-warning shadow">Annulla</button>
+                    </form>
+                    
+                    @endif
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
+
 </div>

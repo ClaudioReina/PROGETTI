@@ -17,11 +17,11 @@ class RevisorController extends Controller
         return view('revisor.index', compact('article_to_check'));
     }
 
-    public function listArticle(){
-        
+    public function listArticle(){       
         $article_to_check =  Article::where('is_accepted', null)->first();
+        $article =  Article::where('is_accepted', !null)->first();
 
-        return view ('revisor.list');
+        return view ('revisor.list', compact('article', 'article_to_check'));
     }
 
     public function acceptArticle(Article $article){
@@ -34,6 +34,12 @@ class RevisorController extends Controller
         return redirect()->back()->with('revisionDeleted', 'Prodotto rifiutato!');
     }
 
+    public function undoArticle(Article $article){
+        $article->setAccepted(null);
+        return redirect()->back()->with('revisionUndo', 'Prodotto da revisionare!');
+    }
+
+    
     public function becomeRevisor(){
 
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));

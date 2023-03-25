@@ -18,6 +18,15 @@ class ArticleList extends Component
         session()->flash('articleDestroyed', 'Articolo eliminato correttamente');
     }
     
+    public function undoArticle(Article $article)
+    {
+        $article->setAccepted(null);
+        $this->articles = $this->articles->where('id', '<>', $article->id);
+        $this->emit('refresh');
+        return redirect()->back()->with('revisionUndo', 'Prodotto da revisionare!');
+    }
+    
+    
     public function render()
     {
         $articles = Article::all();
