@@ -3,7 +3,7 @@
     <div class="container-fluid containerIndexCustom pt-3 text-white">
         <div class="row">
             <div class="col-12 text-center ">
-                <h2 class="robotoFont mt-3">Prodotti Disponibili</h2>
+                <h2 class="robotoFont mt-3">Annunci Disponibili</h2>
             </div>
         </div>
         <x-messages />
@@ -30,12 +30,12 @@
                     </div>
                 @empty
             <div class="col-12 text-center mt-5">
-                <p>Non ci sono prodotti!</p>
+                <p>Non ci sono annunci!</p>
             </div>
             @endforelse
         </div>
-        <div class="container-fluid spaced">
-        </div>
+    </div>
+    <div class="container-fluid spaced">
     </div>
 
 </x-layout>

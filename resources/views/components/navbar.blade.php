@@ -13,7 +13,7 @@
                     <a class="nav-link linkCustom" href="{{route('become.revisor')}}">Diventa revisore</a>
                 </li>           
                 <li class="nav-item">
-                    <a class="nav-link linkCustom" href="{{ route('article.index') }}">Indice Prodotti</a>
+                    <a class="nav-link linkCustom" href="{{ route('article.index') }}">Indice Annunci</a>
                 </li>
 
                 <li class="nav-item dropdown">

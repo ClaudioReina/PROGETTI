@@ -52,7 +52,7 @@ class CategoryController extends Controller
         $articles = Article::all();
 
         $articles = $articles->filter(function ($articles) use ($category) {
-            return $articles->category == $category->id;
+            return $articles->category == $category->name;
         });
         return view('category.show', compact('category', 'articles'));
 

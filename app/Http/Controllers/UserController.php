@@ -38,6 +38,7 @@ class UserController extends Controller
 
     public function show($id)
     {
+        
         $user = User::findOrFail($id);
         $avatar = $user->avatar; // ottieni l'avatar dell'utente
         $imageUrl = asset('path/to/default/image.jpg'); // imposta un'immagine predefinita in caso di avatar non disponibile

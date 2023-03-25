@@ -78,7 +78,6 @@
 </footer> --}}
 <!-- Footer -->
 
-
 <footer class="footer pt-1 mt-3">
   <div class="waves">
     <div class="wave" id="wave1"></div>
@@ -101,10 +100,9 @@
     <ul class="small d-flex">
       <li><a class="text-white mx-2" href="{{route('homepage')}}">Home</a></li>
        <li><a class="text-white mx-2 -flex -third" href="{{route('become.revisor')}}">Lavora con noi</a></li> 
-      <li><a class="text-white mx-2" href="{{ route('article.index') }}">Prodotti</a></li>
-      <li><a class="text-white mx-2" href="{{ route('login') }}">iscriviti</a></li>
+      <li><a class="text-white mx-2" href="{{ route('article.index') }}">Annunci</a></li>
+      <li><a class="text-white mx-2" href="{{ route('login') }}">Iscriviti</a></li>
     </ul>
-    
     
   </div>
   <p class="small text-center text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maxime repellendus mollitia necessitatibus cupiditate totam nulla, ullam qui dolores nisi? Eius est ullam eaque minus dicta velit, optio itaque molestiae.</p>

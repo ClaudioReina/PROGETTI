@@ -118,7 +118,7 @@
     <div class="container-fluid backWelcome2">
         <div class="row pb-5">
             <div class="col-12 text-center">
-                <h3 class="text-white mb-5 display-4 robotoFont">Ultimi prodotti caricati</h3>
+                <h3 class="text-white mb-5 display-4 robotoFont">Ultimi Annunci caricati</h3>
             </div>
             @foreach ($articles as $article)
                 <div class="col-12 col-md-3 mx-auto ">

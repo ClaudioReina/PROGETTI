@@ -1,5 +1,5 @@
 {{-- Access Denied --}}
-<div class="container-fluid">
+<div class="container-fluid py-2">
     <div class="row justify-content-center">
         <div class="col-md-12">
             @if (session()->has('accessDenied'))
@@ -17,7 +17,7 @@
 {{-- SEZIONE ARTICLE --}}
 
     {{-- Delete Article --}}
-    <div class="container-fluid">
+    <div class="container-fluid py-2">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('articleDeleted'))
@@ -31,7 +31,7 @@
     </div>
 
     {{-- Create Article --}}
-    <div class="container-fluid">
+    <div class="container-fluid py-2">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('articleCreated'))
@@ -45,7 +45,7 @@
     </div>
 
     {{-- Update Article --}}
-    <div class="container-fluid">
+    <div class="container-fluid py-2">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('articleUpdated'))
@@ -64,7 +64,7 @@
 {{-- SEZIONE CATEGORY --}}
 
     {{-- Delete Category --}}
-    <div class="container-fluid">
+    <div class="container-fluid py-2">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('categoryDeleted'))
@@ -78,7 +78,7 @@
     </div>
 
     {{-- Create Category --}}
-    <div class="container-fluid">
+    <div class="container-fluid py-2">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('categoryCreated'))
@@ -92,7 +92,7 @@
     </div>
 
     {{-- Update Category --}}
-    <div class="container-fluid">
+    <div class="container-fluid py-2">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('categoryUpdated'))
@@ -112,7 +112,7 @@
 
 {{-- Revision Accepted --}}
 
-    <div class="container-fluid">
+    <div class="container-fluid py-2">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('revisionAccepted'))
@@ -126,7 +126,7 @@
     </div>
 
     {{-- Revision Rejected --}}
-    <div class="container-fluid">
+    <div class="container-fluid py-2">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('revisionDeleted'))
@@ -140,7 +140,7 @@
     </div>
 
     {{-- become Revisor --}}
-    <div class="container-fluid">
+    <div class="container-fluid py-2">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('becomeRevisor'))
@@ -154,7 +154,7 @@
     </div>
 
     {{-- Make Revisor --}}
-    <div class="container-fluid">
+    <div class="container-fluid py-2">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('makeRevisor'))
