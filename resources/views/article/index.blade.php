@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid containerIndexCustom mt-3 text-white">
+    <div class="container-fluid containerIndexCustom pt-3 text-white">
         <div class="row">
             <div class="col-12 text-center ">
                 <h2 class="robotoFont mt-3">Prodotti Disponibili</h2>
