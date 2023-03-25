@@ -101,19 +101,19 @@
                     <h3 class="text-white mb-5 display-4 robotoFont">Ultimi prodotti caricati</h3>
                 </div>
                 @foreach ($articles as $article)
-                <div class="col-12 col-md-3 mx-auto">
-                    <div class="card shadow">
+                <div class="col-12 col-md-3 mx-auto ">
+                    <div class="card cardCust shadow cardElements ">
                         @if (!$article->cover)
                         <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top" alt="immagine non trovata">
                         @else
                         <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top" alt="{{$article->name}}">
                         @endif
-                        <div class="card-body">
-                            <h5 class="card-title">{{$article->title}}</h5>
-                            <p class="card-text">{{$article->price}} €</p>
+                        <div class="card-body ">
+                            <h5 class="card-title animate__animated animate__bounceIn robotoFont fs-4 text-center">{{$article->title}}</h5>
+                            <p class="card-text fst-italic fw-bold text-center">{{$article->price}} €</p>
                             <p class="card-text text-muted">{{Str::limit($article->description,50)}}</p>
                             <p>Creato da {{$article->user->name ?? 'Utente sconosciuto'}}, il {{$article->created_at->format('d/m/Y')}}</p>
-                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">Dettagli</a>
+                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-contact2">Dettagli</a>
                         </div>
                     </div>
                 </div>
@@ -134,19 +134,7 @@
     </div>
     
     
-    <script>
-        var testi = ["Personalizzato!", "Originale!", "Accessibile!", "Sicuro!"];
-        var indice = 0;
-        
-        setInterval(function() {
-            document.getElementById("testo-cambiante").innerHTML = testi[indice];
-            indice++;
-            if (indice == testi.length) {
-                indice = 0;
-            }
-        }, 3000);
-        
-    </script>
+    
 </x-layout>
 
 

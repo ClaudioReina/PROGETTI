@@ -25,6 +25,8 @@ hiddenDownElements.forEach((el) => observer.observe(el));
 const hiddenUpElements = document.querySelectorAll('.hidden-up');
 hiddenUpElements.forEach((el) => observer.observe(el));
 
+//
+
 
 /* navbar fade */
 let navbar = document.querySelector('.navbar');
@@ -35,10 +37,25 @@ document.addEventListener('scroll', () => {
         userIcon.classList.add('text-white');
         navbar.classList.add('navbar-dark');
         navbar.classList.add('bg_forNav','textNav');
+        navbar.classList.remove('navbarColor');
     } else {
         userIcon.classList.remove('text-white');
         navbar.classList.remove('bg_forNav','textNav','navbar-dark')
+        navbar.classList.add('navbarColor');
     }
 })
 
+let testi = ["Personalizzato!", "Originale!", "Accessibile!", "Sicuro!"];
+        var indice = 0;
+        
+        setInterval(function() {
+            document.getElementById("testo-cambiante").innerHTML = testi[indice];
+            indice++;
+            if (indice == testi.length) {
+                indice = 0;
+            }
+        }, 1750);
 
+
+
+        

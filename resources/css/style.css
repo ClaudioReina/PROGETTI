@@ -121,6 +121,10 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
   background-color: var(--main-color);
 }
 
+.navbarColor{
+ background-color: rgb(233, 234, 221);
+}
+
 .transizione{
   transition: 0.8s;
 }
@@ -143,6 +147,7 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
 
 .navbar .linkCustom:hover::before{
   width: 100%;
+  /* border-bottom:rgb(235, 230, 230) !important ; */
 }
 
 
@@ -162,8 +167,8 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
 /* END CARD */
 
 
-.textNav{
-  color: whitesmoke !important;
+.textNav {
+  color: rgb(235, 230, 230) !important;
 }
 
 /* Bottone Del Form Contattaci */
@@ -222,6 +227,73 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
   filter: brightness(.7);
   transform: scale(.98);
 }
+
+
+
+/* BOTTONE PER CARD */
+
+.btn-contact2 {
+ 
+  --color2: rgb(10, 25, 30);
+  padding: 0.8em 1.75em;
+  background-color: var(--main-color);
+  border-radius: 6px;
+  border: .3px solid var(--second-color);
+  transition: .5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 19px;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  color: var(--second-color);
+}
+
+.btn-contact2::after, .btn-contact2::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: .5s ease-out;
+  background-color: var(--second-color);
+}
+
+.btn-contact2::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn-contact2:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn-contact2:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+}
+
+.btn-contact2:hover {
+  color: var(--color2);
+}
+
+.btn-contact2:active {
+  filter: brightness(.7);
+  transform: scale(.98);
+}
+
+
+
+
+
+
+
 /* BG HEADER */
 .form_bg{
   background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/form_contattaci.jpg);
@@ -481,4 +553,13 @@ background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba
   height: 70px;
   width: 70px;
   border: solid 2px white;
+}
+
+.cardCust{
+background-color: rgba(246, 246, 246, 0.742);
+text-shadow: 3px 3px 8px rgb(96, 95, 95);
+}
+
+.cardCust img{
+padding: 15px;
 }

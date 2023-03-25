@@ -10,7 +10,7 @@
         <div class="row py-5 hidden justify-content-around">
             {{--  @if(count($articles)) --}}
                 @forelse ($articles as $article)
-                    <div class="col-12 col-md-6 py-2 divCustom">
+                    <div class="col-12 col-md-6 py-2 divCustom mb-3">
                         <div class="cardCustom d-flex border mx-auto">
                             @if (!$article->cover)
                                 <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top img-custom" alt="immagine non trovata">
@@ -32,6 +32,8 @@
                 <p>Non ci sono prodotti!</p>
             </div>
             @endforelse
+        </div>
+        <div class="container-fluid spaced">
         </div>
     </div>
 

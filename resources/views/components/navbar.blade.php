@@ -1,4 +1,4 @@
-<nav class="navbar navbarCustom navbar-expand-lg sticky-top transizione">
+<nav class="navbar navbarCustom navbarColor navbar-expand-lg sticky-top transizione">
     <div class="container-fluid">
         <a class="navbar-brand ms-5" href="{{ route('homepage') }}"><img src="/media/presto.it__1_-removebg-preview.png"
                 style="width: 50px"></a>
