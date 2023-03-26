@@ -84,11 +84,11 @@
             <a class="nav-link btn_rev position-relative" aria-current="page" href="{{route('revisor.index')}}"> Zona Revisore
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                     {{ App\Models\Article::toBeRevisionedCount()}}</span>
-                    <span class="visually-hidden">Messaggi non letti</span>
-                </a>
-            </div>
-            @endif
-            @endauth
+                <span class="visually-hidden">Messaggi non letti</span>
+            </a>
+        </div>
+        @endif
+        @endauth
             {{-- SEZIONE ANNUNCI --}}
             <div class="row">
                 <div class="col-12 text-center">
@@ -109,6 +109,20 @@
                                     <div class="d-flex justify-content-between"><h3>Nome:</h3><p class="pt-1">{{$article->title}}</p></div>
                                     <div class="d-flex justify-content-between"><h3>Prezzo:</h3><p class="pt-1">{{$article->price}} €</p></div>
                                     <div class="d-flex justify-content-between"><h3>Categoria:</h3><p class="pt-1">{{$article->category}}</p></div>
+                                    @if (Auth::user()->id == $user->id)
+                                    <div class="d-flex justify-content-between"><h3>Stato Annuncio:</h3>
+                                        <p class="pt-1">
+                                        @if($article->is_accepted == 1)
+                                        <span class="label text-success">Accettata</span>
+                                        @elseif ($article->is_accepted === 0)
+                                        <span class="label text-danger">Rifiutata</span>
+                                        @else
+                                        <span class="label">In corso</span>
+                                        @endif
+                                        </p>
+                                    </div>
+                                    @endif
+
                                     <form action="{{route('article.show', $article)}}" method="GET" class="d-inline-block">
                                         @csrf
                                         <button type="submit" class="btn btn-outline-primary">Visualizza</button>
