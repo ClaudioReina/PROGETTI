@@ -92,6 +92,6 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return redirect(route('homepage'))->with('categoryDeleted', "Categoria eliminata con successo.");
+        return redirect()->back()->with('categoryDeleted', "Categoria eliminata con successo.");
     }
 }

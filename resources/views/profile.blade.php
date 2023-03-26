@@ -29,9 +29,12 @@
                                 <i class="bi bi-gear text-black fs-3"></i>
                             </a>
                             <ul class="dropdown-menu">
-                                
-                                {{-- <li><a class="dropdown-item" href="#">Scrivere qui</a></li>
-                                <li><hr class="dropdown-divider"></li> --}}                              
+                                @if(!Auth::user()->is_revisor)
+                                <li class="nav-item text-center">
+                                    <a class="nav-link linkCustom" href="{{route('become.revisor')}}">Diventa revisore</a>
+                                </li> 
+                                <li><hr class="dropdown-divider"></li>                            
+                                @endif
                                 <li>
                                     <div class="text-center">
                                         <!-- Button trigger modal -->
@@ -74,7 +77,9 @@
             </div>
         </div>
         
-        <x-messages />
+        <div class="py-5">
+            <x-messages />
+        </div>
         
         @auth
         @if(Auth::user()->id == $user->id && Auth::user()->is_revisor)
@@ -106,7 +111,7 @@
                                 <img src="{{Storage::url($article->cover)}}" class="img-fluid" alt="...">
                                 @endif
                                 <div class="card-body p-2">
-                                    <div class="d-flex justify-content-between"><h3>Nome:</h3><p class="pt-1">{{$article->title}}</p></div>
+                                    <div class="d-flex justify-content-between"><h3>Nome:</h3><p class="pt-1">{{Str::limit($article->title, 25)}}</p></div>
                                     <div class="d-flex justify-content-between"><h3>Prezzo:</h3><p class="pt-1">{{$article->price}} €</p></div>
                                     <div class="d-flex justify-content-between"><h3>Categoria:</h3><p class="pt-1">{{$article->category}}</p></div>
                                     @if (Auth::user()->id == $user->id)

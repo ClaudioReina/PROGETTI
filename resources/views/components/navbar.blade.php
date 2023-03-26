@@ -8,10 +8,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <a class="nav-link active linkCustom" aria-current="page" href="{{ route('homepage') }}">Home</a>
-            <ul class="navbar-nav mb-2 mb-lg-0 m-auto">
-                <li class="nav-item">
-                    <a class="nav-link linkCustom" href="{{route('become.revisor')}}">Diventa revisore</a>
-                </li>           
+            <ul class="navbar-nav mb-2 mb-lg-0 m-auto">         
                 <li class="nav-item">
                     <a class="nav-link linkCustom" href="{{ route('article.index') }}">Indice Annunci</a>
                 </li>
@@ -30,7 +27,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link linkCustom" href="{{ route('article.create') }}">Crea Prodotto</a>
+                    <a class="nav-link linkCustom" href="{{ route('article.create') }}">Crea Annuncio</a>
                 </li>
             </ul>
             {{-- GUEST --}}
@@ -58,7 +55,7 @@
             </div>
             <form action="{{route('articles.search')}}" method="GET" class="d-flex">
                 <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button id="btn-search" class="btn btn-outline-dark" type="submit">Search</button>
               </form>
         </div>
     </div>
