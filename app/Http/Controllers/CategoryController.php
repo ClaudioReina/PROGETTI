@@ -49,7 +49,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        $articles = Article::all();
+        $articles = Article::where('is_accepted', true)->get();
 
         $articles = $articles->filter(function ($articles) use ($category) {
             return $articles->category == $category->name;

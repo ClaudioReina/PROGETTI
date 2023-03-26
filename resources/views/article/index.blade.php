@@ -9,8 +9,9 @@
     <x-messages />
     {{-- CARD PRODOTTO --}}
     <div class="row py-5 hidden justify-content-around centerMod">
-        {{--  @if(count($articles)) --}}
-            @forelse ($articles as $article)
+        
+        
+        @forelse ($articles as $article)
                 <div class="col-12 col-md-6 py-2 mb-3">
                     <div class="cardCustom d-flex border mx-auto">
                         @if (!$article->cover)
@@ -29,10 +30,10 @@
                     </div>
                 </div>
             @empty
-        <div class="col-12 text-center mt-5">
-            <p>Non ci sono annunci!</p>
-        </div>
-        @endforelse
+            <div class="col-12 text-center mt-5">
+                <p>Non ci sono annunci!</p>
+            </div>
+            @endforelse
     </div>
     <div class="container-fluid spaced">
     </div>
