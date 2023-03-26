@@ -2,7 +2,7 @@
 
     <div class="container-fluid bg_homepage centerMod">
         <div class="row">
-            <h1 class="text-center titolo-animato title_custom"><span class="display-1 fw-bold">
+            <h1 class="text-center txSec hidden"><span class="display-1 fw-bold">
                 Presto.it</span><br><span>shop online</span>
             </h1>
             <div class="py-2">
@@ -136,9 +136,9 @@
                                 {{ $article->title }}
                             </h5>
                             <p class="card-text fst-italic fw-bold text-center">{{ $article->price }} €</p>
-                            <p class="card-text text-muted">{{ Str::limit($article->description, 50) }}</p>
+                            <p class="card-text">{{ Str::limit($article->description, 50) }}</p>
                             <p> Creato da 
-                                <a class="text-success" href="{{route('profile', ['user' => $article->user->id])}}">
+                                <a class="txSec" href="{{route('profile', ['user' => $article->user->id])}}">
                                     {{$article->user->name ?? 'Utente sconosciuto'}}
                                 </a> 
                                 , il {{$article->created_at->format('d/m/Y')}}

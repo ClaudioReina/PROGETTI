@@ -24,6 +24,7 @@ hiddenUpElements.forEach((el) => observer.observe(el));
 // Navbar Fade
 let navbar = document.querySelector('.navbar');
 let userIcon = document.querySelector('.user-icon');
+let btnSearch = document.querySelector('#btn-search');
 
 document.addEventListener('scroll', () => {
     if (window.scrollY>50) {
@@ -31,10 +32,12 @@ document.addEventListener('scroll', () => {
         navbar.classList.add('navbar-dark');
         navbar.classList.add('bg_forNav','textNav');
         navbar.classList.remove('navbarColor');
+        btnSearch.classList.replace('btn-outline-dark', 'btn-outline-light');
     } else {
         userIcon.classList.remove('text-white');
         navbar.classList.remove('bg_forNav','textNav','navbar-dark')
         navbar.classList.add('navbarColor');
+        btnSearch.classList.replace('btn-outline-light', 'btn-outline-dark');
     }
 })
 

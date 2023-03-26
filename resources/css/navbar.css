@@ -1,0 +1,34 @@
+.bg_forNav{
+    background-color: var(--main-color);
+}
+
+.navbarColor{
+    background-color: rgb(233, 234, 221);
+}
+
+.transizione{
+    transition: 0.8s;
+}
+
+.linkCustom{
+    position: relative;
+}
+
+.linkCustom:before{
+    border-bottom: 2px solid black;
+    transition: 0.5s ease-in-out, right 0.5s ease-in-out;
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    left: 0;
+    width: 0;
+}
+
+.navbar .linkCustom:hover::before{
+    width: 100%; 
+    /* border-bottom:rgb(235, 230, 230) !important ; */
+}  
+
+.textNav {
+    color: rgb(235, 230, 230) !important;
+}

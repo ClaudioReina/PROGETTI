@@ -15,10 +15,10 @@ class DatabaseSeeder extends Seeder
     {
         $categories = [
             ["Elettrodomestici",],
-            ["Telefonia"],
+            ["Smartphone"],
             ["Veicoli"],
             ["Per la casa"],
-            ["Cultura"],
+            ["Libri"],
             ["Fotografia"],
             ["Console e videogiochi"],
             ["Per lo sport"],

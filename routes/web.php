@@ -24,6 +24,8 @@ Route::get('/contattaci', [PublicController::class, 'contact_us'])->name('contac
 // Rotte dei profili
 Route::get('/profile/{user?}', [UserController::class, 'profile'])->name('profile')->middleware('auth');
 Route::put('/profile/avatar/{user}', [UserController::class, 'changeAvatar'])->name('changeAvatar');
+Route::get('/profile/edit/{user}', [UserController::class, 'edit'])->name('user.edit');
+Route::post('/profile/update/{user}', [UserController::class, 'update'])->name('user.update');
 Route::delete('/user/destroy', [UserController::class, 'destroy'])->name('user.destroy');
 
 // Rotte degli annunci

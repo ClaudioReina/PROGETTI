@@ -41,6 +41,10 @@ a {
   color: var(--second-color);
 }
 
+.txSec{
+  color: var(--color);
+}
+
 .gradient-custom-2 {
   background: #fccb90;
   background: rgb(2,153,116);
@@ -101,45 +105,6 @@ a {
   transform: translateX(0);
 }
 
-/* NAVBAR */
-
-.bg_forNav{
-  background-color: var(--main-color);
-}
-
-.navbarColor{
-  background-color: rgb(233, 234, 221);
-}
-
-.transizione{
-  transition: 0.8s;
-}
-
-.linkCustom{
-  position: relative;
-}
-
-.linkCustom:before{
-  border-bottom: 2px solid black;
-  transition: 0.5s ease-in-out, right 0.5s ease-in-out;
-  position: absolute;
-  content: "";
-  bottom: -2px;
-  left: 0;
-  width: 0;
-}
-
-.navbar .linkCustom:hover::before{
-  width: 100%; 
-  /* border-bottom:rgb(235, 230, 230) !important ; */
-}  
-
-.textNav {
-  color: rgb(235, 230, 230) !important;
-}
-
-/* END NAVBAR */
-
 .bg_homepage{
   background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/pexels-nataliya-vaitkevich-6214472.jpg);
   background-position: center;
@@ -157,13 +122,6 @@ a {
   
 }
 
-.spaced{
-  height: 30vh;
-}
-
-.spacedSm{
-  height: 20vh;
-}
 .backWelcome2{
   background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/HomePage1.jpg);
   background-position: center;
@@ -183,6 +141,14 @@ a {
 .img-custom{
   width: 200px;
   height: 200px;
+}
+
+.spaced{
+  height: 30vh;
+}
+
+.spacedSm{
+  height: 20vh;
 }
 
 /* Bottone Del Form Contattaci */
@@ -334,83 +300,6 @@ a {
   
 }
 
-/* FOOTER */
-
-.wave {
-  position: absolute;
-  top: -100px;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: url(/public/media/wave.png);
-  background-size: 1000px 100px;
-}
-
-.wave#wave1 {
-  z-index: 1000;
-  opacity: 1;
-  bottom: 0;
-  animation: animateWaves 3s linear infinite;
-}
-
-.wave#wave2 {
-  z-index: 999;
-  opacity: 0.5;
-  bottom: 10px;
-  animation: animate 6s linear infinite !important;
-}
-
-.wave#wave3 {
-  z-index: 1000;
-  opacity: 0.2;
-  bottom: 15px;
-  animation: animateWaves 4s linear infinite;
-}
-
-.wave#wave4 {
-  z-index: 999;
-  opacity: 0.7;
-  bottom: 20px;
-  animation: animate 4s linear infinite;
-}
-
-.footer p {
-  color: #fff;
-  margin: 15px 0 10px 0;
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.footer {
-  position: relative;
-  width: 100%;
-  background:rgb(51,204,102);
-  min-height: 100px;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-@keyframes animateWaves {
-  0% {
-    background-position-x: 1000px;
-  }
-  100% {
-    background-positon-x: 0px;
-  }
-}
-
-@keyframes animate {
-  0% {
-    background-position-x: -1000px;
-  }
-  100% {
-    background-positon-x: 0px;
-  }
-}
-
 /* REVISORE */
 
 .revisione {
@@ -467,16 +356,8 @@ a {
 .cardCust{
   background-color: rgba(246, 246, 246, 0.742);
   text-shadow: 3px 3px 8px rgb(96, 95, 95);
-}
-
-.cardCust img{
   padding: 15px;
 }
-
-.title_custom{
-  color: rgb(51,204,102);
-}
-
 
 .categoryContainer{
   background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/pexels-karolina-grabowska-5632371.jpg) ;
@@ -493,35 +374,3 @@ a {
   padding-top: 6rem;
   z-index: 1;
 }
-
-
-/* ////////////////////////////////////////////////////////////////////////// */
-
-@media (min-width: 769px) {
-
-  .gradient-custom-2 {
-    border-top-right-radius: .3rem;
-    border-bottom-right-radius: .3rem;
-  }
-
-  .cardCustom{
-    width: 35vw;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  
-  .centerMod{
-    justify-content: center;
-  }
-  
-  .marginForMobile{
-    margin-top: 70px;
-  }
-  
-  .centerModPlus{
-    margin-right: 50px;
-  }
-}
-
-/* //////////////////////////////////////////////////////////////////////////// */

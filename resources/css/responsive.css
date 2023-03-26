@@ -1,0 +1,28 @@
+@media (min-width: 769px) {
+    
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+    
+    .cardCustom{
+        width: 70%;
+        height: 250px;
+        background-color: rgba(80, 81, 82, 0.9);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .centerMod{
+        justify-content: center;
+    }
+    
+    .marginForMobile{
+        margin-top: 70px;
+    }
+    
+    .centerModPlus{
+        margin-right: 50px;
+    }
+}

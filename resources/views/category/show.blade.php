@@ -3,7 +3,7 @@
 <div class="container-fluid categoryContainer ">
     <div class="row">
 
-        <div class="col-12 text-center mb-2">
+        <div class="col-12 text-center text-white hidden mb-2">
             <h1>{{$category->name}}</h1>
         </div>
         @if(count($articles) > 0)
