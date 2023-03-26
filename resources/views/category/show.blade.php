@@ -1,14 +1,14 @@
 <x-layout>
 
-<div class="container-fluid">
-    <div class="row py-5">
+<div class="container-fluid categoryContainer ">
+    <div class="row">
 
-        <div class="col-12 text-center py-5">
+        <div class="col-12 text-center mb-2">
             <h1>{{$category->name}}</h1>
         </div>
         @if(count($articles) > 0)
         @foreach ($articles as $article)
-            <div class="col-12 col-md-3 mx-auto">
+            <div class="col-12 col-md-3 mx-auto my-4">
                 <div class="card shadow">
                     @if (!$article->cover)
                         <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top" alt="immagine non trovata">
@@ -26,14 +26,14 @@
             </div>
         @endforeach
         @else
-        <div class="col-12 text-center mt-5">
-            <p>Non ci sono articoli!</p>
+        <div class="col-12 text-center mt-5 text-white hidden">
+            <h4>Non ci sono articoli!</h4>
         </div>
         @endif
     </div>
+    <div class="container-fluid spacedSm">
+    </div>
 </div>
 
-<div class="container-fluid spaced">
-</div>
 
 </x-layout>

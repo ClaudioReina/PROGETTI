@@ -50,7 +50,7 @@
                                         
                                         <div class="text-center pt-1 mb-5 pb-1">
                                             <button
-                                            class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                            class="btn text-white btn-block fa-lg gradient-custom-2 mb-3"
                                             type="submit">Modifica Annuncio</button>
                                         </div>
                                         

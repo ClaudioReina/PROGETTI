@@ -9,6 +9,7 @@
 body{
   overflow-x: hidden;
   margin: 0;
+ background-color: #d6d6d3;
 }
 
 *{
@@ -160,6 +161,9 @@ a {
   height: 30vh;
 }
 
+.spacedSm{
+  height: 20vh;
+}
 .backWelcome2{
   background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/HomePage1.jpg);
   background-position: center;
@@ -472,6 +476,24 @@ a {
 .title_custom{
   color: rgb(51,204,102);
 }
+
+
+.categoryContainer{
+  background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/pexels-karolina-grabowska-5632371.jpg) ;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding-top: 6rem;
+  z-index: 1;
+}
+
 
 /* ////////////////////////////////////////////////////////////////////////// */
 
