@@ -54,6 +54,6 @@ class UserController extends Controller
 
         Auth::user()->delete();
 
-        return redirect(route('homepage'))->with('userDeleted', 'Account deleted');
+        return redirect(route('homepage'))->with('userDeleted', 'Account eliminato! Torna Presto!');
     }
 }

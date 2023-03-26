@@ -1,5 +1,5 @@
 {{-- Access Denied --}}
-<div class="container-fluid py-2">
+<div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
             @if (session()->has('accessDenied'))
@@ -17,7 +17,7 @@
 {{-- SEZIONE ARTICLE --}}
 
     {{-- Delete Article --}}
-    <div class="container-fluid py-2">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('articleDeleted'))
@@ -31,7 +31,7 @@
     </div>
 
     {{-- Create Article --}}
-    <div class="container-fluid py-2">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('articleCreated'))
@@ -45,7 +45,7 @@
     </div>
 
     {{-- Update Article --}}
-    <div class="container-fluid py-2">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('articleUpdated'))
@@ -64,7 +64,7 @@
 {{-- SEZIONE CATEGORY --}}
 
     {{-- Delete Category --}}
-    <div class="container-fluid py-2">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('categoryDeleted'))
@@ -78,7 +78,7 @@
     </div>
 
     {{-- Create Category --}}
-    <div class="container-fluid py-2">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('categoryCreated'))
@@ -92,7 +92,7 @@
     </div>
 
     {{-- Update Category --}}
-    <div class="container-fluid py-2">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('categoryUpdated'))
@@ -110,9 +110,8 @@
 
 {{-- SEZIONE REVISOR --}}
 
-{{-- Revision Accepted --}}
-
-    <div class="container-fluid py-2">
+    {{-- Revision Accepted --}}
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('revisionAccepted'))
@@ -126,7 +125,7 @@
     </div>
 
     {{-- Revision Rejected --}}
-    <div class="container-fluid py-2">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('revisionDeleted'))
@@ -140,7 +139,7 @@
     </div>
 
     {{-- become Revisor --}}
-    <div class="container-fluid py-2">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('becomeRevisor'))
@@ -154,7 +153,7 @@
     </div>
 
     {{-- Make Revisor --}}
-    <div class="container-fluid py-2">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('makeRevisor'))
@@ -167,4 +166,20 @@
         </div>
     </div>
 
-{{-- FINE SEZIONE ARTICLE --}}
+{{-- FINE SEZIONE REVISOR --}}
+
+{{-- SEZIONE USER --}}
+    {{-- User Delete --}}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                @if (session()->has('userDeleted'))
+                <div class="alert alert-danger alert-dismissible fade show border-start border-end" role="alert">
+                    {{session('userDeleted')}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
+            </div>
+        </div>
+    </div>
+{{-- FINE SEZIONE USER  --}}
