@@ -12,23 +12,16 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
-
 const hiddenLeftElements = document.querySelectorAll('.hidden-left');
 hiddenLeftElements.forEach((el) => observer.observe(el));
-
 const hiddenRightElements = document.querySelectorAll('.hidden-right');
 hiddenRightElements.forEach((el) => observer.observe(el));
-
 const hiddenDownElements = document.querySelectorAll('.hidden-down');
 hiddenDownElements.forEach((el) => observer.observe(el));
-
 const hiddenUpElements = document.querySelectorAll('.hidden-up');
 hiddenUpElements.forEach((el) => observer.observe(el));
 
-//
-
-
-/* navbar fade */
+// Navbar Fade
 let navbar = document.querySelector('.navbar');
 let userIcon = document.querySelector('.user-icon');
 
@@ -45,6 +38,7 @@ document.addEventListener('scroll', () => {
     }
 })
 
+// Testo Homepage Categorie
 let testi = ["Personalizzato!", "Originale!", "Accessibile!", "Sicuro!"];
         var indice = 0;
         
@@ -65,7 +59,3 @@ let testi = ["Personalizzato!", "Originale!", "Accessibile!", "Sicuro!"];
                 }
             }
         }, 1750);
-
-
-
-        

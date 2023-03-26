@@ -1,3 +1,11 @@
+:root{
+  --main-color:#333333;
+  --second-color:rgb(44, 204, 119);
+  --third-color:#a90d5d;
+  --textfirst-color:#f5f5f5;
+  --color: #00A97F;
+}
+
 body{
   overflow-x: hidden;
   margin: 0;
@@ -20,18 +28,6 @@ a {
   font-family: 'Roboto Slab', serif;
 }
 
-:root{
-  --main-color:#333333;
-  --second-color:rgb(44, 204, 119);
-  --third-color:#a90d5d;
-  --textfirst-color:#f5f5f5;
-  --color: #00A97F;
-}
-
-.txMain{
-  color: var(--second-color);
-}
-
 .bgMain{
   background-color: var(--second-color);
 }
@@ -40,43 +36,15 @@ a {
   background-color:  var(--main-color);
 }
 
+.txMain{
+  color: var(--second-color);
+}
+
 .gradient-custom-2 {
   background: #fccb90;
   background: rgb(2,153,116);
-background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba(0,0,0,0.9052871148459384) 95%);
+  background: linear-gradient(304deg, rgb(51,204,102,0.9360994397759104) 31%, rgba(0,0,0,0.9052871148459384) 95%);
 }
-
-/* ////////////////////////////////////////////////////////////////////////// */
-
-@media (min-width: 769px) {
-  .gradient-custom-2 {
-    border-top-right-radius: .3rem;
-    border-bottom-right-radius: .3rem;
-  }
-}
-@media (min-width: 769px) {
-  .cardCustom{
-    width: 35vw;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .centerMod{
-   justify-content: center;
-  }
-  .marginForMobile{
-    margin-top: 70px;
-    }
-    
-    .centerModPlus{
-margin-right: 50px;
-
-    }
-}
-
-
-
-/* //////////////////////////////////////////////////////////////////////////// */
 
 .avatar-image {
   width: 200px; 
@@ -134,20 +102,17 @@ margin-right: 50px;
 
 /* NAVBAR */
 
-
 .bg_forNav{
   background-color: var(--main-color);
 }
 
 .navbarColor{
- background-color: rgb(233, 234, 221);
+  background-color: rgb(233, 234, 221);
 }
 
 .transizione{
   transition: 0.8s;
 }
-
-
 
 .linkCustom{
   position: relative;
@@ -165,32 +130,60 @@ margin-right: 50px;
 
 .navbar .linkCustom:hover::before{
   width: 100%; 
- /* border-bottom:rgb(235, 230, 230) !important ; */
+  /* border-bottom:rgb(235, 230, 230) !important ; */
 }  
 
 .textNav {
   color: rgb(235, 230, 230) !important;
 }
 
-
 /* END NAVBAR */
+
+.bg_homepage{
+  background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/pexels-nataliya-vaitkevich-6214472.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding-top: 6rem;
+  z-index: 1;
+  
+}
+
+.spaced{
+  height: 30vh;
+}
+
+.backWelcome2{
+  background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/HomePage1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding-top: 6rem;
+  z-index: 1;
+}
 
 .img-custom{
   width: 200px;
   height: 200px;
 }
 
-/* CARD */
-
-
-
-/* END CARD */
-
-
-
 /* Bottone Del Form Contattaci */
+
 .btn-contact {
- 
   --color2: rgb(10, 25, 30);
   padding: 0.8em 1.75em;
   background-color: transparent;
@@ -248,9 +241,8 @@ margin-right: 50px;
 /* BOTTONE PER CARD */
 
 .btn-contact2 {
- 
   --color2: rgb(10, 25, 30);
-  padding: 0.8em 1.75em;
+  padding: 0.55em 1.75em;
   background-color: var(--main-color);
   border-radius: 6px;
   border: .3px solid var(--second-color);
@@ -303,8 +295,8 @@ margin-right: 50px;
   transform: scale(.98);
 }
 
-
 /* BG HEADER */
+
 .form_bg{
   background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/form_contattaci.jpg);
   background-position: center;
@@ -319,9 +311,7 @@ margin-right: 50px;
   min-height: 100vh;
   padding-top: 6rem;
   z-index: 1;
-
 }
-
 
 .containerIndexCustom{
   background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/pexels-nataliya-vaitkevich-6214478.jpg) ;
@@ -340,69 +330,9 @@ margin-right: 50px;
   
 }
 
-/* BUTTON CUSTOM */
+/* FOOTER */
 
-
-.buttonCustom {
-  
-  padding: 0.8em 1.7em;
-  background-color: transparent;
-  border-radius: .3em;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: .5s;
-  font-weight: 400;
-  font-size: 17px;
-  border: 2px solid;
-  font-family: inherit;
-  text-transform: uppercase;
-  color: var(--color);
-  z-index: 1;
-  bottom: 10px;
- }
- 
- .buttonCustom::before, .buttonCustom::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 50px;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  border-radius: 50%;
-  z-index: -1;
-  background-color: var(--second-color);
-  transition: 1.4s ease;
- }
- 
- .buttonCustom::before {
-  top: -1em;
-  left: -1em;
- }
- 
- .buttonCustom::after {
-  left: calc(100% + 1em);
-  top: calc(100% + 1em);
- }
- 
- .buttonCustom:hover::before, .buttonCustom:hover::after {
-  height: 410px;
-  width: 410px;
- }
- 
- .buttonCustom:hover {
-  color: var(--third-color);
- }
- 
- .buttonCustom:active {
-  filter: brightness(.8);
-  
- }
- 
-
- /* FOOTER */
-
- .wave {
+.wave {
   position: absolute;
   top: -100px;
   left: 0;
@@ -440,13 +370,13 @@ margin-right: 50px;
   animation: animate 4s linear infinite;
 }
 
-
 .footer p {
   color: #fff;
   margin: 15px 0 10px 0;
   font-size: 1rem;
   font-weight: 300;
 }
+
 .footer {
   position: relative;
   width: 100%;
@@ -475,43 +405,6 @@ margin-right: 50px;
   100% {
     background-positon-x: 0px;
   }
-}
-
-.bg_homepage{
-  background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/pexels-nataliya-vaitkevich-6214472.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
-  padding-top: 6rem;
-  z-index: 1;
-
-}
-
-.spaced{
-  height: 30vh;
-}
-
-.backWelcome2{
-  background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/HomePage1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
-  padding-top: 6rem;
-  z-index: 1;
 }
 
 /* REVISORE */
@@ -568,22 +461,45 @@ margin-right: 50px;
 }
 
 .cardCust{
-background-color: rgba(246, 246, 246, 0.742);
-text-shadow: 3px 3px 8px rgb(96, 95, 95);
+  background-color: rgba(246, 246, 246, 0.742);
+  text-shadow: 3px 3px 8px rgb(96, 95, 95);
 }
 
 .cardCust img{
-padding: 15px;
+  padding: 15px;
 }
 
 .title_custom{
   color: rgb(51,204,102);
 }
 
+/* ////////////////////////////////////////////////////////////////////////// */
 
+@media (min-width: 769px) {
 
+  .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+  }
 
+  .cardCustom{
+    width: 35vw;
+  }
+}
 
+@media only screen and (max-width: 600px) {
+  
+  .centerMod{
+    justify-content: center;
+  }
+  
+  .marginForMobile{
+    margin-top: 70px;
+  }
+  
+  .centerModPlus{
+    margin-right: 50px;
+  }
+}
 
-
-
+/* //////////////////////////////////////////////////////////////////////////// */

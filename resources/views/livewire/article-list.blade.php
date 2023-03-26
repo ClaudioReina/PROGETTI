@@ -8,7 +8,7 @@
                 <th scope="col">Prezzo</th>
                 <th scope="col">Creato il</th>
                 <th scope="col">Stato annuncio</th>
-                <th scope="col">######</th>
+                <th scope="col">Annulla Revisione</th>
 
             </tr>
         </thead>
@@ -26,7 +26,7 @@
                     @elseif ($article->is_accepted === 0)
                     <span class="label text-danger">Rifiutata</span>
                     @else
-                    <span class="label text-warning">In corso</span>
+                    <span class="label">In corso</span>
                     @endif
                 </td>
                 <td>

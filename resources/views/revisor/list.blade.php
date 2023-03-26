@@ -10,6 +10,8 @@
         </div>
     </div>
 
+    <div class="container-fluid spaced">
+    </div>
     <script>
         Livewire.on('refresh', () => {
             // aggiorna la lista di articoli
