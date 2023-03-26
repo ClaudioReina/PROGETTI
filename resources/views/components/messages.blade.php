@@ -1,16 +1,30 @@
-{{-- Access Denied --}}
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            @if (session()->has('accessDenied'))
-            <div class="alert alert-danger alert-dismissible fade show border-start border-end" role="alert">
-                {{session('accessDenied')}}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    {{-- Access Denied --}}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                @if (session()->has('accessDenied'))
+                <div class="alert alert-danger alert-dismissible fade show border-start border-end" role="alert">
+                    {{session('accessDenied')}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
             </div>
-            @endif
         </div>
     </div>
-</div>
+
+    {{-- Update User --}}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                @if (session()->has('userUpdated'))
+                <div class="alert alert-success alert-dismissible fade show border-start border-end" role="alert">
+                    {{session('userUpdated')}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
+            </div>
+        </div>
+    </div>
 
 
 
@@ -157,7 +171,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 @if (session()->has('makeRevisor'))
-                <div class="alert alert-danger alert-dismissible fade show border-start border-end" role="alert">
+                <div class="alert alert-success alert-dismissible fade show border-start border-end" role="alert">
                     {{session('makeRevisor')}}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>

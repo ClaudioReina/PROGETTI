@@ -29,6 +29,10 @@
                                 <i class="bi bi-gear text-black fs-3"></i>
                             </a>
                             <ul class="dropdown-menu">
+                                <li class="nav-item text-center">
+                                    <a class="nav-link linkCustom" href="{{route('user.edit', $user)}}">Modifica profilo</a>
+                                </li> 
+                                <li><hr class="dropdown-divider"></li> 
                                 @if(!Auth::user()->is_revisor)
                                 <li class="nav-item text-center">
                                     <a class="nav-link linkCustom" href="{{route('become.revisor')}}">Diventa revisore</a>

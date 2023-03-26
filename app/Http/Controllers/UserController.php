@@ -15,8 +15,8 @@ class UserController extends Controller
         //$this->middleware('verified');
     }
 
-    public function profile(User $user = NULL) {
-
+    public function profile(User $user = NULL) 
+    {
         if(!$user){
             $articles = Article::where('user_id', Auth::id())->orderBy('created_at', 'DESC')->get();
             $categories = Category::where('user_id', Auth::id())->orderBy('name')->get();
@@ -29,7 +29,21 @@ class UserController extends Controller
         return view('profile', compact('categories', 'articles', 'user'));
     }
 
-    public  function changeAvatar(User $user, Request $request) {
+    public function edit(User $user)
+    {
+        return view('user.edit', compact('user'));
+    }
+
+    public function update(Request $request, User $user)
+    {
+        $user->update([
+            'name' => $request->name,
+        ]);
+        return redirect(route('homepage'))->with('userUpdated', "Profilo aggiornato con successo.");
+    }
+
+    public  function changeAvatar(User $user, Request $request)
+    {
         $user->update([
             'avatar' => $request->file('avatar')->store('public/avatars')
         ]);
@@ -38,7 +52,6 @@ class UserController extends Controller
 
     public function show($id)
     {
-        
         $user = User::findOrFail($id);
         $avatar = $user->avatar; // ottieni l'avatar dell'utente
         $imageUrl = asset('path/to/default/image.jpg'); // imposta un'immagine predefinita in caso di avatar non disponibile
@@ -50,8 +63,8 @@ class UserController extends Controller
         return view('profile', ['user' => $user, 'imageUrl' => $imageUrl]);
     }
     
-    public function destroy() {
-
+    public function destroy() 
+    {
         Auth::user()->delete();
 
         return redirect(route('homepage'))->with('userDeleted', 'Account eliminato! Torna Presto!');
