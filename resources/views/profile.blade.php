@@ -89,7 +89,7 @@
         <div class="py-5">
             <x-messages />
         </div>
-        
+        {{-- SEZIONE REVISORE --}}
         @auth
         @if(Auth::user()->id == $user->id && Auth::user()->is_revisor)
         <h4 class="display-6 text-center py-3">Sezione Revisore</h4>
@@ -127,20 +127,8 @@
                                             {{Str::limit($article->title, 25)}}
                                         </h5>
                                         <p class="card-text fst-italic fw-bold text-center">{{ $article->price }} €</p>
-                                        <p class="card-text text-center">{{ Str::limit($article->description, 50) }}</p>
+                                        <p class="card-text text-center">{{ Str::limit($article->description, 30) }}</p>
                                     </div>
-                                    
-                                    
-                                    {{-- <div class="justify-content-between"><h3>Nome:</h3><p class="pt-1">{{Str::limit($article->title, 
-                                        25)}}</p></div>
-                                        <div class="d-flex justify-content-between">
-                                            <h3>Prezzo:</h3><p class="pt-1">{{$article->price}} €</p> 
-                                        </div>
-                                        <div class="d-flex justify-content-between">
-                                            <h3>Categoria:</h3><p class="pt-1">{{$article->category}}</p>
-                                        </div> --}}
-                                        
-                                        
                                         
                                         @if (Auth::user()->id == $user->id)
                                         <div class="text-center my-4"><h5>Stato Annuncio:
@@ -152,10 +140,9 @@
                                             @else
                                             <span class="label">In corso</span>
                                             @endif
-                                        </h5>
-                                        
-                                        
+                                        </h5>     
                                     </div>
+                                    
                                     @endif
                                     
                                     <div class="d-flex justify-content-evenly card-body">
@@ -190,6 +177,7 @@
             {{-- SEZIONE CATEGORIE --}}
             @auth
             @if(Auth::user()->id == $user->id && Auth::id() == 1)
+            {{-- @if(Auth::user()->is_admin) --}}
             <div class="row py-5">
                 <div class="col-12 mb-5 d-flex justify-content-center">
                     <h3 class="display-6 mb-3">Categorie</h3>
