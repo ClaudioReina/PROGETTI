@@ -64,19 +64,10 @@ class UserController extends Controller
         return view('profile', ['user' => $user, 'imageUrl' => $imageUrl]);
     }
     
-    public function destroy(User $user) 
+    public function destroy() 
     {
-        $user->delete();
-        $user->deleteAvatar();
+        Auth::user()->delete();
 
         return redirect(route('homepage'))->with('userDeleted', 'Account eliminato! Torna Presto!');
-    }
-
-    public function deleteAvatar(User $user){
-        if($user->avatar){
-            Storage::delete($user->avatar);
-            $user->avatar = null;
-        }
-        return redirect()->back()->with('avatarDeleted', 'Immagine eliminata con successo');
     }
 }

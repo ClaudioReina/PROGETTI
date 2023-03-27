@@ -5,13 +5,17 @@
             
             {{-- AVATAR SECTION --}}
             <div class="col-md-10 d-flex align-items-center pt-4">
-                <img class="avatar-image" src="{{ Storage::url($user->avatar) }}" onclick="document.getElementById('avatar-input').click();" id="avatar-image">
                 @if(Auth::user()->id == $user->id)
-                <form action="{{ route('changeAvatar', ['user' => $user]) }}" method="POST" enctype="multipart/form-data" id="avatar-form">
-                    @csrf
-                    @method('put')
-                    <input type="file" name="avatar" id="avatar-input" style="display:none;" onchange="document.getElementById('avatar-form').submit();">
-                </form>
+                    @if(!$user->avatar)
+                        <img src="/media/ImmagineSalvaposto.jpg" class="avatar-image" alt="immagine non trovata" onclick="document.getElementById('avatar-input').click();" >
+                    @else
+                        <img class="avatar-image" src="{{ Storage::url($user->avatar) }}" onclick="document.getElementById('avatar-input').click();" id="avatar-image">
+                    @endif
+                    <form action="{{ route('changeAvatar', ['user' => $user]) }}" method="POST" enctype="multipart/form-data" id="avatar-form">
+                        @csrf
+                        @method('put')
+                        <input type="file" name="avatar" id="avatar-input" style="display:none;" onchange="document.getElementById('avatar-form').submit();">
+                    </form>
                 @endif
                 
                 <div class="col-12 col-md-6 d-flex">
@@ -33,14 +37,7 @@
                                     <a class="nav-link linkCustom" href="{{route('user.edit', $user)}}">Modifica profilo</a>
                                 </li> 
                                 <li><hr class="dropdown-divider"></li>
-                                <li class="nav-item text-center">
-                                    <a class="nav-link linkCustom" href="" onclick="event.preventDefault(); document.querySelector('#form-delete').submit();">Elimina foto</a>
-                                    <form id="form-delete" method="POST" action="{{route('deleteAvatar', $user)}}">
-                                        @csrf
-                                        @method('delete')
-                                    </form>
-                                </li>
-                                <li><hr class="dropdown-divider"></li> 
+                                
                                 @if(!Auth::user()->is_revisor)
                                 <li class="nav-item text-center">
                                     <a class="nav-link linkCustom" href="{{route('become.revisor')}}">Diventa revisore</a>
@@ -123,17 +120,17 @@
                                 <img src="{{Storage::url($article->cover)}}" class="img-fluid" alt="...">
                                 @endif
                                 <div class="card-body p-2">
-
-
-                                        <div class="mb-3">
-                                            <h5 class="text-center fs-4">
-                                                {{Str::limit($article->title, 25)}}
-                                            </h5>
-                                            <p class="card-text fst-italic fw-bold text-center">{{ $article->price }} €</p>
-                                            <p class="card-text text-center">{{ Str::limit($article->description, 50) }}</p>
-                                        </div>
-
-
+                                    
+                                    
+                                    <div class="mb-3">
+                                        <h5 class="text-center fs-4">
+                                            {{Str::limit($article->title, 25)}}
+                                        </h5>
+                                        <p class="card-text fst-italic fw-bold text-center">{{ $article->price }} €</p>
+                                        <p class="card-text text-center">{{ Str::limit($article->description, 50) }}</p>
+                                    </div>
+                                    
+                                    
                                     {{-- <div class="justify-content-between"><h3>Nome:</h3><p class="pt-1">{{Str::limit($article->title, 
                                         25)}}</p></div>
                                         <div class="d-flex justify-content-between">
@@ -142,12 +139,12 @@
                                         <div class="d-flex justify-content-between">
                                             <h3>Categoria:</h3><p class="pt-1">{{$article->category}}</p>
                                         </div> --}}
-
-
-
+                                        
+                                        
+                                        
                                         @if (Auth::user()->id == $user->id)
                                         <div class="text-center my-4"><h5>Stato Annuncio:
-
+                                            
                                             @if($article->is_accepted == 1)
                                             <span class="label text-success">Accettata</span>
                                             @elseif ($article->is_accepted === 0)
@@ -156,13 +153,13 @@
                                             <span class="label">In corso</span>
                                             @endif
                                         </h5>
-                                            
-                                            
-                                        </div>
-                                        @endif
-
-                                        <div class="d-flex justify-content-evenly card-body">
-
+                                        
+                                        
+                                    </div>
+                                    @endif
+                                    
+                                    <div class="d-flex justify-content-evenly card-body">
+                                        
                                         <form action="{{route('article.show', $article)}}" method="GET" class="">
                                             @csrf
                                             <button type="submit" class="btn btn-primary">Visualizza</button>
@@ -176,67 +173,67 @@
                                             @method('delete')
                                             <button type="submit" class="btn btn-danger">Cancella</button>
                                         </form>
-                                        </div>
-                                        @endif
                                     </div>
+                                    @endif
                                 </div>
                             </div>
-                            @endforeach
-                            @else
-                            <div class="col-12 ms-5 ps-5">
-                                Non hai caricato nessun annuncio.
-                            </div>
-                            @endif
                         </div>
+                        @endforeach
+                        @else
+                        <div class="col-12 ms-5 ps-5">
+                            Non hai caricato nessun annuncio.
+                        </div>
+                        @endif
                     </div>
                 </div>
-                {{-- SEZIONE CATEGORIE --}}
-                @auth
-                @if(Auth::user()->id == $user->id && Auth::id() == 1)
-                <div class="row py-5">
-                    <div class="col-12 mb-5 d-flex justify-content-center">
-                        <h3 class="display-6 mb-3">Categorie</h3>
-                        <div class="pt-2 ms-5">
-                            <a class="btn btn-warning linkCustom" href="{{ route('category.create') }}">Crea Categoria</a>
-                        </div>
+            </div>
+            {{-- SEZIONE CATEGORIE --}}
+            @auth
+            @if(Auth::user()->id == $user->id && Auth::id() == 1)
+            <div class="row py-5">
+                <div class="col-12 mb-5 d-flex justify-content-center">
+                    <h3 class="display-6 mb-3">Categorie</h3>
+                    <div class="pt-2 ms-5">
+                        <a class="btn btn-warning linkCustom" href="{{ route('category.create') }}">Crea Categoria</a>
                     </div>
-                    <div class="col-12">
-                        <div class="row justify-content-center">
-                            @if(count(Auth::user()->categories))
-                            @foreach(Auth::user()->categories as $category)
-                            <div class="col-12 col-md-4 pb-5">
-                                <div class="card shadow">
-                                    <div class="card-body p-2">
-                                        <h3>{{$category->name}}</h3>
-                                        <form action="{{route('category.show', $category)}}" method="POST" class="d-inline-block">
-                                            @csrf
-                                            <button type="submit" class="btn btn-outline-primary">Visualizza</button>
-                                        </form>
-                                        @if(Auth::user() && Auth::id() == $category->user_id)
-                                        <a href="{{route('category.edit', $category)}}" class="btn btn-outline-dark">Modifica</a>
-                                        <form action="{{route('category.destroy', $category)}}" method="POST" class="d-inline-block">
-                                            @csrf
-                                            @method('delete')
-                                            <button type="submit" class="btn btn-outline-danger">Cancella</button>
-                                        </form>
-                                        @endif
-                                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row justify-content-center">
+                        @if(count(Auth::user()->categories))
+                        @foreach(Auth::user()->categories as $category)
+                        <div class="col-12 col-md-4 pb-5">
+                            <div class="card shadow">
+                                <div class="card-body p-2">
+                                    <h3>{{$category->name}}</h3>
+                                    <form action="{{route('category.show', $category)}}" method="POST" class="d-inline-block">
+                                        @csrf
+                                        <button type="submit" class="btn btn-outline-primary">Visualizza</button>
+                                    </form>
+                                    @if(Auth::user() && Auth::id() == $category->user_id)
+                                    <a href="{{route('category.edit', $category)}}" class="btn btn-outline-dark">Modifica</a>
+                                    <form action="{{route('category.destroy', $category)}}" method="POST" class="d-inline-block">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-outline-danger">Cancella</button>
+                                    </form>
+                                    @endif
                                 </div>
                             </div>
-                            @endforeach
-                            @else
-                            <div class="col-12 ms-5 ps-5">
-                                Non hai caricato nessuna categoria.
-                            </div>
-                            @endif
                         </div>
+                        @endforeach
+                        @else
+                        <div class="col-12 ms-5 ps-5">
+                            Non hai caricato nessuna categoria.
+                        </div>
+                        @endif
                     </div>
                 </div>
-                @endif
-                @endauth
             </div>
-            
-            <div class="container-fluid spaced">
-            </div>
-            
-        </x-layout>
+            @endif
+            @endauth
+        </div>
+        
+        <div class="container-fluid spaced">
+        </div>
+        
+    </x-layout>
