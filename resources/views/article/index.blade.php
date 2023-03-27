@@ -16,7 +16,7 @@
                 <div class="cardCustom d-flex border">
                     <div class="">
                     @if (!$article->cover)
-                    <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid img-custom my-auto" alt="immagine non trovata">
+                    <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid img-custom " alt="immagine non trovata">
                     @else
                     <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top img-custom my-auto" alt="{{$article->name}}">
                     @endif
@@ -25,7 +25,7 @@
                         <h5 class="card-title mt-3">{{$article->title}}</h5>
                         <h6 class="card-text fst-italic">{{$article->price}} €</h6>     
                         <p class="fs-3 txSec">{{$article->category}}</p>                  
-                        <p class="card-text text-white small text-muted">{{Str::limit($article->description, 100)}}</p>
+                        <p class="card-text text-white small text-muted">{{Str::limit($article->description, 20)}}</p>
                         <p>Creato da <a class="txSec" href="{{route('profile', ['user' => $article->user->id])}}">{{$article->user->name ?? 'Utente sconosciuto'}}</a>, il {{$article->created_at->format('d/m/Y')}}</p>
                         <a href="{{route('article.show', compact('article'))}}" class="btn btn-contact2 mb-4">Dettagli</a>
                     </div>

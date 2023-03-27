@@ -154,16 +154,9 @@ a {
 /* CARD CUSTOM INDEX */
 
 .cardCustom{
-  width: 50%;
-  height: 270px;
   background-color: rgba(58, 68, 77, 0.9) !important;
 }
 
-.img-custom{
-  width: 350px;
-  height: 269px;
-  object-fit: cover;
-}
 
 
 
