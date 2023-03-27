@@ -46,7 +46,7 @@
             
         </div>            
             <div class="col-4 col-md-2 ">
-                <a href="{{route('article.index')}}" class="btn btn-secondary">Torna indietro</a>
+                <a href="{{route('article.index')}}" class="btn btn-contact2">Torna indietro</a>
             </div>
         </div>
     </div>

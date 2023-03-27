@@ -12,14 +12,14 @@
         <div class="row ">
             <div class="col-12 col-md-6 ps-5 py-5 text-center text-white ">
                 @auth
-                    <h2 class="centerModPlus mt-2 fs-1">Benvenuto {{ Auth::user()->name }}</h2>
+                    <h2 class="centerModPlus mt-5 fs-1">Benvenuto {{ Auth::user()->name }}</h2>
                     <a href="{{ route('article.create') }}" class="btn btn-contact mt-5 shadow centerModPlus" type="button">
                         Inserisci annuncio
                     </a>
                 @endauth
             </div>
             <div class="col-12 col-md-4 py-5 text-white text-center centerMod">
-                <h1>Presto.it fa al caso tuo!</h1>
+                <h1>Se cerchi la qualità facciamo al caso tuo!</h1>
                 <h3>Mostra a tutti cos'hai da offrire</h3>
                 <p>Nato nel 2023, Presto.it si differenzia dai competitors per la sua accessibilità.
                     Puoi immergerti tra gli annunci di varie categorie, acquistare il prodotto che più desideri

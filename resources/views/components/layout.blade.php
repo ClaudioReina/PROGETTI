@@ -9,7 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="/media/logo.ico" type="image/ICO">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap" rel="stylesheet">
+
     <title>Progetto Gruppo 04</title>
 @livewireStyles
 @vite(['resources/css/app.css', 'resources/js/app.js'])

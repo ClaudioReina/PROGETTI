@@ -16,11 +16,14 @@
                         <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top" alt="{{$article->name}}">
                     @endif
                     <div class="card-body">
-                        <h5 class="card-title">{{$article->title}}</h5>
-                        <p class="card-text">{{$article->price}} €</p>
-                        <p class="card-text text-muted">{{Str::limit($article->description,50)}}</p>
-                        <p>Creato da <a class="text-success" href="{{route('profile', ['user' => $article->user->id])}}">{{$article->user->name ?? 'Utente sconosciuto'}}</a>, il {{$article->created_at->format('d/m/Y')}}</p>
-                        <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary">Dettagli</a>
+                        <h5 class="card-title text-center fs-4">{{$article->title}}</h5>
+                        <p class="card-text fst-italic fw-bold text-center">{{$article->price}} €</p>
+                        <p class="card-text text-center text-muted">{{Str::limit($article->description,50)}}</p>
+                        <p class="text-center">Creato da <a class="text-success" href="{{route('profile', ['user' => $article->user->id])}}">{{$article->user->name ?? 'Utente sconosciuto'}}</a>, il {{$article->created_at->format('d/m/Y')}}</p>
+
+                        <div class="d-flex justify-content-center">
+                        <a href="{{route('article.show', compact('article'))}}" class="btn btn-contact2 ">Dettagli</a>
+                        </div>
                     </div>
                 </div>
             </div>
