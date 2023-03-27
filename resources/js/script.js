@@ -28,13 +28,13 @@ let btnSearch = document.querySelector('#btn-search');
 
 document.addEventListener('scroll', () => {
     if (window.scrollY>50) {
-        userIcon.classList.add('text-white');
+        // userIcon.classList.add('text-white');
         navbar.classList.add('navbar-dark');
         navbar.classList.add('bg_forNav','textNav');
         navbar.classList.remove('navbarColor');
         btnSearch.classList.replace('btn-outline-dark', 'btn-outline-light');
     } else {
-        userIcon.classList.remove('text-white');
+        // userIcon.classList.remove('text-white');
         navbar.classList.remove('bg_forNav','textNav','navbar-dark')
         navbar.classList.add('navbarColor');
         btnSearch.classList.replace('btn-outline-light', 'btn-outline-dark');
