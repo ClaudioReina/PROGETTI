@@ -12,7 +12,7 @@
             
             
             @forelse ($articles as $article)
-            <div class="col-12 col-md-12 py-2 mb-3 d-flex justify-content-center">
+            <div class="col-10 col-md-12 py-2 mb-3 d-flex justify-content-center">
                 <div class="cardCustom d-flex border">
                     <div class="">
                     @if (!$article->cover)

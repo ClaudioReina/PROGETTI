@@ -124,8 +124,8 @@
                 <h3 class="text-white mb-5 display-4 robotoFont">Ultimi Annunci caricati</h3>
             </div>
             @foreach ($articles as $article)
-                <div class="col-12 col-md-3 mx-auto">
-                    <div class="card cardCust shadow cardElements marginForMobile">
+                <div class="col-10 col-md-5 col-lg-3 mx-auto mb-5">
+                    <div class="card cardCust shadow cardElements ">
                         @if (!$article->cover)
                             <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top" alt="immagine non trovata">
                         @else
@@ -136,7 +136,7 @@
                                 {{ $article->title }}
                             </h5>
                             <p class="card-text fst-italic fw-bold text-center">{{ $article->price }} €</p>
-                            <p class="card-text">{{ Str::limit($article->description, 50) }}</p>
+                            <p class="card-text">{{ Str::limit($article->description, 20) }}</p>
                             <p> Creato da 
                                 <a class="txSec" href="{{route('profile', ['user' => $article->user->id])}}">
                                     {{$article->user->name ?? 'Utente sconosciuto'}}
@@ -155,7 +155,7 @@
 
     <div class="container-fluid form_bg">
         <div class="row">
-            <div class="col-12 col-md-6 text-white ms-5 ">
+            <div class="col-12 col-md-6 col-lg-7 text-white ">
                 <h4 class="display-4">Vuoi restare informato sui nuovi annunci?</h4>
                 <h5 class="display-6">Clicca sul bottone e compila il form di adesione alla
                     <span class="txMain">newsletter</span>

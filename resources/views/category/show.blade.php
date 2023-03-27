@@ -8,7 +8,7 @@
         </div>
         @if(count($articles) > 0)
         @foreach ($articles as $article)
-            <div class="col-12 col-md-3 mx-auto my-4">
+            <div class="col-10 col-md-3 mx-auto my-4">
                 <div class="card shadow">
                     @if (!$article->cover)
                         <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top" alt="immagine non trovata">
