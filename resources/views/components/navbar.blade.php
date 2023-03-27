@@ -32,16 +32,24 @@
             </ul>
             {{-- GUEST --}}
             <div class="nav-item dropdown text-black">
-                <a class="nav-link dropdown-toggle me-5 " href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <i class="bi bi-person-fill display-6 user-icon"></i>
-                </a>
                 @guest
-                    <ul class="dropdown-menu">
+                    <a class="nav-link dropdown-toggle me-5 " href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-person-fill display-6 user-icon"></i>
+                    </a>
+                <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
                         <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
                     </ul>
                 @else
+                    <a class="nav-link dropdown-toggle me-5 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        @if(!Auth::user()->avatar)
+                            {{-- <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top rounded-5" alt="immagine non trovata"> --}}
+                            <i class="bi bi-person-fill display-6 user-icon"></i>
+                        @else 
+                            <img class="avatar-icon" src="{{Storage::url(Auth::user()->avatar)}}" alt="">
+                        @endif
+                    </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('profile', Auth::id())}}">Profilo</a></li>
                         <li>

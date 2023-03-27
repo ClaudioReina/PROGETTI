@@ -32,6 +32,10 @@
                                 <li class="nav-item text-center">
                                     <a class="nav-link linkCustom" href="{{route('user.edit', $user)}}">Modifica profilo</a>
                                 </li> 
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="nav-item text-center">
+                                    <a class="nav-link linkCustom" href="">Elimina foto</a>
+                                </li>
                                 <li><hr class="dropdown-divider"></li> 
                                 @if(!Auth::user()->is_revisor)
                                 <li class="nav-item text-center">
