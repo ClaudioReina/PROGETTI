@@ -29,10 +29,13 @@
                 <li class="nav-item">
                     <a class="nav-link linkCustom linkCustomActive" href="{{ route('article.create') }}">Crea Annuncio</a>
                 </li>
-
+                @auth
+                @if(Auth::user()->is_revisor)
                 <li class="nav-item">
                     <a class="nav-link linkCustom linkCustomActive" href="{{ route('become-revisor') }}">Diventa revisore</a>
                 </li>
+                @endif
+                @endauth
             </ul>
             {{-- GUEST --}}
             <div class="nav-item dropdown text-black">
