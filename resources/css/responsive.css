@@ -45,13 +45,12 @@
     }
 
     .img-custom{
-        width: 175px;
+        width: 275px;
         height: 135px;
         object-fit: cover;
        margin-top:10vh ;
       }
 }
-
 
 .spaced{
     height: 30vh;
@@ -60,5 +59,3 @@
   .spacedSm{
     height: 20vh;
   }
-
-  

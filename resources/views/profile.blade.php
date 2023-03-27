@@ -3,25 +3,26 @@
     <div class="container py-5">
         {{-- SEZIONE AVATAR --}}
         <div class="row">
-            <div class="col-md-10 d-flex align-items-center pt-4">
+            <div class="col-12 col-md-6 d-flex align-items-center ms-5 pt-4">
                 @if(!$user->avatar)
-                        <img src="/media/ImmagineSalvaposto.jpg" class="avatar-image" alt="immagine non trovata" onclick="document.getElementById('avatar-input').click();" >
-                    @else
-                        <img class="avatar-image" src="{{ Storage::url($user->avatar) }}" onclick="document.getElementById('avatar-input').click();" id="avatar-image">
-                    @endif
-                    @if(Auth::user()->id == $user->id)
-                        <form action="{{ route('changeAvatar', ['user' => $user]) }}" method="POST" enctype="multipart/form-data" id="avatar-form">
-                            @csrf
-                            @method('put')
-                            <input type="file" name="avatar" id="avatar-input" style="display:none;" onchange="document.getElementById('avatar-form').submit();">
-                        </form>
-                    @endif
+                    <img src="/media/ImmagineSalvaposto.jpg" class="avatar-image" alt="immagine non trovata" onclick="document.getElementById('avatar-input').click();" >
+                @else
+                    <img class="avatar-image" src="{{ Storage::url($user->avatar) }}" onclick="document.getElementById('avatar-input').click();" id="avatar-image">
+                @endif
+                @if(Auth::user()->id == $user->id)
+                    <form action="{{ route('changeAvatar', ['user' => $user]) }}" method="POST" enctype="multipart/form-data" id="avatar-form">
+                        @csrf
+                        @method('put')
+                        <input type="file" name="avatar" id="avatar-input" style="display:none;" onchange="document.getElementById('avatar-form').submit();">
+                    </form>
+                @endif
+            </div>
                 
                 <div class="col-12 col-md-6 d-flex">
                     @if(Auth::user()->name == $user->name)
-                    <h1 class="ms-5 me-2 mt-2">{{Auth::user()->name}}</h1>
+                        <h1 class="ms-5 me-2 mt-2">{{Auth::user()->name}}</h1>
                     @else
-                    <h1 class="ms-5 me-2 mt-2">{{$user->name}}</h1>
+                        <h1 class="ms-5 me-2 mt-2">{{$user->name}}</h1>
                     @endif
                     
                     {{-- SETTING --}}
@@ -83,7 +84,6 @@
                         </div>
                     @endif
                 </div>
-            </div>
         </div>
         
         {{-- SEZIONE MESSAGGI --}}
@@ -99,7 +99,7 @@
                 <h4 class="display-6 text-center py-3">Sezione Revisore</h4>
                 <div class="revisione">
                     <a href="{{route('revisor.list')}}" class="nav-link btn_rev">Lista articoli da revisionare</a>
-                    <a class="nav-link btn_rev position-relative" aria-current="page" href="{{route('revisor.index')}}"> Zona Revisore
+                    <a class="btn_rev position-relative" aria-current="page" href="{{route('revisor.index')}}"> Zona Revisore
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         {{ App\Models\Article::toBeRevisionedCount()}}</span>
                         <span class="visually-hidden">Messaggi non letti</span>

@@ -7,14 +7,15 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <a class="nav-link active linkCustom linkCustomActive" aria-current="page" href="{{ route('homepage') }}">Home</a>
-            <ul class="navbar-nav mb-2 mb-lg-0 m-auto">         
+            <li class="nav-item">
+                <a class="nav-link active linkCustom linkCustomActive" aria-current="page" href="{{ route('homepage') }}">Home</a>
+            </li>
+            <ul class="navbar-nav mb-4 mb-lg-1 m-auto">         
                 <li class="nav-item">
-                    <a class="nav-link linkCustom linkCustomActive" href="{{ route('article.index') }}">Indice Annunci</a>
+                    <a class="nav-link linkCustom linkCustomActive mb-2" href="{{ route('article.index') }}">Indice Annunci</a>
                 </li>
-
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle linkCustom linkCustomActive" href="#" id="categoriesDropdown" role="button"
+                    <a class="nav-link dropdown-toggle linkCustom linkCustomActive mb-2" href="#" id="categoriesDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
@@ -27,14 +28,14 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link linkCustom linkCustomActive" href="{{ route('article.create') }}">Crea Annuncio</a>
+                    <a class="nav-link linkCustom linkCustomActive mb-2" href="{{ route('article.create') }}">Crea Annuncio</a>
                 </li>
                 @auth
-                @if(Auth::user()->is_revisor)
-                <li class="nav-item">
-                    <a class="nav-link linkCustom linkCustomActive" href="{{ route('become-revisor') }}">Diventa revisore</a>
-                </li>
-                @endif
+                    @if(!Auth::user()->is_revisor)
+                        <li class="nav-item">
+                            <a class="nav-link linkCustom linkCustomActive" href="{{ route('become-revisor') }}">Diventa revisore</a>
+                        </li>
+                    @endif
                 @endauth
             </ul>
             {{-- GUEST --}}
@@ -49,7 +50,7 @@
                         <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
                     </ul>
                 @else
-                    <a class="nav-link dropdown-toggle me-5 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle me-5 my-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         @if(!Auth::user()->avatar)
                             {{-- <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top rounded-5" alt="immagine non trovata"> --}}
                             <i class="bi bi-person-fill display-6 user-icon"></i>

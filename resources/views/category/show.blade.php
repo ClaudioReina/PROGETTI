@@ -7,27 +7,25 @@
             <h1>{{$category->name}}</h1>
         </div>
         @if(count($articles) > 0)
-        @foreach ($articles as $article)
-            <div class="col-10 col-md-3 mx-auto my-4">
-                <div class="card shadow">
-                    @if (!$article->cover)
-                        <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top" alt="immagine non trovata">
-                    @else
-                        <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top" alt="{{$article->name}}">
-                    @endif
-                    <div class="card-body">
-                        <h5 class="card-title text-center fs-4">{{$article->title}}</h5>
-                        <p class="card-text fst-italic fw-bold text-center">{{$article->price}} €</p>
-                        <p class="card-text text-center text-muted">{{Str::limit($article->description,50)}}</p>
-                        <p class="text-center">Creato da <a class="text-success" href="{{route('profile', ['user' => $article->user->id])}}">{{$article->user->name ?? 'Utente sconosciuto'}}</a>, il {{$article->created_at->format('d/m/Y')}}</p>
-
-                        <div class="d-flex justify-content-center">
-                        <a href="{{route('article.show', compact('article'))}}" class="btn btn-contact2 ">Dettagli</a>
+            @foreach ($articles as $article)
+                <div class="col-12 col-md-12 py-2 mb-3 text-white d-flex justify-content-center">
+                    <div class="cardCustom d-flex border">
+                        @if (!$article->cover)
+                            <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid img-custom " alt="immagine non trovata">
+                        @else
+                            <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top img-custom my-auto" alt="{{$article->name}}">
+                        @endif
+                        <div class="card-body ms-3">
+                            <h5 class="card-title mt-3">{{$article->title}}</h5>
+                            <h6 class="card-text fst-italic">{{$article->price}} €</h6>     
+                            <p class="fs-3 txSec">{{$article->category}}</p>                  
+                            <p class="card-text text-white small text-muted">{{Str::limit($article->description, 20)}}</p>
+                            <p>Creato da <a class="txSec" href="{{route('profile', ['user' => $article->user->id])}}">{{$article->user->name ?? 'Utente sconosciuto'}}</a>, il {{$article->created_at->format('d/m/Y')}}</p>
+                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-contact2 mb-4">Dettagli</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
         @else
         <div class="col-12 text-center mt-5 text-white hidden">
             <h4>Non ci sono articoli!</h4>
