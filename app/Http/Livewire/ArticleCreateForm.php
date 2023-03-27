@@ -14,16 +14,32 @@ public $category;
 public $description;
 public $price;
 
-protected $rules =[
-    'title' => 'require|min:4|unique:articles,title',
-    'description' =>'require|max:600',
+public function rules(): array
+{
+    return [
+        'title' =>'required|min:2',
+        'price' =>'required',
+        'category' =>'required',
+        'description' =>'required|min:20'        
+    ];
+}
 
-];
+public function messages(): array
+{
+    return [
+       'title.required' => 'Titolo mancante!',
+       'title.min' => 'Il titolo deve avere almeno 2 caratteri!',
+       'price.required' => 'Prezzo mancante!',
+       'category.required' => 'Selezionare una categoria',
+       'description.required' => 'Descrizione mancante!',
+       'description.min' => 'La descrizione deve avere almeno 20 caratteri!',
+    ];
+}
 
 
 public function store(){
-  /*   $this->validate();
- */
+     $this->validate();
+ 
        Article::create([
        'title' => $this->title,
        'category' => $this->category,

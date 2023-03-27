@@ -37,12 +37,12 @@ Route::delete('/article/destroy/{article}', [ArticleController::class, 'destroy'
 
 // Rotte delle categorie
 Route::get('/category/index', [CategoryController::class, 'index'])->name('category.index');
-Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+Route::get('/category/create', [CategoryController::class, 'create'])->middleware('isAdmin')->name('category.create');
 Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
 Route::get('/category/show/{category}', [CategoryController::class, 'show'])->name('category.show');
-Route::get('/category/edit/{category}', [CategoryController::class, 'edit'])->name('category.edit');
-Route::put('/category/update/{category}', [CategoryController::class, 'update'])->name('category.update');
-Route::delete('/category/destroy/{category}', [CategoryController::class, 'destroy'])->name('category.destroy');
+Route::get('/category/edit/{category}', [CategoryController::class, 'edit'])->middleware('isAdmin')->name('category.edit');
+Route::put('/category/update/{category}', [CategoryController::class, 'update'])->middleware('isAdmin')->name('category.update');
+Route::delete('/category/destroy/{category}', [CategoryController::class, 'destroy'])->middleware('isAdmin')->name('category.destroy');
 
 
 // ROTTA DEL REVISORE
