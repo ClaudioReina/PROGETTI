@@ -1,13 +1,36 @@
-@media (min-width: 769px) {
+@media (min-width: 770px) {
     
     .gradient-custom-2 {
         border-top-right-radius: .3rem;
         border-bottom-right-radius: .3rem;
     }
-    
+    .cardCustom{
+        width: 50%;
+        height: 270px;
+      }
+
+      .img-custom{
+        width: 350px;
+        height: 269px;
+        object-fit: cover;
+      }
+      
 }
 
-@media only screen and (max-width: 600px) {
+@media (min-width:481px) and (max-width:769px){
+    .cardCustom{
+        width: 60vh;
+      }
+
+      .img-custom{
+        width: 350px;
+        height: 269px;
+        object-fit: cover;
+        margin-top: 2px;
+      }
+}
+
+@media only screen and (max-width: 480px) {
     
     .centerMod{
         justify-content: center;
@@ -20,6 +43,13 @@
     .centerModPlus{
         margin-right: 50px;
     }
+
+    .img-custom{
+        width: 175px;
+        height: 135px;
+        object-fit: cover;
+       margin-top:10vh ;
+      }
 }
 
 
@@ -30,3 +60,5 @@
   .spacedSm{
     height: 20vh;
   }
+
+  
