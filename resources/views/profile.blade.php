@@ -34,7 +34,11 @@
                                 </li> 
                                 <li><hr class="dropdown-divider"></li>
                                 <li class="nav-item text-center">
-                                    <a class="nav-link linkCustom" href="">Elimina foto</a>
+                                    <a class="nav-link linkCustom" href="" onclick="event.preventDefault(); document.querySelector('#form-delete').submit();">Elimina foto</a>
+                                    <form id="form-delete" method="POST" action="{{route('deleteAvatar', $user)}}">
+                                        @csrf
+                                        @method('delete')
+                                    </form>
                                 </li>
                                 <li><hr class="dropdown-divider"></li> 
                                 @if(!Auth::user()->is_revisor)

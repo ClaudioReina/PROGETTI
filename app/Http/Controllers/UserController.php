@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
 use App\Models\User;
+use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -63,10 +64,19 @@ class UserController extends Controller
         return view('profile', ['user' => $user, 'imageUrl' => $imageUrl]);
     }
     
-    public function destroy() 
+    public function destroy(User $user) 
     {
-        Auth::user()->delete();
+        $user->delete();
+        $user->deleteAvatar();
 
         return redirect(route('homepage'))->with('userDeleted', 'Account eliminato! Torna Presto!');
+    }
+
+    public function deleteAvatar(User $user){
+        if($user->avatar){
+            Storage::delete($user->avatar);
+            $user->avatar = null;
+        }
+        return redirect()->back()->with('avatarDeleted', 'Immagine eliminata con successo');
     }
 }
