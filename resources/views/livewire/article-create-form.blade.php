@@ -72,7 +72,7 @@
                         </div>
                         <div class="col-lg-6 d-flex align-items-center gradient-custom-2 marginForMobile">
                             <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                                <h4 class="mb-4">Qualche consiglio dal Team Presto.it</h4>
+                                <h4 class="mb-4 text-center">Qualche consiglio dal Team Presto.it</h4>
                                 <ol>
                                     <li><h5>1. Scatta una bella fotografia.</h5>
                                         <p>Metti bene a fuoco l'oggetto e cerca una superficie, o uno sfondo, con meno distrazioni possibili. Una bella foto ti aiuta ad attirare di più l'attenzione di persone interessate.</p>

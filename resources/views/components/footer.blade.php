@@ -99,7 +99,7 @@
     
     <ul class="small d-flex">
       <li><a class="text-white mx-2" href="{{route('homepage')}}">Home</a></li>
-       <li><a class="text-white mx-2 -flex -third" href="{{route('become.revisor')}}">Lavora con noi</a></li> 
+       {{-- <li><a class="text-white mx-2 -flex -third" href="{{route('become.revisor')}}">Lavora con noi</a></li>  --}}
       <li><a class="text-white mx-2" href="{{ route('article.index') }}">Annunci</a></li>
       <li><a class="text-white mx-2" href="{{ route('login') }}">Iscriviti</a></li>
     </ul>
