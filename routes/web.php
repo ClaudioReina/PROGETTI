@@ -15,11 +15,12 @@ use App\Http\Controllers\CategoryController;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
-|
+
 */
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/contattaci', [PublicController::class, 'contact_us'])->name('contact_us');
+Route::get('/diventa-revisore', [PublicController::class, 'becomeRevisor'])->name('become-revisor');
 
 // Rotte dei profili
 Route::get('/profile/{user?}', [UserController::class, 'profile'])->name('profile')->middleware('auth');

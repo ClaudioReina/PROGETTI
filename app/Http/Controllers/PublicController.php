@@ -22,7 +22,13 @@ public function searchArticle (Request $request){
 
     $articles = Article::search($request->searched)->where('is_accepted', true)->paginate(10);
     return view ('article.index', compact('articles'));
-
 }
+
+
+public function becomeRevisor(){
+    return view('become-revisor');
+}
+
+
 
 }

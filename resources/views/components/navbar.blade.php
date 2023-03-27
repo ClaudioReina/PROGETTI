@@ -7,14 +7,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <a class="nav-link active linkCustom" aria-current="page" href="{{ route('homepage') }}">Home</a>
+            <a class="nav-link active linkCustom linkCustomActive" aria-current="page" href="{{ route('homepage') }}">Home</a>
             <ul class="navbar-nav mb-2 mb-lg-0 m-auto">         
                 <li class="nav-item">
-                    <a class="nav-link linkCustom" href="{{ route('article.index') }}">Indice Annunci</a>
+                    <a class="nav-link linkCustom linkCustomActive" href="{{ route('article.index') }}">Indice Annunci</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle linkCustom" href="#" id="categoriesDropdown" role="button"
+                    <a class="nav-link dropdown-toggle linkCustom linkCustomActive" href="#" id="categoriesDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
@@ -27,7 +27,11 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link linkCustom" href="{{ route('article.create') }}">Crea Annuncio</a>
+                    <a class="nav-link linkCustom linkCustomActive" href="{{ route('article.create') }}">Crea Annuncio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link linkCustom linkCustomActive" href="{{ route('become-revisor') }}">Diventa revisore</a>
                 </li>
             </ul>
             {{-- GUEST --}}
