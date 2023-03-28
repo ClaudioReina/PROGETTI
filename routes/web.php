@@ -65,4 +65,7 @@ Route::get('/revisor/list', [ArticleController::class, 'listArticle'])->middlewa
 //ROTTA RICERCA 
 Route::get('ricerca/articolo', [PublicController::class, 'searchArticle'])->name('articles.search');
 
+// ROTTA LINGUA
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+
 
