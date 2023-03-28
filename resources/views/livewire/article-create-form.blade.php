@@ -7,91 +7,127 @@
                         <div class="row g-0">
                             <div class="col-lg-6">
                                 <div class="card-body p-md-5 mx-md-4">
-                                    
+
                                     <x-messages />
-                                    
+
                                     <div class="text-center">
-                                        <img src="/media/presto.it__1_-removebg-preview.png" style="width: 100px;" alt="logo">
+                                        <img src="/media/presto.it__1_-removebg-preview.png" style="width: 100px;"
+                                            alt="logo">
                                         <h4 class="mt-1 mb-5 pb-1">Presto.it</h4>
                                     </div>
-                                    
-                                    @if($errors->any())
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                            <li>{{$error}}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
+
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
                                     @endif
-                                    
+
                                     <form wire:submit.prevent="store">
                                         @csrf
                                         <h4 class="my-5 text-center">Crea Nuovo Annuncio</h4>
-                                        
+
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="title">Nome</label>
                                             <input type="title" wire:model="title" id="title"
-                                            class="form-control"/>
+                                                class="form-control" />
                                         </div>
-                                        
+
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="categories">Categoria:</label>
                                             <select wire:model="category" id="categories">
                                                 <option value="">Seleziona Categoria</option>
                                                 @foreach ($categories as $category)
-                                                <option value="{{$category->name}}">
-                                                    {{$category->name}}
-                                                </option>
+                                                    <option value="{{ $category->name }}">
+                                                        {{ $category->name }}
+                                                    </option>
                                                 @endforeach
                                             </select>
                                         </div>
-                                        
+
+                                        <div class="form-outline mb-4">
+                                            <input wire:model="temporary_images" multiple
+                                                class="form-control shadow @error('temporary_images.*') is-invalid @enderror"
+                                                placeholder="image" type="file">
+                                            @error('temporary_images.*')
+                                                <p class="text-danger mt-2">{{$message}}</p>
+                                            @enderror
+                                        </div>
+                                        @if (!empty($images))
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <p>Anteprima:</p>
+                                                    <div class="row border-4 border-info rounded shadow py-4">
+                                                        @foreach ($images as $key => $image)
+                                                            <div class="col my-3">
+                                                                <div class="img-preview mx-auto shadow rounded "
+                                                                    style="background-image: url({{$image->temporaryUrl()}})">
+                                                                </div>
+                                                                <button type="button"
+                                                                    class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
+                                                                    wire:click="removeImage({{ $key }})">Cancella</button>
+                                                            </div>
+                                                        @endforeach
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endif
+                    
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="price">Prezzo</label>
                                             <input type="price" wire:model="price" id="price"
-                                            class="form-control"/>
+                                                class="form-control" />
                                         </div>
-                                        
+
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="description">Descrizione annuncio</label>
-                                            <textarea type="text" wire:model="description" id="description"
-                                            class="form-control" cols="7" rows="3"></textarea>
+                                            <textarea type="text" wire:model="description" id="description" class="form-control" cols="7" rows="3"></textarea>
                                         </div>
-                                        
+
                                         <div class="text-center pt-1 mb-5 pb-1">
-                                            <button
-                                            class="btn text-white btn-block gradient-custom-2 mb-3"
-                                            type="submit">Crea Annuncio
-                                        </button>
-                                    </div>
-                                    
-                                </form>
-                                
+                                            <button class="btn text-white btn-block gradient-custom-2 mb-3"
+                                                type="submit">Crea Annuncio
+                                            </button>
+                                        </div>
+
+                                    </form>
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2 marginForMobile">
-                            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                                <h4 class="mb-4 text-center">Qualche consiglio dal Team Presto.it</h4>
-                                <ol>
-                                    <li><h5>1. Scatta una bella fotografia.</h5>
-                                        <p>Metti bene a fuoco l'oggetto e cerca una superficie, o uno sfondo, con meno distrazioni possibili. Una bella foto ti aiuta ad attirare di più l'attenzione di persone interessate.</p>
-                                    </li>
-                                    <li><h5>2. Inserisci un prezzo realistico.</h5>
-                                        <p>Se sei indeciso sul prezzo dai un'occhiata agli altri annunci di oggetti simili al tuo pubblicati su Subito: questo ti aiuterà a identificare il prezzo migliore.</p>
-                                    </li>
-                                    <li><h5>3. Scrivi un annuncio chiaro.</h5>
-                                        <p>Cerca di inserire tutte le specifiche del prodotto che vuoi vendere. Cosa vorresti sapere se fossi tu la persona interessata all'acquisto? Fai una descrizione chiara, onesta e completa.</p>
-                                    </li>
-                                </ol>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2 marginForMobile">
+                                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                    <h4 class="mb-4 text-center">Qualche consiglio dal Team Presto.it</h4>
+                                    <ol>
+                                        <li>
+                                            <h5>1. Scatta una bella fotografia.</h5>
+                                            <p>Metti bene a fuoco l'oggetto e cerca una superficie, o uno sfondo, con
+                                                meno distrazioni possibili. Una bella foto ti aiuta ad attirare di più
+                                                l'attenzione di persone interessate.</p>
+                                        </li>
+                                        <li>
+                                            <h5>2. Inserisci un prezzo realistico.</h5>
+                                            <p>Se sei indeciso sul prezzo dai un'occhiata agli altri annunci di oggetti
+                                                simili al tuo pubblicati su Subito: questo ti aiuterà a identificare il
+                                                prezzo migliore.</p>
+                                        </li>
+                                        <li>
+                                            <h5>3. Scrivi un annuncio chiaro.</h5>
+                                            <p>Cerca di inserire tutte le specifiche del prodotto che vuoi vendere. Cosa
+                                                vorresti sapere se fossi tu la persona interessata all'acquisto? Fai una
+                                                descrizione chiara, onesta e completa.</p>
+                                        </li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    <div class="container-fluid spaced">
     </div>
-</section>
-<div class="container-fluid spaced">
-</div>
 </div>

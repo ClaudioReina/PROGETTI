@@ -3,10 +3,11 @@
 namespace App\Models;
 
 use App\Models\User;
+use App\Models\Image;
 use App\Models\Category;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
@@ -55,5 +56,8 @@ class Article extends Model
     public static function toBeRevisionedCount(){
         return Article::where('is_accepted', null)->count();
     }
-
+        public function image()
+        {
+            return $this->hasMany(Image::class);
+        }
 }

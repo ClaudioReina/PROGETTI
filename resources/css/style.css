@@ -392,3 +392,19 @@ a {
   padding-top: 6rem;
   z-index: 1;
 }
+
+
+
+
+
+
+/* CREAZIONE ARTICOLO */
+.img-preview{
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+/* END CREAZIONE ARTICOLO */
