@@ -174,7 +174,7 @@
 
         {{-- SEZIONE CATEGORIE --}}
         @auth
-            @if(Auth::user()->id == $user->id && Auth::id() == 1)
+            @if(Auth::user()->is_admin)
                 <div class="row py-5">
                     <div class="col-12 mb-5 d-flex justify-content-center">
                         <h3 class="display-6 mb-3">Categorie</h3>
