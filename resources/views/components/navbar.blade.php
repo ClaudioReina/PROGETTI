@@ -70,8 +70,8 @@
                 @endguest
             </div>
             <form action="{{route('articles.search')}}" method="GET" class="d-flex">
-                <input name="searched" class="form-control me-2 bg-secondary text-white" type="search" placeholder="Search" aria-label="Search">
-                <button id="btn-search" class="btn btn-outline-dark" type="submit">Search</button>
+                <input name="searched" class="form-control me-2 text-white" type="search" placeholder="Search" aria-label="Search">
+                <button id="btn-search" class="btn btn-outline-dark" type="submit">Cerca</button>
             </form>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

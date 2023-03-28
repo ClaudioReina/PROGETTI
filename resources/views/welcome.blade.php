@@ -160,8 +160,7 @@
                 <h5 class="display-6">Clicca sul bottone e compila il form di adesione alla
                     <span class="txMain">newsletter</span>
                 </h5>
-                <button class="btn-contact"> Iscriviti alla newsletter
-                </button>
+                <button class="btn-contact"> Iscriviti alla newsletter </button>
             </div>
         </div>
     </div>
