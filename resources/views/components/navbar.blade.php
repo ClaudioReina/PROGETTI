@@ -72,7 +72,23 @@
             <form action="{{route('articles.search')}}" method="GET" class="d-flex">
                 <input name="searched" class="form-control me-2 bg-secondary text-white" type="search" placeholder="Search" aria-label="Search">
                 <button id="btn-search" class="btn btn-outline-dark" type="submit">Search</button>
-              </form>
+            </form>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lingue
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item dropdown-item">
+                        <x-_locale lang='it'/>
+                    </li>
+                    <li class="nav-item dropdown-item">
+                        <x-_locale lang='en'/>
+                    </li>
+                    <li class="nav-item dropdown-item">
+                        <x-_locale lang='es'/>
+                    </li>
+                </ul>
+              </li>
         </div>
     </div>
 </nav>
