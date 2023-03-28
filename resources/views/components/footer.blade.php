@@ -87,7 +87,7 @@
   </div>
   
   <div class="">
-    <ul class="d-flex ms-4 ">
+    <ul class="d-flex ms-3 ">
       <li><i class="bi bi-facebook me-2 text-white fs-3"></i></li>
       <li><i class="bi bi-twitter mx-2 text-white fs-3"></i></li>
       <li><i class="bi bi-instagram mx-2 text-white fs-3"></i></li>
@@ -97,7 +97,7 @@
       
     </ul>
     
-    <ul class="small d-flex">
+    <ul class="small d-flex ms-5 fw-bold">
       <li><a class="text-white mx-2" href="{{route('homepage')}}">Home</a></li>
        {{-- <li><a class="text-white mx-2 -flex -third" href="{{route('become.revisor')}}">Lavora con noi</a></li>  --}}
       <li><a class="text-white mx-2" href="{{ route('article.index') }}">Annunci</a></li>
@@ -105,6 +105,6 @@
     </ul>
     
   </div>
-  <p class="small text-center text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maxime repellendus mollitia necessitatibus cupiditate totam nulla, ullam qui dolores nisi? Eius est ullam eaque minus dicta velit, optio itaque molestiae.</p>
+  <p class="small fst-italic text-white text-center text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maxime repellendus mollitia necessitatibus cupiditate totam nulla, ullam qui dolores nisi? Eius est ullam eaque minus dicta velit, optio itaque molestiae.</p>
 </footer>
 
