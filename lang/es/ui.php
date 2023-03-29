@@ -4,7 +4,7 @@ return [
     'welcome' => 'Bienvenido',
     'insertArticle' => 'Publicar Anuncios',
     'sloganOne' => 'Si buscas calidad, ¡estamos aquí para ti!',
-    'sloganTow' => 'Muestra a todos lo que tienes para ofrecer',
+    'sloganTwo' => 'Muestra a todos lo que tienes para ofrecer',
     'CTA' => 'Nacido en 2023, Presto.it se diferencia de sus competidores por su accesibilidad. Puede sumergirse en los anuncios de varias categorías, comprar el producto que más desea o cargar el que ya no necesita. ¡Y eso no es todo!
     ¿Quieres unirte al equipo de Presto.it? ¿Rellenas el formulario y esperas a la aceptación del \'admin. ¿Es todo tan simple? Sí, somos PRESTO.IT!',
     'category1' => 'Electrodomésticos',
@@ -48,7 +48,7 @@ return [
     'Registrati' => 'Registrarse',
     'Password' => 'Contraseña olvidada',
     // Modulo di registrazione
-    'NomeUtente' => 'Nombre completo',
+    'NomeUtente' => 'Nombre',
     'Conferma P' => 'Confirmar contraseña',
     // Profilo
     'AnnunciCaricati' => 'Anuncios cargados',
@@ -68,8 +68,14 @@ return [
     'Punto2' => 'Ingresa un precio realista.',
     'Descrizionepunto2' => 'Si no estás seguro del precio, echa un vistazo a otros anuncios de objetos similares al tuyo publicados: esto te ayudará a identificar el mejor precio.',
     'Punto3' => 'Escribe un anuncio claro.',
-    'Descrizionepunto3' => 'Intente introducir todas las especificaciones del producto que desea vender. ¿Qué le gustaría saber si usted era la persona interesada en la compra? Haz una descripción clara, honesta y completa.
-    ',
+    'Descrizionepunto3' => 'Intente introducir todas las especificaciones del producto que desea vender. ¿Qué le gustaría saber si usted era la persona interesada en la compra? Haz una descripción clara, honesta y completa.',
+    // Crea nuova categoria
+    'NuovaCategoria' => 'Nueva Categoría',
+    'NomeCategoria' => 'Nombre',
+    'CaricaImmagine' => 'Cargar Imagen',
+    'CreaCategoria'=> 'Crear Categoría',
+    'InserisciCategoria' => 'Introduce una nueva categoría',
+    'DescrizioneCategoria' => 'Como administrador, puede agregar una nueva categoría aquí.',
     // Revisore
     'Sezione' => 'Secciòn Revisor',
     'Lista' => 'Lista de artículos a revisar',

@@ -15,7 +15,7 @@
         <div class="col-12 col-md-6 mt-4">
             <form class="form formLogin p-4" method="POST" action="{{route('register')}}">
                 @csrf
-                <p id="heading">Registrati</p>
+                <p id="heading">{{__('ui.Registrati')}}</p>
                 <div class="field">
                     <label for="name">{{__('ui.NomeUtente')}}</label>
                     <input type="name" name="name" id="name" class="form-control input-field" placeholder="Indirizzo email" />
@@ -29,7 +29,7 @@
                     <input type="password" name="password" id="password" class="form-control input-field" />
                 </div>
                 <div class="field">
-                    <label for="password">Conferma Password</label>
+                    <label for="password">{{__('ui.Conferma_P')}}</label>
                     <input type="password" name="password_confirmation" id="password" class="form-control input-field" />
                 </div>
                 <div class="btnLogin">

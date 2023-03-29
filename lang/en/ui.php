@@ -52,7 +52,7 @@ return [
     'Registrati' => 'Sign In',
     'Password' => 'Forgotten Password',
     // Modulo di registrazione
-    'NomeUtente' => 'User Name',
+    'NomeUtente' => 'Name',
     'Conferma P' => 'Confirm password',
     // Profilo
     'AnnunciCaricati' => 'Article loaded',
@@ -68,12 +68,18 @@ return [
     'Crea2' => 'Create announcement',
     'Descrizione1' => 'Some advice from Team Presto.it',
     'Punto1' => 'Take a nice picture.',
-    'Descrizionepunto1' => 'Focus the object well and look for a surface, or background, with as few distractions as possible. A beautiful photo helps you attract more attention to interested people.
-    ',
+    'Descrizionepunto1' => 'Focus the object well and look for a surface, or background, with as few distractions as possible. A beautiful photo helps you attract more attention to interested people.',
     'Punto2' => 'Add a realistic price.',
     'Descrizionepunto2' => 'If you are undecided about the price, take a look at the other ads of items similar to your published: this will help you identify the best price.',
     'Punto3' => 'Write a clear announcement.',
     'Descrizionepunto3' => 'Try to enter all the specifications of the product you want to sell. What would you like to know if you were the person interested in buying? Make a clear, honest and complete description.',
+    // Crea nuova categoria
+    'NuovaCategoria' => 'New Category',
+    'NomeCategoria' => 'Name',
+    'CaricaImmagine' => 'Upload Image',
+    'CreaCategoria'=> 'Create Category',
+    'InserisciCategoria' => 'Enter a new category',
+    'DescrizioneCategoria' => 'As an administrator, you can add a new category here.',
     // Revisore
     'Sezione' => 'Revisor section',
     'Lista' => 'List of articles to be reviewed',
