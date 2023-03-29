@@ -22,6 +22,12 @@ Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/contattaci', [PublicController::class, 'contact_us'])->name('contact_us');
 Route::get('/diventa-revisore', [PublicController::class, 'becomeRevisor'])->name('become-revisor');
 
+// ROTTA LINGUA
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+//ROTTA RICERCA 
+Route::get('ricerca/articolo', [PublicController::class, 'searchArticle'])->name('articles.search');
+
+
 // Rotte dei profili
 Route::get('/profile/{user?}', [UserController::class, 'profile'])->name('profile')->middleware('auth');
 Route::put('/profile/avatar/{user}', [UserController::class, 'changeAvatar'])->name('changeAvatar');
@@ -60,12 +66,3 @@ Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->
 Route::get('/richiesta/revisore{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 //Lista degli articoli (only moderator)
 Route::get('/revisor/list', [ArticleController::class, 'listArticle'])->middleware('isRevisor')->name('revisor.list');
-
-
-//ROTTA RICERCA 
-Route::get('ricerca/articolo', [PublicController::class, 'searchArticle'])->name('articles.search');
-
-// ROTTA LINGUA
-Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
-
-

@@ -7,11 +7,11 @@
                 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                                @if (!$article->cover)
-                                <img src="https://picsum.photos/300" class="img-fluid card-img-top rounded-5" alt="immagine non trovata">
-                                @else
-                                <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top rounded-5" alt="{{$article->name}}">
-                                @endif
+                            @if (!$article->cover)
+                            <img src="https://picsum.photos/300" class="img-fluid card-img-top rounded-5" alt="immagine non trovata">
+                            @else
+                            <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top rounded-5" alt="{{$article->name}}">
+                            @endif
                         </div>
                          <div class="carousel-item">
                             @if (!$article->cover)

@@ -12,9 +12,9 @@
         <div class="row ">
             <div class="col-12 col-md-6 ps-5 py-5 text-center text-white ">
                 @auth
-                    <h2 class="centerModPlus mt-5 fs-1">Benvenuto {{ Auth::user()->name }}</h2>
+                    <h2 class="centerModPlus mt-5 fs-1">{{__('ui.welcome')}} {{ Auth::user()->name }}</h2>
                     <a href="{{ route('article.create') }}" class="btn btn-contact mt-5 shadow centerModPlus" type="button">
-                        Inserisci annuncio
+                        Inserisci Annuncio
                     </a>
                 @endauth
             </div>

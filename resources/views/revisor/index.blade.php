@@ -30,22 +30,22 @@
                         <div class="carousel-item active">
                             @if (!$article_to_check->cover)
                                 <img src="https://picsum.photos/300" class="img-fluid card-img-top rounded-5" alt="immagine non trovata">
-                                @else
-                                <img src="{{Storage::url($article_to_check->cover)}}" class="img-fluid card-img-top rounded-5" alt="{{$article_to_check->name}}">
-                                @endif
-                        </div>
-                        <div class="carousel-item">
-                            @if (!$article_to_check->cover)
-                            <img src="https://picsum.photos/301" class="img-fluid card-img-top rounded-5" alt="immagine non trovata">
                             @else
-                            <img src="{{Storage::url($article_to_check->cover)}}" class="img-fluid card-img-top rounded-5" alt="{{$article_to_check->name}}">
+                                <img src="{{Storage::url($article_to_check->cover)}}" class="img-fluid card-img-top rounded-5" alt="{{$article_to_check->name}}">
                             @endif
                         </div>
                         <div class="carousel-item">
                             @if (!$article_to_check->cover)
-                            <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top rounded-5" alt="immagine non trovata">
+                                <img src="https://picsum.photos/301" class="img-fluid card-img-top rounded-5" alt="immagine non trovata">
                             @else
-                            <img src="{{Storage::url($article_to_check->cover)}}" class="img-fluid card-img-top rounded-5" alt="{{$article_to_check->name}}">
+                                <img src="{{Storage::url($article_to_check->cover)}}" class="img-fluid card-img-top rounded-5" alt="{{$article_to_check->name}}">
+                            @endif
+                        </div>
+                        <div class="carousel-item">
+                            @if (!$article_to_check->cover)
+                                <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top rounded-5" alt="immagine non trovata">
+                            @else
+                                <img src="{{Storage::url($article_to_check->cover)}}" class="img-fluid card-img-top rounded-5" alt="{{$article_to_check->name}}">
                             @endif
                         </div>
                     </div>
