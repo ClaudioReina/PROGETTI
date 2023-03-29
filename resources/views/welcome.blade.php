@@ -21,7 +21,7 @@
             <div class="col-12 col-md-4 py-5 text-white text-center centerMod">
                 <h1>Se cerchi la qualità facciamo al caso tuo!</h1>
                 <h3>Mostra a tutti cos'hai da offrire</h3>
-                <p>Nato nel 2023, Presto.it si differenzia dai competitors per la sua accessibilità.
+                <p > Nato nel 2023, Presto.it si differenzia dai competitors per la sua accessibilità.
                     Puoi immergerti tra gli annunci di varie categorie, acquistare il prodotto che più desideri
                     o caricare quello che non ti serve più. E non è finita qui!
                     Vuoi unirti al team di Presto.it? Compila il form e attendi l'accettazione

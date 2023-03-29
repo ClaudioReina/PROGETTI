@@ -49,8 +49,14 @@ return [
     'Password' => 'Password dimenticata',
     // Modulo di registrazione
     'NomeUtente' => 'Nome completo',
-    'Conferma P' => 'Conferma password',
+    'Conferma_P' => 'Conferma password',
     // Profilo
+    'modificaProfilo' => 'Modifica profilo',
+    'diventaRevisore' => 'Diventa revisore',
+    'eliminaAccount' => 'Elimina Account',
+    'seiSicuro' => 'Sei sicuro di voler\'eliminare l\'account',
+    'chiudi' => 'Chiudi',
+    'Elimina' => 'Elimina',
     'AnnunciCaricati' => 'Annunci caricati',
     // Crea nuovo articolo
     'Crea' => 'Crea nuovo articolo',
@@ -85,6 +91,9 @@ return [
     'Cancella' => 'Cancella',
     'Accetta' => 'Accetta',
     'Rifiuta' => 'Rifiuta',
+    'statoAnnuncio' => 'Stato annuncio',
+    'inCorso' => 'In corso',
+    
     // Index
     'AnnunciDisponibili' => 'Annunci Disponibili',
     'DettagliCard' => 'Dettagli',
