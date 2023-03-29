@@ -18,7 +18,7 @@
                 <p id="heading">Registrati</p>
                 <div class="field">
                     <label for="name">{{__('ui.NomeUtente')}}</label>
-                    <input type="name" name="name" id="name" class="form-control input-field" placeholder="Indirizzo email" />
+                    <input type="name" name="name" id="name" class="form-control input-field" placeholder="Mario Rossi" />
                 </div>
                 <div class="field">
                     <label for="email">Email</label>
