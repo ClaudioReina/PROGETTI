@@ -106,7 +106,7 @@
                                         <li>
                                             <h5>2. Inserisci un prezzo realistico.</h5>
                                             <p>Se sei indeciso sul prezzo dai un'occhiata agli altri annunci di oggetti
-                                                simili al tuo pubblicati su Subito: questo ti aiuterà a identificare il
+                                                simili al tuo pubblicati: questo ti aiuterà a identificare il
                                                 prezzo migliore.</p>
                                         </li>
                                         <li>

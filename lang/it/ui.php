@@ -1,16 +1,12 @@
 <?php
 return [
+    // Welcome
     'welcome' => 'Benvenuto',
-    
     'insertArticle' => 'Inserisci Annuncio',
-    
     'sloganOne' => 'Se cerchi la qualità facciamo al caso tuo!',
-    
     'sloganTow' => 'Mostra a tutti cos\'hai da offrire',
-    
     'CTA' => 'Nato nel 2023, Presto.it si differenzia dai competitors per la sua accessibilità. Puoi immergerti tra gli annunci di varie categorie, acquistare il prodotto che più desideri o caricare quello che non ti serve più. E non è finita qui!
               Vuoi unirti al team di Presto.it? Compila il form e attendi l\'accettazione dell\'admin. E\' tutto così semplice? Sì, noi siamo PRESTO.IT!',
-    
     'category1' => 'Elettrodomestici',
     'category2' => 'Telefonia',
     'category3' => 'Veicoli',
@@ -21,48 +17,79 @@ return [
     'category8' => 'Cultura',
     'category9' => 'Fotografia',
     'category10' => 'Console e videogiochi',
-
     'sloganThree' => 'Il nostro servizio è',
-
     'sloganFour' => 'Ultimi Annunci caricati',
-
     'create' => 'Creato da',
-
     'btnShowArt' => 'Dettaglio',
-
     'sloganFive' => 'Vuoi restare informato sui nuovi annunci?',
-
     'sloganSix' => 'Clicca sul bottone e compila il form di adesione alla',
-
     'sloganSixSpan' => 'newsletter',
-
     'subscribe' => 'Iscriviti alla newsletter',
-
+    // Footer
     'footerHome' => 'Home',
-
     'footerArticles' => 'Articoli',
-
     'footerSubscribe' => 'Iscriviti',
-
+    // Navbar
     'navbarHome' => 'Home',
-
     'navbarIndex' => 'Indice Annunci',
-
     'navbarCategories' => 'Categorie',
-
     'navbarNewArticle' => 'Crea Annuncio',
-
     'navbarRevisor' => 'Diventa Revisore',
-
     'navbarRegister' => 'Registrati',
-
     'navbarLogin' => 'Accedi',
-
     'navabarProfile' => 'Profilo',
-
     'navbarOut' => 'Esci',
-
     'navabarLanguages' => 'Lingue',
-
     'navbarSearch' => 'Cerca',
+    'Lingue' => 'Lingue',
+    'Profilo' => 'Profilo',
+    // Login
+    'Accedi' => 'Login',
+    'Registrati' => 'Registrati',
+    'Password' => 'Password dimenticata',
+    // Modulo di registrazione
+    'NomeUtente' => 'Nome completo',
+    'Conferma P' => 'Conferma password',
+    // Profilo
+    'AnnunciCaricati' => 'Annunci caricati',
+    // Crea nuovo articolo
+    'Crea' => 'Crea nuovo articolo',
+    'NomeArticolo' => 'Nome',
+    'Categoria' => 'Categoria',
+    'Selezione' => 'Seleziona Categoria',
+    'File' => 'Scegli file',
+    'Nessuno' => 'Nessun file selezionato',
+    'Prezzo' => 'Prezzo',
+    'DescrizioneAnnuncio' => 'Descrizione annuncio',
+    'Crea2' => 'Crea Annuncio',
+    'Descrizione1' => 'Qualche consiglio dal Team Presto.it',
+    'Punto1' => 'Scatta una bella fotografia.',
+    'Descrizionepunto1' => 'Metti bene a fuoco l\'oggetto e cerca una superficie, o uno sfondo, con meno distrazioni possibili. Una bella foto ti aiuta ad attirare di più l\'attenzione di persone interessate.',
+    'Punto2' => 'Inserisci un prezzo realistico.',
+    'Descrizionepunto2' => 'Se sei indeciso sul prezzo dai un\'occhiata agli altri annunci di oggetti simili al tuo pubblicati: questo ti aiuterà a identificare il prezzo migliore.',
+    'Punto3' => 'Scrivi un annuncio chiaro.',
+    'Descrizionepunto3' => 'Cerca di inserire tutte le specifiche del prodotto che vuoi vendere. Cosa vorresti sapere se fossi tu la persona interessata all\'acquisto? Fai una descrizione chiara, onesta e completa.',
+    // Revisore
+    'Sezione' => 'Sezione Revisore',
+    'Lista' => 'Lista articoli da revisionare',
+    'Zona' => 'Zona Revisore',
+    'Annunci' => 'Annunci caricati',
+    'NessunoRevisore' => 'Non hai caricato nessun annuncio',
+    'CategorieRevisore' => 'Categorie',
+    'CreaCategoriaRevisore' => 'Crea Categoria',
+    'NessunaCategoriaRevisore' => 'Non hai caricato nessuna categoria.',
+    'NessunAnnunciodaRevisionare' => 'Non ci sono annunci da revisionare.',
+    'Ecco' => 'Ecco l\'annucio da revisionare.',
+    'Visualizza' => 'Visualizza',
+    'Modifica' => 'Modifica',
+    'Cancella' => 'Cancella',
+    'Accetta' => 'Accetta',
+    'Rifiuta' => 'Rifiuta',
+    // Index
+    'AnnunciDisponibili' => 'Annunci Disponibili',
+    'DettagliCard' => 'Dettagli',
+    'TornaIndietro' => 'Torna indietro',
+    'NessunArticoloIndex' => 'Non ci sono articoli'
+
+
 ];
