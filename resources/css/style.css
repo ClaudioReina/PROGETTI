@@ -110,11 +110,15 @@ a {
   transition: all 3s;
 }
 
-.show {
+.show1{
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
 }
+
+
+
+
 
 .bg_homepage{
   background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/pexels-nataliya-vaitkevich-6214472.jpg);

@@ -8,11 +8,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <li class="nav-item">
-                <a class="nav-link active linkCustom linkCustomActive pt-1" aria-current="page" href="{{ route('homepage') }}">{{__('ui.navbarHome')}}</a>
+                <a class="nav-link active linkCustom linkCustomActive" aria-current="page" href="{{ route('homepage') }}">{{__('ui.navbarHome')}}</a>
             </li>
-            <ul class="navbar-nav pt-1 mt-2 m-auto">         
+            <ul class="navbar-nav mt-3  m-auto">         
                 <li class="nav-item">
-                    <a class="nav-link linkCustom linkCustomActive mb-2" href="{{ route('article.index') }}">{{__('ui.navbarIndex')}}</a>
+                    <a class="nav-link linkCustom linkCustomActive" href="{{ route('article.index') }}">{{__('ui.navbarIndex')}}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle linkCustom linkCustomActive mb-2" href="#" id="categoriesDropdown" role="button"
@@ -69,10 +69,6 @@
     </ul>
     @endguest
 </div>
-<form action="{{route('articles.search')}}" method="GET" class="d-flex">
-    <input name="searched" class="form-control me-2 text-white" type="search" placeholder="Search" aria-label="Search">
-    <button id="btn-search" class="btn btn-outline-dark" type="submit">{{__('ui.navbarSearch')}}</button>
-</form>
 <li class="nav-item dropdown mx-3">
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         {{__('ui.navabarLanguages')}}
