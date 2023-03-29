@@ -12,6 +12,7 @@ class ArticleCreateForm extends Component
 {
     use WithFileUploads;
 
+    public $name;
     public $title;
     public $category;
     public $description;
@@ -75,22 +76,21 @@ class ArticleCreateForm extends Component
     public function store()
     {
         $this->validate();
+        // $this->article = Category::find($this->category)->articles()->create($this->validate());
 
-        $this->article = Category::find($this->category)->articles()->create($this->validate());
-        if (count($this->images)){
-            foreach($this->images as $image){
-                $this->article->images()->create(['path'=>$image->store('images', 'public')]);
-            }
-        }
-
-        Article::create([
+        $this->article = Article::create([
             'title' => $this->title,
             'category' => $this->category,
             'description' => $this->description,
             'price' => $this->price,
             'user_id' => Auth::id(),
         ]);
-
+        
+        if (count($this->images)){
+            foreach($this->images as $image){
+                $this->article->image()->create(['path'=>$image->store('images', 'public')]);
+            }
+        }
         session()->flash('articleCreated', 'Annuncio creato, è tra le mani dei nostri revisori!');
         $this->cleanForm();
     }

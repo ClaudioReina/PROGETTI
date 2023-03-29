@@ -22,9 +22,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
      {
-        $user = User::find(1);
-        $user->is_admin = true;
-        $user->save();
+        // $user = User::find(1);
+        // $user->is_admin = true;
+        // $user->save();
 
         if(\Illuminate\Support\Facades\Schema::hasTable('categories')){
          View::share('categories', Category::all());
