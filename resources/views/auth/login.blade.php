@@ -13,7 +13,7 @@
 
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-12 mt-5 pt-5 col-md-3">
+        <div class="col-12 col-md-6 col-lg-4 mt-5 pt-5 ">
             <x-loginForm />
         </div>
     </div>

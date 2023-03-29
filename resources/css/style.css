@@ -25,6 +25,10 @@ a {
   
 }
 
+.underline{
+  text-decoration: underline;
+}
+
 .robotoFont{
   font-family: 'Roboto Slab', serif;
 }

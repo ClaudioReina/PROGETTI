@@ -12,7 +12,7 @@
 
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-6 mt-4">
+        <div class="col-12 col-md-6 col-lg-4 mt-4">
             <form class="form formLogin p-4" method="POST" action="{{route('register')}}">
                 @csrf
                 <p id="heading">Registrati</p>
