@@ -55,3 +55,8 @@
 .textNav {
     color: rgb(235, 230, 230) !important;
 }
+
+.dropdowndimention{
+    --bs-dropdown-min-width: 7vw !important;
+   padding-left: 7px !important;
+}

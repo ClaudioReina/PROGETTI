@@ -28,17 +28,17 @@
 
                                     <form wire:submit.prevent="store">
                                         @csrf
-                                        <h4 class="my-5 text-center">Crea Nuovo Annuncio</h4>
+                                        <h4 class="my-5 text-center">{{__('ui.Crea')}}</h4>
 
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="title">Nome</label>
+                                            <label class="form-label" for="title">{{__('ui.NomeArticolo')}}</label>
                                             <input type="title" wire:model="title" id="title" class="form-control" />
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="categories">Categoria:</label>
+                                            <label class="form-label" for="categories">{{__('ui.Categoria')}}:</label>
                                             <select wire:model="category" id="categories">
-                                                <option value="">Seleziona Categoria</option>
+                                                <option value="">{{__('ui.Selezione')}}</option>
                                                 @foreach ($categories as $category)
                                                     <option value="{{ $category->name }}">
                                                         {{ $category->name }}
@@ -57,14 +57,14 @@
                                         @if (!empty($images))
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <p>Anteprima:</p>
+                                                    <p>{{__('ui.Anteprima')}}:</p>
                                                     <div class="row border-4 border-info rounded shadow py-4">
                                                         @foreach ($images as $key => $image)
                                                             <div class="col my-3">
-                                                                <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}})">
+                                                                <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});">
                                                                 </div>
                                                                 <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{ $key }})">
-                                                                    Cancella
+                                                                    {{__('ui.Cancella')}}
                                                                 </button>
                                                             </div>
                                                         @endforeach
@@ -74,18 +74,18 @@
                                         @endif
                     
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="price">Prezzo</label>
+                                            <label class="form-label" for="price">{{__('ui.Prezzo')}}</label>
                                             <input type="price" wire:model="price" id="price" class="form-control" />
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="description">Descrizione annuncio</label>
+                                            <label class="form-label" for="description">{{__('ui.DescrizioneAnnuncio')}}</label>
                                             <textarea type="text" wire:model="description" id="description" class="form-control" cols="7" rows="3"></textarea>
                                         </div>
 
                                         <div class="text-center pt-1 mb-5 pb-1">
                                             <button class="btn text-white btn-block gradient-custom-2 mb-3"
-                                                type="submit">Crea Annuncio
+                                                type="submit">{{__('ui.Crea2')}}
                                             </button>
                                         </div>
 
@@ -95,25 +95,19 @@
                             </div>
                             <div class="col-lg-6 d-flex align-items-center gradient-custom-2 marginForMobile">
                                 <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                                    <h4 class="mb-4 text-center">Qualche consiglio dal Team Presto.it</h4>
+                                    <h4 class="mb-4 text-center">{{__('ui.Descrizione1')}}</h4>
                                     <ol>
                                         <li>
-                                            <h5>1. Scatta una bella fotografia.</h5>
-                                            <p>Metti bene a fuoco l'oggetto e cerca una superficie, o uno sfondo, con
-                                                meno distrazioni possibili. Una bella foto ti aiuta ad attirare di più
-                                                l'attenzione di persone interessate.</p>
+                                            <h5>{{__('ui.Punto1')}}</h5>
+                                            <p>{{__('ui.Descrizionepunto1')}}</p>
                                         </li>
                                         <li>
-                                            <h5>2. Inserisci un prezzo realistico.</h5>
-                                            <p>Se sei indeciso sul prezzo dai un'occhiata agli altri annunci di oggetti
-                                                simili al tuo pubblicati: questo ti aiuterà a identificare il
-                                                prezzo migliore.</p>
+                                            <h5>{{__('ui.Punto2')}}</h5>
+                                            <p>{{__('ui.Descrizionepunto2')}}</p>
                                         </li>
                                         <li>
-                                            <h5>3. Scrivi un annuncio chiaro.</h5>
-                                            <p>Cerca di inserire tutte le specifiche del prodotto che vuoi vendere. Cosa
-                                                vorresti sapere se fossi tu la persona interessata all'acquisto? Fai una
-                                                descrizione chiara, onesta e completa.</p>
+                                            <h5>{{__('ui.Punto3')}}</h5>
+                                            <p>{{__('ui.Descrizionepunto3')}}</p>
                                         </li>
                                     </ol>
                                 </div>

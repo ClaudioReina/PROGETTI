@@ -20,7 +20,7 @@
             </div>
             <div class="col-12 col-md-4 py-5 text-white text-center centerMod">
                 <h1>{{__('ui.sloganOne')}}</h1>
-                <h3>{{__('ui.sloganTow')}}</h3>
+                <h3>{{__('ui.sloganTwo')}}</h3>
                 <p>{{__('ui.CTA')}}
                 </p>
                 <div class="d-flex justify-content-around mx-auto text-center">
@@ -51,43 +51,43 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img width="120" src="https://img.icons8.com/dotty/80/null/appliances.png" />
-                    <p class="text-white text-center fs-5">{{__('ui.Category1')}}</p>
+                    <p class="text-white text-center fs-5">{{__('ui.category1')}}</p>
                 </div>
                 <div class="carousel-item">
                     <img width="120" src="https://img.icons8.com/dotty/80/000000/multiple-smartphones.png" />
-                    <p class="text-white text-center fs-5">{{__('ui.Category2')}}</p>
+                    <p class="text-white text-center fs-5">{{__('ui.category2')}}</p>
                 </div>
                 <div class="carousel-item">
                     <img width="120" src="https://img.icons8.com/carbon-copy/100/null/car--v1.png" />
-                    <p class="text-white text-center fs-5">{{__('ui.Category3')}}</p>
+                    <p class="text-white text-center fs-5">{{__('ui.category3')}}</p>
                 </div>
                 <div class="carousel-item">
                     <img width="120" src="https://img.icons8.com/dotty/80/null/home-page.png" />
-                    <p class="text-white text-center fs-5">{{__('ui.Category4')}}</p>
+                    <p class="text-white text-center fs-5">{{__('ui.category4')}}</p>
                 </div>
                 <div class="carousel-item">
                     <img width="120" src="https://img.icons8.com/carbon-copy/100/null/petanque.png" />
-                    <p class="text-white text-center fs-5">{{__('ui.Category5')}}</p>
+                    <p class="text-white text-center fs-5">{{__('ui.category5')}}</p>
                 </div>
                 <div class="carousel-item">
                     <img width="120" src="https://img.icons8.com/dotty/80/null/guitar.png" />
-                    <p class="text-white text-center fs-5">{{__('ui.Category6')}}</p>
+                    <p class="text-white text-center fs-5">{{__('ui.category6')}}</p>
                 </div>
                 <div class="carousel-item">
                     <img width="120" src="https://img.icons8.com/dotty/80/null/pets.png" />
-                    <p class="text-white text-center fs-5">{{__('ui.Category7')}}</p>
+                    <p class="text-white text-center fs-5">{{__('ui.category7')}}</p>
                 </div>
                 <div class="carousel-item">
                     <img width="120" src="https://img.icons8.com/dotty/80/null/book-shelf.png" />
-                    <p class="text-white text-center fs-5">{{__('ui.Category8')}}</p>
+                    <p class="text-white text-center fs-5">{{__('ui.category8')}}</p>
                 </div>
                 <div class="carousel-item">
                     <img width="120" src="https://img.icons8.com/dotty/80/null/camera-addon.png" />
-                    <p class="text-white text-center fs-5">{{__('ui.Category9')}}</p>
+                    <p class="text-white text-center fs-5">{{__('ui.category9')}}</p>
                 </div>
                 <div class="carousel-item">
                     <img width="120" src="https://img.icons8.com/carbon-copy/100/null/controller.png" />
-                    <p class="text-white text-center fs-5">{{__('ui.Category10')}}</p>
+                    <p class="text-white text-center fs-5">{{__('ui.category10')}}</p>
                 </div>
                 <button class="carousel-control-prev" type="button"
                     data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">

@@ -31,7 +31,7 @@ let linkCustomActive = document.querySelectorAll('.linkCustomActive');
 
 document.addEventListener('scroll', () => {
     if (window.scrollY>50) {
-        // userIcon.classList.add('text-white');
+        userIcon.classList.add('text-white');
         navbar.classList.add('navbar-dark');
         navbar.classList.add('bg_forNav','textNav');
         navbar.classList.remove('navbarColor');
@@ -40,14 +40,12 @@ document.addEventListener('scroll', () => {
             linkCustomActive.classList.remove('linkCustom');
             linkCustomActive.classList.add('linkCustom2')
         })
-        
     } else {
-        
         linkCustomActive.forEach(linkCustomActive => {
             linkCustomActive.classList.add('linkCustom');
             linkCustomActive.classList.remove('linkCustom2')
         })
-        // userIcon.classList.remove('text-white');
+        userIcon.classList.remove('text-white');
         navbar.classList.remove('bg_forNav','textNav','navbar-dark')
         navbar.classList.add('navbarColor');
         btnSearch.classList.replace('btn-outline-light', 'btn-outline-dark');

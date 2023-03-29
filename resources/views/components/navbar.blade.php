@@ -55,7 +55,7 @@
             {{-- <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top rounded-5" alt="immagine non trovata"> --}}
             <i class="bi bi-person-fill display-6 user-icon"></i>
             @else 
-            <img class="avatar-icon" src="{{Storage::url(Auth::user()->avatar)}}" alt="">
+            <img class="avatar-icon user-icon" src="{{Storage::url(Auth::user()->avatar)}}" alt="">
             @endif
         </a>
         <ul class="dropdown-menu">
@@ -73,7 +73,7 @@
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         {{__('ui.navabarLanguages')}}
     </a>
-    <ul class="dropdown-menu">
+    <ul class="dropdown-menu dropdowndimention">
         <li class="nav-item dropdown-item">
             <x-_locale lang='it'/>
         </li>

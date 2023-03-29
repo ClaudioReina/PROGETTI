@@ -25,6 +25,10 @@ a {
   
 }
 
+.underline{
+  text-decoration: underline;
+}
+
 .robotoFont{
   font-family: 'Roboto Slab', serif;
 }
@@ -110,7 +114,7 @@ a {
   transition: all 3s;
 }
 
-.show1{
+.show1 {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);

@@ -5,8 +5,10 @@ namespace App\Http\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class ArticleCreateForm extends Component
 {
@@ -76,7 +78,6 @@ class ArticleCreateForm extends Component
     public function store()
     {
         $this->validate();
-        // $this->article = Category::find($this->category)->articles()->create($this->validate());
 
         $this->article = Article::create([
             'title' => $this->title,
@@ -88,9 +89,16 @@ class ArticleCreateForm extends Component
         
         if (count($this->images)){
             foreach($this->images as $image){
-                $this->article->image()->create(['path'=>$image->store('images', 'public')]);
+                // $this->article->image()->create(['path'=>$image->store('images', 'public')]);
+                $newFileName = "article/{$this->article->id}";
+                $newImage = $this->article->image()->create(['path' => $image->store($newFileName , 'public')]);
+
+                dispatch(new ResizeImage($newImage->path, 400 , 300));
             }
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
+
         session()->flash('articleCreated', 'Annuncio creato, è tra le mani dei nostri revisori!');
         $this->cleanForm();
     }

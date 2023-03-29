@@ -3,7 +3,7 @@ return [    // Welcome
     'welcome' => 'Benvenuto',
     'insertArticle' => 'Inserisci Annuncio',
     'sloganOne' => 'Se cerchi la qualità facciamo al caso tuo!',
-    'sloganTow' => 'Mostra a tutti cos\'hai da offrire',
+    'sloganTwo' => 'Mostra a tutti cos\'hai da offrire',
     'CTA' => 'Nato nel 2023, Presto.it si differenzia dai competitors per la sua accessibilità. Puoi immergerti tra gli annunci di varie categorie, acquistare il prodotto che più desideri o caricare quello che non ti serve più. E non è finita qui!
               Vuoi unirti al team di Presto.it? Compila il form e attendi l\'accettazione dell\'admin. E\' tutto così semplice? Sì, noi siamo PRESTO.IT!',
     'category1' => 'Elettrodomestici',
@@ -43,11 +43,11 @@ return [    // Welcome
     'Lingue' => 'Lingue',
     'Profilo' => 'Profilo',
     // Login
-    'Accedi' => 'Login',
+    'Accedi' => 'Accedi',
     'Registrati' => 'Registrati',
     'Password' => 'Password dimenticata',
     // Modulo di registrazione
-    'NomeUtente' => 'Nome completo',
+    'NomeUtente' => 'Nome',
     'Conferma_P' => 'Conferma password',
     // Profilo
     'modificaProfilo' => 'Modifica profilo',
@@ -62,6 +62,7 @@ return [    // Welcome
     'NomeArticolo' => 'Nome',
     'Categoria' => 'Categoria',
     'Selezione' => 'Seleziona Categoria',
+    'Anteprima' => 'Anteprima',
     'File' => 'Scegli file',
     'Nessuno' => 'Nessun file selezionato',
     'Prezzo' => 'Prezzo',
@@ -74,6 +75,13 @@ return [    // Welcome
     'Descrizionepunto2' => 'Se sei indeciso sul prezzo dai un\'occhiata agli altri annunci di oggetti simili al tuo pubblicati: questo ti aiuterà a identificare il prezzo migliore.',
     'Punto3' => 'Scrivi un annuncio chiaro.',
     'Descrizionepunto3' => 'Cerca di inserire tutte le specifiche del prodotto che vuoi vendere. Cosa vorresti sapere se fossi tu la persona interessata all\'acquisto? Fai una descrizione chiara, onesta e completa.',
+    // Crea nuova categoria
+    'NuovaCategoria' => 'Nuova Categoria',
+    'NomeCategoria' => 'Nome',
+    'CaricaImmagine' => 'Carica Immagine',
+    'CreaCategoria'=> 'Crea Categoria',
+    'InserisciCategoria' => 'Inserisci una nuova categoria',
+    'DescrizioneCategoria' => 'In qualità di amministratore, qui puoi aggiungere una nuova categoria.',
     // Revisore
     'Sezione' => 'Sezione Revisore',
     'Lista' => 'Lista articoli da revisionare',
