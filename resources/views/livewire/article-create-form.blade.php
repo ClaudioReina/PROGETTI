@@ -48,7 +48,7 @@
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <input wire:model="temporary_images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="image" type="file">
+                                            <input wire:model="temporary_images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror" placeholder="image" type="file">
                                             @error('temporary_images.*')
                                                 <p class="text-danger mt-2">{{$message}}</p>
                                             @enderror
