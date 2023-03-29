@@ -115,8 +115,10 @@
                 </div>
             </div>
         </div>
-        {{-- FINE CAROSELLO --}}
     </div>
+    {{-- FINE CAROSELLO --}}
+
+
 
     <div class="container-fluid backWelcome2">
         <div class="row pb-5">
@@ -125,7 +127,7 @@
             </div>
             @foreach ($articles as $article)
                 <div class="col-10 col-md-5 col-lg-3 mx-auto mb-5">
-                    <div class="card cardCust shadow cardElements ">
+                    <div class="card cardCust shadow round cardElements ">
                         @if (!$article->cover)
                             <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top" alt="immagine non trovata">
                         @else
@@ -155,14 +157,14 @@
 
     <div class="container-fluid form_bg">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-7 text-white ">
+            <div class="col-12 hidden-right col-md-6 col-lg-7 text-white">
                 <h4 class="display-4">Vuoi restare informato sui nuovi annunci?</h4>
                 <h5 class="display-6">Clicca sul bottone e compila il form di adesione alla
                     <span class="txMain">newsletter</span>
                 </h5>
-                <button class="btn-contact"> Iscriviti alla newsletter </button>
+                <button class="btn-contact mt-5"> Iscriviti alla newsletter </button>
             </div>
         </div>
     </div>
-
+    
 </x-layout>

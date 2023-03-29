@@ -11,19 +11,19 @@
         
         <div class="row py-5 hidden justify-content-around centerMod">
             @forelse ($articles as $article)
-                <div class="col-12 col-md-12 py-2 mb-3 text-white d-flex justify-content-center">
-                    <div class="cardCustom d-flex border">
-                        @if (!$article->cover)
-                            <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid img-custom " alt="immagine non trovata">
-                        @else
-                            @foreach($article_to_check->imagages as $image)
-                            <div class=" @if($loop->first)active @endif">
-                                <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="...">
-                            </div>
-                            @endforeach
+                <div class="col-12 col-md-6 py-2 mb-3 text-white d-flex justify-content-center">
+                    @if (!$article->cover)
+                        <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid img-custom " alt="immagine non trovata">
+                    @else
+                        @foreach($article_to_check->images as $image)
+                        <div class=" @if($loop->first)active @endif">
+                            <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="...">
+                        </div>
+                        @endforeach
 
-                            {{-- <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top img-custom my-auto" alt="{{$article->name}}"> --}}
-                        @endif
+                        {{-- <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top img-custom my-auto" alt="{{$article->name}}"> --}}
+                    @endif
+                    <div class="cardCustom d-flex border">
                         <div class="card-body ms-3">
                             <h5 class="card-title mt-3">{{$article->title}}</h5>
                             <h6 class="card-text fst-italic">{{$article->price}} €</h6>     

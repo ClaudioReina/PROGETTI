@@ -15,6 +15,16 @@
         object-fit: cover;
       }
       
+      
+
+}
+
+
+@media (min-width:1025px) and (max-width:1200px){
+  .colonnaDaSpostare{
+   
+    padding-right: 100px;
+   }
 }
 
 @media (min-width:481px) and (max-width:769px){
@@ -31,6 +41,9 @@
 }
 
 @media only screen and (max-width: 480px) {
+
+
+  
     
     .centerMod{
         justify-content: center;
