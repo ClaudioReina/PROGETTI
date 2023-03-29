@@ -77,7 +77,7 @@
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         {{__('ui.navabarLanguages')}}
     </a>
-    <ul class="dropdown-menu">
+    <ul class="dropdown-menu dropdowndimention">
         <li class="nav-item dropdown-item">
             <x-_locale lang='it'/>
         </li>

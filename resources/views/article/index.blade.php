@@ -9,6 +9,7 @@
         <x-messages />
         {{-- CARD PRODOTTO --}}
         
+        
         <div class="row py-5 hidden justify-content-around centerMod">
             @forelse ($articles as $article)
                 <div class="col-12 col-md-6 py-2 mb-3 text-white d-flex justify-content-center">
