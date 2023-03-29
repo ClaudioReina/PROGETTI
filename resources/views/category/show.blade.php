@@ -16,7 +16,7 @@
                             <img src="{{Storage::url($article->cover)}}" class="img-fluid card-img-top img-custom my-auto" alt="{{$article->name}}">
                         @endif
                         <div class="card-body ms-3">
-                            <h5 class="card-title mt-3">{{$article->title}}</h5>
+                            <h5 class="card-title mt-3">{{Str::limit($article->title, 30)}}</h5>
                             <h6 class="card-text fst-italic">{{$article->price}} €</h6>     
                             <p class="fs-3 txSec">{{$article->category}}</p>                  
                             <p class="card-text text-white small text-muted">{{Str::limit($article->description, 20)}}</p>
