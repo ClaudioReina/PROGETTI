@@ -55,7 +55,7 @@
             {{-- <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top rounded-5" alt="immagine non trovata"> --}}
             <i class="bi bi-person-fill display-6 user-icon"></i>
             @else 
-            <img class="avatar-icon" src="{{Storage::url(Auth::user()->avatar)}}" alt="">
+            <img class="avatar-icon user-icon" src="{{Storage::url(Auth::user()->avatar)}}" alt="">
             @endif
         </a>
         <ul class="dropdown-menu">
