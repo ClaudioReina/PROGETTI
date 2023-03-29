@@ -13,7 +13,7 @@
     padding-left: 2em;
     padding-right: 2em;
     padding-bottom: 0.4em;
-    background-color:var(--color);
+    background-color:rgb(44, 204, 119);
     border-radius: 25px;
     transition: .4s ease-in-out;
   }
