@@ -1,6 +1,6 @@
 <form class="form formLogin" method="POST" action="{{route('login')}}">
     @csrf
-    <p id="heading">Accedi</p>
+    <p id="heading">{{__('ui.Accedi')}}</p>
     <div class="field">
     <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
     <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 
@@ -24,12 +24,12 @@
     <input type="password" placeholder="Qwerty123!£$" name="password" id="password" class="form-control input-field" />
     </div>
     <div class="btnLogin">
-    <button type="submit" class="buttonLogin1 text-center"><span class="mx-3">Accedi</span></button>
+    <button type="submit" class="buttonLogin1 text-center"><span class="mx-3">{{__('ui.Accedi')}}</span></button>
     {{-- <button class="buttonLogin2">Sign Up</button> --}}
     <a href="{{route('register')}}"><button type="button"
-        class="buttonLogin2">Registrati!</button></a>
+        class="buttonLogin2">{{__('ui.Registrati')}}!</button></a>
     </div>
-    <button class="buttonLogin3">Password Dimenticata?</button>
+    <button class="buttonLogin3">{{__('ui.Password')}}?</button>
 </form>
 
 

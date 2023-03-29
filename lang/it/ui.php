@@ -1,6 +1,5 @@
 <?php
-return [
-    // Welcome
+return [    // Welcome
     'welcome' => 'Benvenuto',
     'insertArticle' => 'Inserisci Annuncio',
     'sloganOne' => 'Se cerchi la qualità facciamo al caso tuo!',
@@ -89,7 +88,10 @@ return [
     'AnnunciDisponibili' => 'Annunci Disponibili',
     'DettagliCard' => 'Dettagli',
     'TornaIndietro' => 'Torna indietro',
-    'NessunArticoloIndex' => 'Non ci sono articoli'
+    'NessunArticoloIndex' => 'Non ci sono articoli',
 
 
+    'navabarLanguages' => 'Lingue',
+
+    'navbarSearch' => 'Cerca',
 ];

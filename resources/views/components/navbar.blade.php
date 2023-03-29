@@ -8,16 +8,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <li class="nav-item">
-                <a class="nav-link active linkCustom linkCustomActive pt-1" aria-current="page" href="{{ route('homepage') }}">Home</a>
+                <a class="nav-link active linkCustom linkCustomActive pt-1" aria-current="page" href="{{ route('homepage') }}">{{__('ui.navbarHome')}}</a>
             </li>
             <ul class="navbar-nav pt-1 mt-2 m-auto">         
                 <li class="nav-item">
-                    <a class="nav-link linkCustom linkCustomActive mb-2" href="{{ route('article.index') }}">Indice Annunci</a>
+                    <a class="nav-link linkCustom linkCustomActive mb-2" href="{{ route('article.index') }}">{{__('ui.navbarIndex')}}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle linkCustom linkCustomActive mb-2" href="#" id="categoriesDropdown" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    Categorie
+                    {{__('ui.navbarCategories')}}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                     @foreach ($categories as $category)
@@ -28,12 +28,12 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link linkCustom linkCustomActive mb-2" href="{{ route('article.create') }}">Crea Annuncio</a>
+                <a class="nav-link linkCustom linkCustomActive mb-2" href="{{ route('article.create') }}">{{__('ui.navbarNewArticle')}}</a>
             </li>
             @auth
             @if(!Auth::user()->is_revisor)
             <li class="nav-item">
-                <a class="nav-link linkCustom linkCustomActive" href="{{ route('become-revisor') }}">Diventa revisore</a>
+                <a class="nav-link linkCustom linkCustomActive" href="{{ route('become-revisor') }}">{{__('ui.navbarRevisor')}}</a>
             </li>
             @endif
             @endauth
@@ -46,8 +46,8 @@
             <i class="bi bi-person-fill display-6 user-icon"></i>
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
-            <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
+            <li><a class="dropdown-item" href="{{ route('register') }}">{{__('ui.navbarRegister')}}</a></li>
+            <li><a class="dropdown-item" href="{{ route('login') }}">{{__('ui.navbarLogin')}}</a></li>
         </ul>
         @else
         <a class="nav-link dropdown-toggle me-5 my-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -59,10 +59,10 @@
             @endif
         </a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ route('profile', Auth::id())}}">Profilo</a></li>
+            <li><a class="dropdown-item" href="{{ route('profile', Auth::id())}}">{{__('ui.navabarProfile')}}</a></li>
             <li>
                 <button class="dropdown-item"
-                onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Esci
+                onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">{{__('ui.navbarOut')}}
             </button>
         </li>
         <form id="form-logout" method="POST" action="{{ route('logout') }}" class="d-none">@Csrf</form>
@@ -71,11 +71,11 @@
 </div>
 <form action="{{route('articles.search')}}" method="GET" class="d-flex">
     <input name="searched" class="form-control me-2 text-white" type="search" placeholder="Search" aria-label="Search">
-    <button id="btn-search" class="btn btn-outline-dark" type="submit">Cerca</button>
+    <button id="btn-search" class="btn btn-outline-dark" type="submit">{{__('ui.navbarSearch')}}</button>
 </form>
 <li class="nav-item dropdown mx-3">
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Lingue
+        {{__('ui.navabarLanguages')}}
     </a>
     <ul class="dropdown-menu">
         <li class="nav-item dropdown-item">

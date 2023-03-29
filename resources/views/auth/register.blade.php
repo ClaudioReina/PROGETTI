@@ -17,7 +17,7 @@
                 @csrf
                 <p id="heading">Registrati</p>
                 <div class="field">
-                    <label for="name">Nome Completo</label>
+                    <label for="name">{{__('ui.NomeUtente')}}</label>
                     <input type="name" name="name" id="name" class="form-control input-field" placeholder="Indirizzo email" />
                 </div>
                 <div class="field">
@@ -34,10 +34,10 @@
                 </div>
                 <div class="btnLogin">
                     <button type="submit" class="buttonLogin1 text-center">
-                        <span class="mx-3">Registrati</span>
+                        <span class="mx-3">{{__('ui.Registrati')}}</span>
                     </button>
                     <a href="{{route('login')}}">
-                        <button type="button" class="buttonLogin2">Accedi!</button>
+                        <button type="button" class="buttonLogin2">{{__('ui.Accedi')}}!</button>
                     </a>
                 </div>
                 {{-- <button class="buttonLogin3">Password Dimenticata?</button> --}}
