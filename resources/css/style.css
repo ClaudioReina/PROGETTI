@@ -121,7 +121,7 @@ a {
 }
 
 
-
+/* END MOTION */
 
 
 .bg_homepage{
@@ -184,18 +184,9 @@ a {
   
 }
 
+/* END CARD CUSTOM INDEX */
 
-
-
-
-
-
-
-
-
-
-
-/* Bottone Del Form Contattaci */
+/* BOTTONE DEL FORM CONTATTACI */
 
 .btn-contact {
   --color2: rgb(10, 25, 30);
@@ -251,6 +242,7 @@ a {
   filter: brightness(.7);
   transform: scale(.98);
 }
+/* END DEL BOTTONE FORM CONTATTI  */
 
 /* BOTTONE PER CARD */
 
@@ -308,6 +300,8 @@ a {
   filter: brightness(.7);
   transform: scale(.98);
 }
+/* END BOTTONE PER CARD */
+
 
 /* BG HEADER */
 
@@ -343,6 +337,8 @@ a {
   z-index: 1;
   
 }
+
+/* END BACKGROUND HEADER */
 
 /* REVISORE */
 
@@ -420,10 +416,7 @@ a {
   z-index: 1;
 }
 
-
-
-
-
+/* END REVISORE */
 
 /* CREAZIONE ARTICOLO */
 .img-preview{
@@ -437,3 +430,10 @@ a {
 /* END CREAZIONE ARTICOLO */
 
 
+/* TITOLO PRINCIPALE  */
+
+.Shodow_text{
+  text-shadow: white 4px 4px 6px;
+}
+
+/* END TITOLO PRINCIPALE */

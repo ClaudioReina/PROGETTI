@@ -2,15 +2,15 @@
 
     <div class="container-fluid bg_homepage centerMod">
         <div class="row">
-            <h1 class="text-center txSec hidden"><span class="display-1 fw-bold">
-                Presto.it</span><br><span>shop online</span>
+            <h1 class="text-center txSec hidden "><span class="display-1 fw-bold Shodow_text">
+                Presto.it</span><br><span class=" fw-bold Shodow_text">shop online</span>
             </h1>
             <div class="py-2">
                 <x-messages />
             </div>
         </div>
-        <div class="row ">
-            <div class="col-12 col-md-6 ps-5 py-5 text-center text-white ">
+        <div class="row justify-content-evenly">
+            <div class="col-12 col-md-5 py-5 text-center text-white welcomeMobile ">
                 @auth
                     <h2 class="centerModPlus mt-5 fs-1">{{__('ui.welcome')}} {{ Auth::user()->name }}</h2>
                     <a href="{{ route('article.create') }}" class="btn btn-contact mt-5 shadow centerModPlus" type="button">
