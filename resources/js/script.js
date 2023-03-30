@@ -78,5 +78,3 @@ let testi = ["Personalizzato!", "Originale!", "Accessibile!", "Sicuro!"];
             }
         }, 1750);
 
-
-        

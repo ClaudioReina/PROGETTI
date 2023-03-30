@@ -5,5 +5,7 @@
 @import './login.css';
 @import './navbar.css';
 @import './footer.css';
+@import 'swiper/css';
+@import 'swiper/css/bundle';
 @import './responsive.css';
 /* @import '~flag-icon-css/css/css/flag-icon'; */

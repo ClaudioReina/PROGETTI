@@ -1,6 +1,6 @@
 <div>
     <section class=" gradient-form">
-        <div class="container py-5 ">
+        <div class="container-fluid py-5">
             <div class="row d-flex justify-content-center align-items-center ">
                 <div class="col-xl-10">
                     <div class="card rounded-3 text-black shadow">
@@ -118,6 +118,6 @@
             </div>
         </div>
     </section>
-    <div class="container-fluid spaced">
+    <div class="container-fluid spacedSm">
     </div>
 </div>

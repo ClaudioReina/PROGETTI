@@ -11,9 +11,9 @@
     
 
 
-<div class="container-fluid">
+<div class="container-fluid createBackground">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-6 col-lg-4 mt-5 pt-5 ">
+        <div class="col-12 col-md-6 col-lg-4 mt-2">
             <x-loginForm />
         </div>
     </div>

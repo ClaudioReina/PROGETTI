@@ -159,6 +159,24 @@ a {
 
 
 
+.createBackground{
+  background-image:url(/public/media/edera.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding-top: 6rem;
+  z-index: 1;
+}
+
+
+
 /* CARD CUSTOM INDEX */
 
 .cardCustom{
