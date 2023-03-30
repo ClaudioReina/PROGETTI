@@ -31,7 +31,7 @@
                         <div class="carousel-inner">
                             @foreach ($article_to_check->image as $key => $image)
                                 <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
-                                    <img src="{{ Storage::url($image->path) }}" class="d-block w-100" alt="{{ $article_to_check->title }}">
+                                    <img src="{{!$article_to_check->image()->get()->isEmpty() ? $article_to_check->image()->first()->getUrl(500, 500) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top img-custom" alt="...">
                                 </div>
                             @endforeach
                         </div>

@@ -71,6 +71,7 @@ return [
     'NomeArticolo' => 'Nombre',
     'Categoria' => 'Categoría',
     'Selezione' => 'Selecciona Categoría',
+    'Anteprima' => 'Avance',
     'File' => 'Selecciona archivo',
     'Nessuno' => 'Ningún archivo seleccionado',
     'Prezzo' => 'Precio',

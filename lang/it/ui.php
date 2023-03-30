@@ -125,11 +125,8 @@ return [    // Welcome
     'DettagliCard' => 'Dettagli',
     'TornaIndietro' => 'Torna indietro',
     'NessunArticoloIndex' => 'Non ci sono articoli',
-
     'accettaRevisore' => 'accetta',
     'rifiutaRevisore' => 'rifiuta',
-
     'navabarLanguages' => 'Lingue',
-
     'navbarSearch' => 'Cerca',
 ];
