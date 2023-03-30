@@ -23,7 +23,7 @@
             @forelse ($articles as $article)
                 <div class="col-12 col-md-12 col-lg-5 py-2 mb-3 text-white d-flex justify-content-center">
                     <div class="h-100">
-                        <img src="{{!$article->image()->get()->isEmpty() ? Storage::url($article->image()->first()->path) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top img-custom" alt="...">
+                        <img src="{{!$article->image()->get()->isEmpty() ? $article->image()->first()->getUrl(500, 500) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top img-custom" alt="...">
                     </div>
                     <div class="cardCustom d-flex border h-100">
                         <div class="card-body ms-3">

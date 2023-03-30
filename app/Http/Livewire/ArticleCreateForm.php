@@ -91,7 +91,7 @@ class ArticleCreateForm extends Component
                 $newFileName = "article/{$this->article->id}";
                 $newImage = $this->article->image()->create(['path' => $image->store($newFileName , 'public')]);
 
-                dispatch(new ResizeImage($newImage->path, 300 , 300));
+                dispatch(new ResizeImage($newImage->path, 500 , 500));
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));

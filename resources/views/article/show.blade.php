@@ -8,7 +8,7 @@
                         <div class="carousel-inner">
                             @foreach ($article->image as $key => $image)
                                 <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
-                                    <img src="{{ Storage::url($image->path) }}" class="d-block w-100" alt="{{ $article->title }}">
+                                    <img src="{{!$article->image()->get()->isEmpty() ? $article->image()->first()->getUrl(500, 500) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top img-custom" alt="...">
                                 </div>
                             @endforeach
                         </div>

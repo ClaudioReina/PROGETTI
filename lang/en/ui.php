@@ -74,6 +74,7 @@ return [
     'NomeArticolo' => 'Name',
     'Categoria' => 'Category',
     'Selezione' => 'Choose category',
+    'Anteprima' => 'Preview',
     'File' => 'Choose file',
     'Nessuno' => 'No file selected',
     'Prezzo' => 'Price',
@@ -112,7 +113,7 @@ return [
     'Modifica' => 'Edit',
     'Cancella' => 'Delete',
     'Accetta' => 'Accepted',
-    'Rifiuta' => 'Discarded',
+    'Rifiuta' => 'Refused',
     'accettaRevisore' => 'accept',
     'rifiutaRevisore' => 'refuse',
     //Lista Revisore
