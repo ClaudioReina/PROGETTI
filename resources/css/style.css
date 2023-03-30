@@ -433,7 +433,7 @@ a {
 /* TITOLO PRINCIPALE  */
 
 .Shodow_text{
-  text-shadow: white 4px 4px 6px;
+  text-shadow: rgb(255, 255, 255) 2px 4px 8px;
 }
 
 /* END TITOLO PRINCIPALE */
