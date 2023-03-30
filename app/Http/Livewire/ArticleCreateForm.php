@@ -4,11 +4,14 @@ namespace App\Http\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use Spatie\Image\Image;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
+use Spatie\Image\Manipulations;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+
 
 class ArticleCreateForm extends Component
 {
@@ -72,6 +75,18 @@ class ArticleCreateForm extends Component
         }
     }
 
+    // public function imageWaterMark(){
+        
+
+    //     $waterMark = public_path('media/watermark_Presto.png');
+    //     $img = Image::make($waterMark->resize(100, 50));
+    //     $img->save(public_path('image/pic-new.jpg'));
+    //     // return $img->response('jpg');
+    //     // $image = Image::make(public_path('images/pic.png'));
+    //     // $image->insert($watermark, 'bottom-right', 10 , 10 );
+
+    // }
+
     public function store()
     {
         $this->validate();
@@ -90,6 +105,10 @@ class ArticleCreateForm extends Component
                 // $this->article->image()->create(['path'=>$image->store('images', 'public')]);
                 $newFileName = "article/{$this->article->id}";
                 $newImage = $this->article->image()->create(['path' => $image->store($newFileName , 'public')]);
+
+                $watermark = public_path('media\watermark_Presto.png');            
+                // $watermark = $newImage->make($watermarkPath);
+                // $newImage->addWatermark($watermark, 70);
 
                 dispatch(new ResizeImage($newImage->path, 500 , 500));
             }

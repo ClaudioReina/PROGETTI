@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use App\Models\Article;
+use Spatie\Image\Image as SpatieImage; 
+use Spatie\Image\Manipulations;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -27,10 +29,24 @@ class Image extends Model
         $filename = basename($filePath);
         $file = "{$path}/crop_{$w}x{$h}_{$filename}";
 
+        
+
         return Storage::url($file);
     }
 
     public function getUrl($w = null , $h = null){
-        return Image::getUrlByFilePath($this->path, $w, $h);
+        return self::getUrlByFilePath($this->path, $w, $h);
     }
+    
+    public function addWatermark($watermark, $opacity = 70)
+    {
+        $img = SpatieImage::load($this->path);
+        $img->watermark($watermark)
+            ->watermarkPosition(Manipulations::POSITION_CENTER)
+            ->watermarkOpacity($opacity)
+            ->save($this->path);
+    
+        return $this;
+    }
+
 }
