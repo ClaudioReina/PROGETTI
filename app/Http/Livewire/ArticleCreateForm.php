@@ -26,8 +26,6 @@ class ArticleCreateForm extends Component
 
     public function rules(): array
     {
-
-
         return [
             'title' => 'required|min:2',
             'price' => 'required',
@@ -60,7 +58,6 @@ class ArticleCreateForm extends Component
     {
         if ($this->validate([
             'temporary_images.*' => 'image|max:1024', // 1MB Max
-
         ])) {
             foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
@@ -79,6 +76,7 @@ class ArticleCreateForm extends Component
     {
         $this->validate();
 
+    
         $this->article = Article::create([
             'title' => $this->title,
             'category' => $this->category,
@@ -93,7 +91,7 @@ class ArticleCreateForm extends Component
                 $newFileName = "article/{$this->article->id}";
                 $newImage = $this->article->image()->create(['path' => $image->store($newFileName , 'public')]);
 
-                dispatch(new ResizeImage($newImage->path, 400 , 300));
+                dispatch(new ResizeImage($newImage->path, 300 , 300));
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));

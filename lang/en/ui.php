@@ -29,10 +29,13 @@ return [
     'sloganSix' => 'Click on the button and fill the registration form',
     'sloganSixSpan' => 'newsletter',
     'subscribe' => 'Subscrive to the newsletter',
+
     // Footer
     'footerHome' => 'Home',
     'footerArticles' => 'Announcements',
     'footerSubscribe' => 'Subscribe',
+    'footerText' => 'Explore thousands of free ads and find what you’re looking for in just a few clicks. Presto.it, your trusted ad portal.',
+
     // Navbar
     'navbarHome' => 'Home',
     'navbarIndex' => 'Announcements',
@@ -51,11 +54,21 @@ return [
     'Accedi' => 'Login',
     'Registrati' => 'Sign In',
     'Password' => 'Forgotten Password',
+
     // Modulo di registrazione
     'NomeUtente' => 'Name',
     'Conferma P' => 'Confirm password',
+
     // Profilo
+    'modificaProfilo' => 'Modify Profile',
+    'diventaRevisore' => 'Become Revisor',
+    'eliminaAccount' => 'Delete Account',
+    'seiSicuro' => 'Are you sure you want to delete the account',
+    'chiudi' => 'Close',
+    'Elimina' => 'Delete',
     'AnnunciCaricati' => 'Article loaded',
+    'StatoAnnuncio' => 'Announcement Status',
+
     // Crea nuovo articolo
     'Crea' => 'Create new announcement',
     'NomeArticolo' => 'Name',
@@ -64,7 +77,7 @@ return [
     'File' => 'Choose file',
     'Nessuno' => 'No file selected',
     'Prezzo' => 'Price',
-    'DescrizioneAnnuncio' => 'Article description',
+    'DescrizioneAnnuncio' => 'Description',
     'Crea2' => 'Create announcement',
     'Descrizione1' => 'Some advice from Team Presto.it',
     'Punto1' => 'Take a nice picture.',
@@ -73,6 +86,7 @@ return [
     'Descrizionepunto2' => 'If you are undecided about the price, take a look at the other ads of items similar to your published: this will help you identify the best price.',
     'Punto3' => 'Write a clear announcement.',
     'Descrizionepunto3' => 'Try to enter all the specifications of the product you want to sell. What would you like to know if you were the person interested in buying? Make a clear, honest and complete description.',
+
     // Crea nuova categoria
     'NuovaCategoria' => 'New Category',
     'NomeCategoria' => 'Name',
@@ -80,6 +94,7 @@ return [
     'CreaCategoria'=> 'Create Category',
     'InserisciCategoria' => 'Enter a new category',
     'DescrizioneCategoria' => 'As an administrator, you can add a new category here.',
+
     // Revisore
     'Sezione' => 'Revisor section',
     'Lista' => 'List of articles to be reviewed',
@@ -91,16 +106,30 @@ return [
     'NessunaCategoriaRevisore' => 'You have not uploaded any category.',
     'NessunAnnunciodaRevisionare' => 'There are no ads to review.',
     'Ecco' => 'Here is the announcement to be revised.',
+    'descrizione' => 'Description',
+    'pubblicato' => 'Published',
     'Visualizza' => 'Show',
     'Modifica' => 'Edit',
     'Cancella' => 'Delete',
-    'Accetta' => 'Accept',
-    'Rifiuta' => 'Discarde',
+    'Accetta' => 'Accepted',
+    'Rifiuta' => 'Discarded',
+    'accettaRevisore' => 'accept',
+    'rifiutaRevisore' => 'refuse',
+    //Lista Revisore
+    'statoAnnuncio' => 'Announcement status',
+    'inCorso' => 'in progress',
+    'titolo' => 'title',
+    'categoria' => 'category',
+    'prezzo' => 'price',
+    'creatoIl' => 'created',
+    'annullaRevisione' => 'cancel revision',
+    'annulla' => 'cancel',
+
     // Index
     'AnnunciDisponibili' => 'Available announcements',
+    'CreatoDa' => 'Created by',
     'DettagliCard' => 'Details',
     'TornaIndietro' => 'Come back',
-    'NessunArticoloIndex' => 'There are no announcements'
-
-
+    'NessunArticoloIndex' => 'There are no announcements!',
+    'InserisciAnnuncio' => 'Insert Announcement',
 ];

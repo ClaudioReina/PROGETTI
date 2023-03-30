@@ -1,15 +1,14 @@
-<div>
-    <table class="table table-striped">
+<div class="table-responsive">
+    <table class="table d-md-table table-striped">
         <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Titolo</th>
-                <th scope="col">Categoria</th>
-                <th scope="col">Prezzo</th>
-                <th scope="col">Creato il</th>
-                <th scope="col">Stato annuncio</th>
-                <th scope="col">Annulla Revisione</th>
-
+                <th scope="col">{{__('ui.titolo')}}</th>
+                <th scope="col">{{__('ui.categoria')}}</th>
+                <th scope="col">{{__('ui.prezzo')}}</th>
+                <th scope="col">{{__('ui.creatoIl')}}</th>
+                <th scope="col">{{__('ui.statoAnnuncio')}}</th>
+                <th scope="col">{{__('ui.annullaRevisione')}}</th>
             </tr>
         </thead>
         <tbody>
@@ -22,11 +21,11 @@
                 <td>{{$article->created_at}}</td>
                 <td>
                     @if($article->is_accepted == 1)
-                    <span class="label text-success">Accettata</span>
+                    <span class="label text-success">{{__('ui.Accetta')}}</span>
                     @elseif ($article->is_accepted === 0)
-                    <span class="label text-danger">Rifiutata</span>
+                    <span class="label text-danger">{{__('ui.Rifiuta')}}</span>
                     @else
-                    <span class="label">In corso</span>
+                    <span class="label">{{__('ui.inCorso')}}</span>
                     @endif
                 </td>
                 <td>
@@ -35,7 +34,7 @@
                         method="POST" class="mx-auto">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-warning shadow">Annulla</button>
+                        <button type="submit" class="btn btn-warning shadow">{{__('ui.annulla')}}</button>
                     </form>
                     
                     @endif
@@ -44,5 +43,4 @@
             @endforeach
         </tbody>
     </table>
-
 </div>

@@ -11,7 +11,7 @@
 
       .img-custom{
         width: 350px;
-        height: 269px;
+        height: 100%;
         object-fit: cover;
       }
       

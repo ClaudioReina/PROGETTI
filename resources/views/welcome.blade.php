@@ -122,13 +122,13 @@
             </div>
             @foreach ($articles as $article)
                 <div class="col-10 col-md-5 col-lg-3 mx-auto mb-5">
-                    <div class="card cardCust shadow round cardElements ">
+                    <div class="card cardCust shadow round cardElements">
                         @if (!$article->cover)
                             <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top" alt="immagine non trovata">
                         @else
                             <img src="{{ Storage::url($article->cover) }}" class="img-fluid card-img-top" alt="{{ $article->name }}">
                         @endif
-                        <div class="card-body ">
+                        <div class="card-body">
                             <h5 class="card-title animate__animated animate__bounceIn robotoFont fs-4 text-center">
                                 {{ $article->title }}
                             </h5>
@@ -138,7 +138,7 @@
                                 <a class="txSec" href="{{route('profile', ['user' => $article->user->id])}}">
                                     {{$article->user->name ?? 'Utente sconosciuto'}}
                                 </a> 
-                                , il {{$article->created_at->format('d/m/Y')}}
+                                , {{$article->created_at->format('d/m/Y')}}
                             </p>
                             <a href="{{ route('article.show', compact('article')) }}" class="btn btn-contact2">
                                 {{__('ui.btnShowArt')}}

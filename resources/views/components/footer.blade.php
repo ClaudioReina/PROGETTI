@@ -26,6 +26,6 @@
     
   </div>
   <p class="small fw-normal text-white text-center text-black robotoFont ">
-    Esplora migliaia di annunci gratuiti e trova ciò che cerchi in pochi clic. Presto.it, il tuo portale di annunci di fiducia.</p>
+  {{__('ui.footerText')}}</p>
 </footer>
 

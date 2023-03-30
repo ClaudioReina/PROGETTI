@@ -24,10 +24,13 @@ return [    // Welcome
     'sloganSix' => 'Clicca sul bottone e compila il form di adesione alla',
     'sloganSixSpan' => 'newsletter',
     'subscribe' => 'Iscriviti alla newsletter',
+
     // Footer
     'footerHome' => 'Home',
     'footerArticles' => 'Articoli',
     'footerSubscribe' => 'Iscriviti',
+    'footerText' => 'Esplora migliaia di annunci gratuiti e trova ciò che cerchi in pochi clic. Presto.it, il tuo portale di annunci di fiducia.',
+
     // Navbar
     'navbarHome' => 'Home',
     'navbarIndex' => 'Indice Annunci',
@@ -42,13 +45,16 @@ return [    // Welcome
     'navbarSearch' => 'Cerca',
     'Lingue' => 'Lingue',
     'Profilo' => 'Profilo',
+
     // Login
     'Accedi' => 'Accedi',
     'Registrati' => 'Registrati',
     'Password' => 'Password dimenticata',
+
     // Modulo di registrazione
     'NomeUtente' => 'Nome',
     'Conferma_P' => 'Conferma password',
+
     // Profilo
     'modificaProfilo' => 'Modifica profilo',
     'diventaRevisore' => 'Diventa revisore',
@@ -57,6 +63,8 @@ return [    // Welcome
     'chiudi' => 'Chiudi',
     'Elimina' => 'Elimina',
     'AnnunciCaricati' => 'Annunci caricati',
+    'StatoAnnuncio' => 'Stato Anuncio',
+
     // Crea nuovo articolo
     'Crea' => 'Crea nuovo articolo',
     'NomeArticolo' => 'Nome',
@@ -66,7 +74,7 @@ return [    // Welcome
     'File' => 'Scegli file',
     'Nessuno' => 'Nessun file selezionato',
     'Prezzo' => 'Prezzo',
-    'DescrizioneAnnuncio' => 'Descrizione annuncio',
+    'DescrizioneAnnuncio' => 'Descrizione',
     'Crea2' => 'Crea Annuncio',
     'Descrizione1' => 'Qualche consiglio dal Team Presto.it',
     'Punto1' => 'Scatta una bella fotografia.',
@@ -75,6 +83,7 @@ return [    // Welcome
     'Descrizionepunto2' => 'Se sei indeciso sul prezzo dai un\'occhiata agli altri annunci di oggetti simili al tuo pubblicati: questo ti aiuterà a identificare il prezzo migliore.',
     'Punto3' => 'Scrivi un annuncio chiaro.',
     'Descrizionepunto3' => 'Cerca di inserire tutte le specifiche del prodotto che vuoi vendere. Cosa vorresti sapere se fossi tu la persona interessata all\'acquisto? Fai una descrizione chiara, onesta e completa.',
+
     // Crea nuova categoria
     'NuovaCategoria' => 'Nuova Categoria',
     'NomeCategoria' => 'Nome',
@@ -82,6 +91,7 @@ return [    // Welcome
     'CreaCategoria'=> 'Crea Categoria',
     'InserisciCategoria' => 'Inserisci una nuova categoria',
     'DescrizioneCategoria' => 'In qualità di amministratore, qui puoi aggiungere una nuova categoria.',
+
     // Revisore
     'Sezione' => 'Sezione Revisore',
     'Lista' => 'Lista articoli da revisionare',
@@ -94,19 +104,30 @@ return [    // Welcome
     'NessunAnnunciodaRevisionare' => 'Non ci sono annunci da revisionare.',
     'Ecco' => 'Ecco l\'annucio da revisionare.',
     'Visualizza' => 'Visualizza',
+    'descrizione' => 'Descrizione',
+    'pubblicato' => 'Pubblicato',
     'Modifica' => 'Modifica',
     'Cancella' => 'Cancella',
-    'Accetta' => 'Accetta',
-    'Rifiuta' => 'Rifiuta',
+    'Accetta' => 'Accettata',
+    'Rifiuta' => 'Rifiutata',
+    //Lista Revisore
     'statoAnnuncio' => 'Stato annuncio',
     'inCorso' => 'In corso',
-    
+    'titolo' => 'Titolo',
+    'categoria' => 'Categoria',
+    'prezzo' => 'Prezzo',
+    'creatoIl' => 'Creato il',
+    'annullaRevisione' => 'Annulla revisione',
+    'annulla' => 'Annulla',
+
     // Index
     'AnnunciDisponibili' => 'Annunci Disponibili',
     'DettagliCard' => 'Dettagli',
     'TornaIndietro' => 'Torna indietro',
     'NessunArticoloIndex' => 'Non ci sono articoli',
 
+    'accettaRevisore' => 'accetta',
+    'rifiutaRevisore' => 'rifiuta',
 
     'navabarLanguages' => 'Lingue',
 

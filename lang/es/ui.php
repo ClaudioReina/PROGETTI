@@ -25,10 +25,13 @@ return [
     'sloganSix' => 'Haga clic en el botón y rellene el formulario de adhesión a',
     'sloganSixSpan' => 'newsletter',
     'subscribe' => 'Suscríbete al boletín',
+
     // Footer
     'footerHome' => 'Home',
     'footerArticles' => 'artículos',
     'footerSubscribe' => 'Regístrate',
+    'footerText' => 'Explore miles de anuncios gratuitos y encuentre lo que busca con unos pocos clics. Presto.es, su portal de anuncios de confianza.',
+
     // Navbar
     'navbarHome' => 'Home',
     'navbarIndex' => 'Indice Anuncios',
@@ -43,15 +46,26 @@ return [
     'navbarSearch' => 'Buscar',
     'Lingue' => 'Idiomas',
     'Profilo' => 'Perfil',
+
     // Login
     'Accedi' => 'Iniciar sesión',
     'Registrati' => 'Registrarse',
     'Password' => 'Contraseña olvidada',
+
     // Modulo di registrazione
     'NomeUtente' => 'Nombre',
     'Conferma P' => 'Confirmar contraseña',
+
     // Profilo
+    'modificaProfilo' => 'Editar perfil',
+    'diventaRevisore' => 'Conviértete en revisor',
+    'eliminaAccount' => 'Eliminar cuenta',
+    'seiSicuro' => 'Estás seguro de que quieres eliminar la cuenta',
+    'chiudi' => 'Cierra',
+    'Elimina' => 'Elimina',
     'AnnunciCaricati' => 'Anuncios cargados',
+    'StatoAnnuncio' => 'Stato Anuncio',
+
     // Crea nuovo articolo
     'Crea' => 'Crear nuevo artículo',
     'NomeArticolo' => 'Nombre',
@@ -69,6 +83,7 @@ return [
     'Descrizionepunto2' => 'Si no estás seguro del precio, echa un vistazo a otros anuncios de objetos similares al tuyo publicados: esto te ayudará a identificar el mejor precio.',
     'Punto3' => 'Escribe un anuncio claro.',
     'Descrizionepunto3' => 'Intente introducir todas las especificaciones del producto que desea vender. ¿Qué le gustaría saber si usted era la persona interesada en la compra? Haz una descripción clara, honesta y completa.',
+
     // Crea nuova categoria
     'NuovaCategoria' => 'Nueva Categoría',
     'NomeCategoria' => 'Nombre',
@@ -76,6 +91,7 @@ return [
     'CreaCategoria'=> 'Crear Categoría',
     'InserisciCategoria' => 'Introduce una nueva categoría',
     'DescrizioneCategoria' => 'Como administrador, puede agregar una nueva categoría aquí.',
+
     // Revisore
     'Sezione' => 'Secciòn Revisor',
     'Lista' => 'Lista de artículos a revisar',
@@ -87,16 +103,28 @@ return [
     'NessunaCategoriaRevisore' => 'No has subido ninguna categoría.',
     'NessunAnnunciodaRevisionare' => 'No hay anuncios que revisar.',
     'Ecco' => 'Aquí está el anuario para revisar.',
+    'descrizione' => 'Descripción',
+    'pubblicato' => 'Publicado',
     'Visualizza' => 'Muestra',
     'Modifica' => 'Editar',
     'Cancella' => 'Borrar',
-    'Accetta' => 'Aceptar',
-    'Rifiuta' => 'Rechazar',
+    'Accetta' => 'Aceptada',
+    'Rifiuta' => 'Rechazada',
+    'accettaRevisore' => 'acepta',
+    'rifiutaRevisore' => 'rechaza',
+    //Lista Revisore
+    'statoAnnuncio' => 'Estado de anuncio',
+    'InCorso' => ' En curso',
+    'titolo' => 'Título',
+    'categoria' => 'Categoría',
+    'prezzo' => 'Precio',
+    'creatoIl' => 'Creado el',
+    'annullaRevisione' => 'Cancelar la revisión',
+    'annulla' => 'Cancela',
+
     // Index
     'AnnunciDisponibili' => 'Anuncios disponibles',
     'DettagliCard' => 'Detalles',
     'TornaIndietro' => 'Retrocede',
     'NessunArticoloIndex' => 'No hay artículos'
-
-
 ];

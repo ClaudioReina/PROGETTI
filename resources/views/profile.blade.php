@@ -119,11 +119,7 @@
                         @foreach($articles as $article)
                             <div class="col-12 col-md-4 pb-5">
                                 <div class="card cardCust shadow cardElements">
-                                    @if(!$article->cover)
-                                        <img src="/media/ImmagineSalvaposto.jpg" class="img-card object-fit-cover" alt="...">
-                                    @else
-                                        <img src="{{Storage::url($article->cover)}}" class="img-fluid" alt="...">
-                                    @endif
+                                <img src="{{!$article->image()->get()->isEmpty() ? Storage::url($article->image()->first()->path) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top" alt="...">
                                     <div class="card-body p-2">                                           
                                         <div class="mb-3">
                                             <h5 class="text-center fs-4">
@@ -134,7 +130,7 @@
                                         </div>
                                         @if (Auth::user()->id == $user->id)
                                             <div class="text-center my-4">
-                                                <h5>Stato Annuncio:                                                    
+                                                <h5>{{__('ui.StatoAnnuncio')}}:                                                    
                                                     @if($article->is_accepted == 1)
                                                         <span class="label text-success">{{__('ui.Accetta')}}</span>
                                                     @elseif ($article->is_accepted === 0)
