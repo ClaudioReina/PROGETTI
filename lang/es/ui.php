@@ -194,6 +194,8 @@ return [
     'descrCategory' => 'Como administrador, aquí puedes agregar una nueva categoría.',
     'addCategory' => 'Agregar nueva categoría',
     'newCategory' => 'Nueva Categoría',
+    'textEdit' => 'Aquí puedes editar categorías existentes en la base de datos.',
+    
 
     // Crea nuovo annuncio
     'preview' => 'Vista previa',
