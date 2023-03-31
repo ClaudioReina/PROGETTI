@@ -43,6 +43,31 @@
                 </div>
             @endforelse
         </div>
+            
+                <div class="row justify-content-center">
+                    <div class="col-1 d-flex bg-danger rounded ">
+                                @if ($articles->currentPage() > 1)
+                                    <div class="text-center text-white"><a href="{{ $articles->previousPageUrl() }}"><i class="fa fa-angle-left"></i></a></div>
+                                @endif
+                        
+                                @for ($i = 1; $i <= $articles->lastPage(); $i++)
+                                    <div  class=" text-center mx-auto text-white {{ ($i == $articles->currentPage()) ? ' active' : '' }}">
+                                        <a class="text-white" href="{{ $articles->url($i) }}">{{ $i }}</a>
+                                    </div>
+                                @endfor
+                        
+                                @if ($articles->hasMorePages())
+                                    <div><a href=" text-center {{ $articles->nextPageUrl() }}"><i class="fa fa-angle-right text-white"></i></a></div>
+                                @endif
+                            </div>
+                </div>
+            
+
+            
+
+                
+            
+        
         <div class="container-fluid spaced">
         </div>
     </div>

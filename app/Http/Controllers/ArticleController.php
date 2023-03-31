@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
@@ -16,8 +17,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::latest()->where('is_accepted', true)->get();
+        $articles = Article::latest()->where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(10);
         $categories = Category::all();
+        
         return view('article.index', compact('articles', 'categories'));
     }
 
