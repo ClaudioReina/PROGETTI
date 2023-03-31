@@ -46,7 +46,7 @@
 .footer {
     position: relative;
     width: 100%;
-    background:rgb(51,204,102);
+    background:#2ccc77;
     min-height: 100px;
     padding: 20px 50px;
     display: flex;

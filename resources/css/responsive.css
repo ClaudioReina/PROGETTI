@@ -63,10 +63,14 @@
     }
 
     .img-custom{
-        width: 275px;
-        height: 135px;
+        width: 93vw;
+          height: 135px;
         object-fit: cover;
        margin-top:10vh ;
+      }
+
+      .CardMobileIndex{
+       flex-direction: column;
       }
 }
 

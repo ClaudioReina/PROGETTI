@@ -21,7 +21,7 @@
 
         <div class="row py-5 hidden justify-content-around centerMod">
             @forelse ($articles as $article)
-                <div class="col-12 col-md-12 col-lg-5 py-2 mb-3 text-white d-flex justify-content-center">
+                <div class="col-12 col-md-10 col-lg-5 py-2 mb-3 text-white d-flex justify-content-center CardMobileIndex">
                     <div class="h-100">
                         <img src="{{!$article->image()->get()->isEmpty() ? $article->image()->first()->getUrl(500, 500) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top img-custom" alt="...">
                     </div>
