@@ -192,6 +192,7 @@ return [
     'descrCategory' => 'As an administrator, you can add a new category here.',
     'addCategory' => 'Add a new category',
     'newCategory' => 'New Category',
+    'textEdit' => 'Here you can edit existing categories in the database.',
 
     // Crea nuovo annuncio
         'preview' => 'Preview',

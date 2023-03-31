@@ -57,6 +57,7 @@ return [
     'descrCategory' => 'In qualità di amministratore, qui puoi aggiungere una nuova categoria.',
     'addCategory' => 'Inserisci una nuova categoria',
     'newCategory' => 'Nuova Categoria',
+    'textEdit' => 'Qui puoi modificare delle categorie già esistenti all\'interno del database',
 
     // Crea nuovo annuncio
     'preview' => 'Anteprima',
