@@ -19,11 +19,11 @@
                                             <form method="POST" action="{{route('category.update', compact('category'))}}" enctype="multipart/form-data">
                                                 @csrf
                                                 @method('put')
-                                                <p>Modifica Categoria</p>
+                                                <p>{{__('ui.Edit')}}</p>
                                                 <div class="form-outline mb-4">
                                                     <input type="name" name="name" id="name"
                                                         class="form-control"/>
-                                                    <label class="form-label" for="name">Nome</label>
+                                                    <label class="form-label" for="name">{{__('ui.Name')}}</label>
                                                 </div>
 
                                                 <div class="mb-3">
@@ -34,21 +34,17 @@
                                                 <div class="text-center pt-1 mb-5 pb-1">
                                                     <button
                                                         class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                                                        type="submit">Crea Categoria</button>
+                                                        type="submit">{{__('ui.createCategory')}}</button>
                                                 </div>
-
+                                                
                                             </form>
 
                                         </div>
                                     </div>
                                     <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                                         <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                                            <h4 class="mb-4">Inserisci una nuova categoria</h4>
-                                            <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud
-                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            <h4 class="mb-4">{{__('ui.addCategory')}}</h4>
+                                            <p class="small mb-0">{{__('ui.textEdit')}}
                                             </p>
                                         </div>
                                     </div>
