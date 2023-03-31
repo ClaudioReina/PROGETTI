@@ -15,16 +15,12 @@
                             <form method="POST" action="{{route('user.update', compact('user'))}}" enctype="multipart/form-data">
                                 @csrf                                            
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="name">Nome Profilo</label>
-                                    <input type="name" name="name" id="name"
-                                        class="form-control"/>
+                                    <label class="form-label" for="name">{{__('ui.Name')}}</label>
+                                    <input type="name" name="name" id="name" class="form-control"/>
                                 </div>
                                 <div class="text-center pt-1 mb-5 pb-1">
-                                    <button
-                                        class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                                        type="submit">Modifica</button>
+                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">{{__('ui.Edit')}}</button>
                                 </div>
-
                             </form>
                         </div>
                     </div>

@@ -14,7 +14,7 @@
                 @auth
                     <h2 class="centerModPlus mt-5 fs-1">{{__('ui.welcome')}} {{ Auth::user()->name }}</h2>
                     <a href="{{ route('article.create') }}" class="btn btn-contact mt-5 shadow centerModPlus" type="button">
-                        {{__('ui.insertArticle')}}
+                        {{__('ui.createAds')}}
                     </a>
                 @endauth
             </div>
@@ -141,7 +141,7 @@
                                 , {{$article->created_at->format('d/m/Y')}}
                             </p>
                             <a href="{{ route('article.show', compact('article')) }}" class="btn btn-contact2">
-                                {{__('ui.btnShowArt')}}
+                                {{__('ui.show')}}
                             </a>
                         </div>
                     </div>
@@ -155,7 +155,7 @@
             <div class="col-12 hidden-right col-md-6 col-lg-7 text-white">
                 <h4 class="display-4">{{__('ui.sloganFive')}}</h4>
                 <h5 class="display-6">{{__('ui.sloganSix')}}
-                    <span class="txMain">{{__('ui.sloganSixSpan')}}</span>
+                    <span class="txMain">Newsletter</span>
                 </h5>
                 <button class="btn-contact mt-5">{{__('ui.subscribe')}}</button>
             </div>

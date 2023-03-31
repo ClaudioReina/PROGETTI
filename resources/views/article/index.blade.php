@@ -3,7 +3,7 @@
     <div class="container-fluid containerIndexCustom pt-3 text-white">
         <div class="row">
             <div class="col-12 text-center py-5">
-                <h2 class="robotoFont mt-3">{{__('ui.AnnunciDisponibili')}}</h2>
+                <h2 class="robotoFont mt-3">{{__('ui.availableAds')}}</h2>
             </div>
         </div>
 
@@ -14,7 +14,7 @@
             <div class="col-8 py-5">
                 <form action="{{route('articles.search')}}" method="GET" class="d-flex">
                     <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-dark" type="submit">{{__('ui.navbarSearch')}}</button>
+                    <button class="btn btn-dark" type="submit">{{__('ui.search')}}</button>
                 </form>
             </div>
         </div>
@@ -31,17 +31,15 @@
                             <h6 class="card-text fst-italic">{{$article->price}} €</h6>     
                             <p class="fs-3 txSec">{{$article->category}}</p>                  
                             <p class="card-text text-white small text-muted">{{Str::limit($article->description, 20)}}</p>
-                            <p>{{__('ui.CreatoDa')}} <a class="txSec" href="{{route('profile', ['user' => $article->user->id])}}">{{$article->user->name ?? 'Utente sconosciuto'}}</a>, il {{$article->created_at->format('d/m/Y')}}</p>
-                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-contact2 mb-4">{{__('ui.DettagliCard')}}</a>
+                            <p>{{__('ui.create')}} <a class="txSec" href="{{route('profile', ['user' => $article->user->id])}}">{{$article->user->name ?? 'Utente sconosciuto'}}</a>, il {{$article->created_at->format('d/m/Y')}}</p>
+                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-contact2 mb-4">{{__('ui.details')}}</a>
                         </div>
                     </div>
                 </div>
             @empty
                 <div class="col-12 text-center mt-5">
-                    <p>{{__('ui.NessunArticoloIndex')}}</p>
-                    <a href="{{ route('article.create') }}" class="btn btn-contact mt-5 shadow centerModPlus" type="button">
-                    {{__('ui.InserisciAnnuncio')}}
-                    </a>
+                    <p>{{__('ui.noAds')}}</p>
+                    <a href="{{ route('article.create') }}" class="btn btn-contact mt-5 shadow centerModPlus" type="button">{{__('ui.createAds')}}</a>
                 </div>
             @endforelse
         </div>

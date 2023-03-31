@@ -18,10 +18,9 @@
     </ul>
     
     <ul class="small d-flex ms-2 fw-bold justify-content-center">
-      <li><a class="text-white mx-2" href="{{route('homepage')}}">{{__('ui.footerHome')}}</a></li>
-       {{-- <li><a class="text-white mx-2 -flex -third" href="{{route('become.revisor')}}">Lavora con noi</a></li>  --}}
-      <li><a class="text-white mx-2" href="{{ route('article.index') }}">{{__('ui.footerArticles')}}</a></li>
-      <li><a class="text-white mx-2" href="{{ route('login') }}">{{__('ui.footerSubscribe')}}</a></li>
+      <li><a class="text-white mx-2" href="{{route('homepage')}}">{{__('ui.Home')}}</a></li>
+      <li><a class="text-white mx-2" href="{{ route('article.index') }}">{{__('ui.Index')}}</a></li>
+      <li><a class="text-white mx-2" href="{{ route('login') }}">{{__('ui.subscribe')}}</a></li>
     </ul>
     
   </div>

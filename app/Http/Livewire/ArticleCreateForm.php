@@ -9,6 +9,8 @@ use App\Models\Category;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Spatie\Image\Manipulations;
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -111,6 +113,8 @@ class ArticleCreateForm extends Component
                 // $newImage->addWatermark($watermark, 70);
 
                 dispatch(new ResizeImage($newImage->path, 500 , 500));
+                dispatch(new GoogleVisionSafeSearch($newImage->id));
+                dispatch(new GoogleVisionLabelImage($newImage->id));
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));

@@ -28,17 +28,17 @@
 
                                     <form wire:submit.prevent="store">
                                         @csrf
-                                        <h4 class="my-5 text-center">{{__('ui.Crea')}}</h4>
+                                        <h4 class="my-5 text-center">{{__('ui.createAds')}}</h4>
 
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="title">{{__('ui.NomeArticolo')}}</label>
+                                            <label class="form-label" for="title">{{__('ui.Name')}}</label>
                                             <input type="title" wire:model="title" id="title" class="form-control" />
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="categories">{{__('ui.Categoria')}}:</label>
+                                            <label class="form-label" for="categories">{{__('ui.category')}}:</label>
                                             <select wire:model="category" id="categories">
-                                                <option value="">{{__('ui.Selezione')}}</option>
+                                                <option value="">{{__('ui.selectCategory')}}</option>
                                                 @foreach ($categories as $category)
                                                     <option value="{{ $category->name }}">
                                                         {{ $category->name }}
@@ -57,14 +57,14 @@
                                         @if (!empty($images))
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <p>{{__('ui.Anteprima')}}:</p>
+                                                    <p>{{__('ui.preview')}}:</p>
                                                     <div class="row border-4 border-info rounded shadow py-4">
                                                         @foreach ($images as $key => $image)
                                                             <div class="col my-3">
                                                                 <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});">
                                                                 </div>
                                                                 <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{ $key }})">
-                                                                    {{__('ui.Cancella')}}
+                                                                    {{__('ui.cancel')}}
                                                                 </button>
                                                             </div>
                                                         @endforeach
@@ -74,18 +74,18 @@
                                         @endif
                     
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="price">{{__('ui.Prezzo')}}</label>
+                                            <label class="form-label" for="price">{{__('ui.price')}}</label>
                                             <input type="price" wire:model="price" id="price" class="form-control" />
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="description">{{__('ui.DescrizioneAnnuncio')}}</label>
+                                            <label class="form-label" for="description">{{__('ui.description')}}</label>
                                             <textarea type="text" wire:model="description" id="description" class="form-control" cols="7" rows="3"></textarea>
                                         </div>
 
                                         <div class="text-center pt-1 mb-5 pb-1">
                                             <button class="btn text-white btn-block gradient-custom-2 mb-3"
-                                                type="submit">{{__('ui.Crea2')}}
+                                                type="submit">{{__('ui.createAds')}}
                                             </button>
                                         </div>
 
@@ -95,19 +95,19 @@
                             </div>
                             <div class="col-lg-6 d-flex align-items-center gradient-custom-2 marginForMobile">
                                 <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                                    <h4 class="mb-4 text-center">{{__('ui.Descrizione1')}}</h4>
+                                    <h4 class="mb-4 text-center">{{__('ui.title1')}}</h4>
                                     <ol>
                                         <li>
-                                            <h5>{{__('ui.Punto1')}}</h5>
-                                            <p>{{__('ui.Descrizionepunto1')}}</p>
+                                            <h5>1. {{__('ui.point1')}}</h5>
+                                            <p>{{__('ui.textlg1')}}</p>
                                         </li>
                                         <li>
-                                            <h5>{{__('ui.Punto2')}}</h5>
-                                            <p>{{__('ui.Descrizionepunto2')}}</p>
+                                            <h5>2. {{__('ui.point2')}}</h5>
+                                            <p>{{__('ui.textlg2')}}</p>
                                         </li>
                                         <li>
-                                            <h5>{{__('ui.Punto3')}}</h5>
-                                            <p>{{__('ui.Descrizionepunto3')}}</p>
+                                            <h5>3. {{__('ui.point3')}}</h5>
+                                            <p>{{__('ui.textlg3')}}</p>
                                         </li>
                                     </ol>
                                 </div>

@@ -30,7 +30,7 @@
             
         </div>            
             <div class="col-4 col-md-2 ">
-                <a href="{{route('article.index')}}" class="btn btn-contact2">{{__('ui.TornaIndietro')}}</a>
+                <a href="{{route('article.index')}}" class="btn btn-contact2">{{__('ui.goBack')}}</a>
             </div>
         </div>
     </div>
