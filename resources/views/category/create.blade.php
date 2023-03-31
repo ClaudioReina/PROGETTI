@@ -18,23 +18,23 @@
                                             
                                             <form method="POST" action="{{route('category.store')}}" enctype="multipart/form-data">
                                                 @csrf
-                                                <p>{{__('ui.NuovaCategoria')}}</p>
+                                                <p>{{__('ui.newCategory')}}</p>
                                                 
                                                 <div class="form-outline mb-4">
                                                     <input type="name" name="name" id="name"
                                                     class="form-control"/>
-                                                    <label class="form-label" for="name">{{__('ui.NomeCategoria')}}</label>
+                                                    <label class="form-label" for="name">{{__('ui.Name')}}</label>
                                                 </div>
                                                 
                                                 <div class="mb-3">
-                                                    <label for="cover" class="form-label">{{__('ui.CaricaImmagine')}}</label>
+                                                    <label for="cover" class="form-label">{{__('ui.uploadImg')}}</label>
                                                     <input class="form-control" name="cover" type="file" id="cover">
                                                 </div>
                                                 
                                                 <div class="text-center pt-1 mb-5 pb-1">
                                                     <button
                                                     class="btn text-white  btn-block gradient-custom-2 mb-3"
-                                                    type="submit">{{__('ui.CreaCategoria')}}</button>
+                                                    type="submit">{{__('ui.createCategory')}}</button>
                                                 </div>
                                                 
                                             </form>
@@ -43,8 +43,8 @@
                                     </div>
                                     <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                                         <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                                            <h4 class="mb-4">{{__('ui.InserisciCategoria')}}</h4>
-                                            <p class="small mb-0">{{__('ui.DescrizioneCategoria')}}.
+                                            <h4 class="mb-4">{{__('ui.addCategory')}}</h4>
+                                            <p class="small mb-0">{{__('ui.descrCategory')}}.
                                             </p>
                                         </div>
                                     </div>
