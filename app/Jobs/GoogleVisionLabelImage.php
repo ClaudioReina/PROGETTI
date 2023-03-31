@@ -41,7 +41,7 @@ class GoogleVisionLabelImage implements ShouldQueue
 
         $imageAnnotator = new ImageAnnotatorClient();
         $response = $imageAnnotator->safeSearchDetection($image);
-        $label = $response->getLabelAnnotations();
+        $labels = $response->getLabelAnnotations();
 
         if($labels){
             $result = [];
