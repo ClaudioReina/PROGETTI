@@ -34,13 +34,13 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item text-center">
-                                        <a class="nav-link linkCustom" href="{{route('user.edit', $user)}}">{{__('ui.modificaProfilo')}}</a>
+                                        <a class="nav-link linkCustom" href="{{route('user.edit', $user)}}">{{__('ui.editProfile')}}</a>
                                     </li> 
                                     <li><hr class="dropdown-divider"></li>
                                     
                                     @if(!Auth::user()->is_revisor)
                                     <li class="nav-item text-center">
-                                        <a class="nav-link linkCustom" href="{{route('become.revisor')}}">{{__('ui.diventaRevisore')}}</a>
+                                        <a class="nav-link linkCustom" href="{{route('become.revisor')}}">{{__('ui.becameRevisor')}}</a>
                                     </li> 
                                     <li><hr class="dropdown-divider"></li>                            
                                     @endif
@@ -48,7 +48,7 @@
                                         <div class="text-center">
                                             <!-- Button trigger modal -->
                                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                {{__('ui.eliminaAccount')}}
+                                                {{__('ui.deleteAccount')}}
                                             </button>
                                         </div>
                                     </li>
@@ -61,11 +61,11 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">{{__('ui.eliminaAccount')}}:</h1>
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">{{__('ui.deleteAccount')}}:</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <p>{{__('ui.seiSicuro')}}?</p>
+                                        <p>{{__('ui.deleteUserModal')}}?</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('ui.chiudi')}}</button>
@@ -74,7 +74,7 @@
                                             <form method="POST" action="{{route('user.destroy')}}">
                                                 @csrf
                                                 @method('delete')
-                                                <button type="submit" class="btn btn-danger mx-auto">{{__('ui.Elimina')}}</button>
+                                                <button type="submit" class="btn btn-danger mx-auto">{{__('ui.deleteAccount')}}</button>
                                             </form>
                                             @endif
                                         </a>
@@ -96,10 +96,10 @@
         {{-- SEZIONE REVISORE --}}
         @auth
             @if(Auth::user()->id == $user->id && Auth::user()->is_revisor)
-                <h4 class="display-6 text-center py-3">{{__('ui.Sezione')}}</h4>
+                <h4 class="display-6 text-center py-3">{{__('ui.titleRevisor')}}</h4>
                 <div class="revisione">
-                    <a href="{{route('revisor.list')}}" class="nav-link btn_rev">{{__('ui.Lista')}}</a>
-                    <a class="btn_rev position-relative" aria-current="page" href="{{route('revisor.index')}}">{{__('ui.Zona')}}
+                    <a href="{{route('revisor.list')}}" class="nav-link btn_rev">{{__('ui.revisorList')}}</a>
+                    <a class="btn_rev position-relative" aria-current="page" href="{{route('revisor.index')}}">{{__('ui.revisorZone')}}
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         {{ App\Models\Article::toBeRevisionedCount()}}</span>
                         <span class="visually-hidden">Messaggi non letti</span>
@@ -111,7 +111,7 @@
         {{-- SEZIONE ANNUNCI --}}
         <div class="row">
             <div class="col-12 pt-5 text-center">
-                <h3 class="display-6 py-5">{{__('ui.Annunci')}}</h3>
+                <h3 class="display-6 py-5">{{__('ui.loadedAds')}} :</h3>
             </div>
             <div class="col-12">
                 <div class="row justify-content-center">
@@ -130,13 +130,13 @@
                                         </div>
                                         @if (Auth::user()->id == $user->id)
                                             <div class="text-center my-4">
-                                                <h5>{{__('ui.StatoAnnuncio')}}:                                                    
+                                                <h5>{{__('ui.adsStatus')}}:                                                    
                                                     @if($article->is_accepted == 1)
-                                                        <span class="label text-success">{{__('ui.Accetta')}}</span>
+                                                        <span class="label text-success">{{__('ui.accepted')}}</span>
                                                     @elseif ($article->is_accepted === 0)
-                                                        <span class="label text-danger">{{__('ui.Rifiuta')}}</span>
+                                                        <span class="label text-danger">{{__('ui.refused')}}</span>
                                                     @else
-                                                        <span class="label">{{__('ui.inCorso')}}</span>
+                                                        <span class="label">{{__('ui.inProgress')}}</span>
                                                     @endif
                                                 </h5>     
                                             </div>                                            
@@ -144,14 +144,14 @@
                                         <div class="d-flex justify-content-evenly card-body">                                                
                                             <form action="{{route('article.show', $article)}}" method="GET" class="">
                                                 @csrf
-                                                <button type="submit" class="btn btn-primary">{{__('ui.Visualizza')}}</button>
+                                                <button type="submit" class="btn btn-primary">{{__('ui.show')}}</button>
                                             </form>
                                             @if(Auth::user() && Auth::id() == $article->user_id)
-                                            <a href="{{ route('article.edit', $article) }}" class="btn btn-dark">{{__('ui.Modifica')}}</a>
+                                            <a href="{{ route('article.edit', $article) }}" class="btn btn-dark">{{__('ui.Edit')}}</a>
                                             <form action="{{ route('article.destroy', $article) }}" method="POST" class="">
                                                 @csrf
                                                 @method('delete')
-                                                <button type="submit" class="btn btn-danger">{{__('ui.Cancella')}}</button>
+                                                <button type="submit" class="btn btn-danger">{{__('ui.delete')}}</button>
                                             </form>
                                             @endif
                                         </div>
@@ -161,7 +161,7 @@
                         @endforeach
                     @else
                         <div class="col-12 ms-5 ps-5">
-                            {{__('ui.Cancella')}}
+                            {{__('ui.noAds')}}
                         </div>
                     @endif
                 </div>
@@ -173,9 +173,9 @@
             @if(Auth::user()->is_admin)
                 <div class="row py-5">
                     <div class="col-12 mb-5 d-flex justify-content-center">
-                        <h3 class="display-6 mb-3">{{__('ui.Categoria')}}</h3>
+                        <h3 class="display-6 mb-3">{{__('ui.category')}}</h3>
                         <div class="pt-2 ms-5">
-                            <a class="btn btn-warning linkCustom" href="{{ route('category.create') }}">{{__('ui.CreaCategoriaRevisore')}}</a>
+                            <a class="btn btn-warning linkCustom" href="{{ route('category.create') }}">{{__('ui.createCategory')}}</a>
                         </div>
                     </div>
                     <div class="col-12">
@@ -188,14 +188,14 @@
                                             <div class="card-body p-2 d-flex justify-content-around">
                                                 <form action="{{route('category.show', $category)}}" method="POST" class="d-inline-block">
                                                     @csrf
-                                                    <button type="submit" class="btn btn-primary">{{__('ui.Visualizza')}}</button>
+                                                    <button type="submit" class="btn btn-primary">{{__('ui.show')}}</button>
                                                 </form>
                                                 @if(Auth::user() && Auth::id() == $category->user_id)
-                                                    <a href="{{route('category.edit', $category)}}" class="btn btn-dark">{{__('ui.Modifica')}}</a>
+                                                    <a href="{{route('category.edit', $category)}}" class="btn btn-dark">{{__('ui.Edit')}}</a>
                                                     <form action="{{route('category.destroy', $category)}}" method="POST" class="d-inline-block">
                                                         @csrf
                                                         @method('delete')
-                                                        <button type="submit" class="btn btn-danger">{{__('ui.Cancella')}}</button>
+                                                        <button type="submit" class="btn btn-danger">{{__('ui.cancel')}}</button>
                                                     </form>
                                                 @endif
                                             </div>
@@ -204,7 +204,7 @@
                                 @endforeach
                             @else
                                 <div class="col-12 ms-5 ps-5">
-                                    {{__('ui.NessunaCategoriaRevisore')}}
+                                    {{__('ui.noCategory')}}
                                 </div>
                             @endif
                         </div>
