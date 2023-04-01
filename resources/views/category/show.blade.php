@@ -8,7 +8,7 @@
         </div>
         @if(count($articles) > 0)
             @foreach ($articles as $article)
-            <div class="col-12 col-md-12 col-lg-6 py-2 mb-3 text-white d-flex justify-content-center">
+            <div class="col-12 col-md-12 col-lg-6 py-2 mb-3 text-white d-flex justify-content-center CardMobileIndex ">
                     <div class="h-100">
                         <img src="{{!$article->image()->get()->isEmpty() ? $article->image()->first()->getUrl(500, 500) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top img-custom" alt="...">
                     </div>
@@ -18,8 +18,8 @@
                             <h6 class="card-text fst-italic">{{$article->price}} €</h6>     
                             <p class="fs-3 txSec">{{$article->category}}</p>                  
                             <p class="card-text text-white small text-muted">{{Str::limit($article->description, 20)}}</p>
-                            <p>{{__('ui.CreatoDa')}} <a class="txSec" href="{{route('profile', ['user' => $article->user->id])}}">{{$article->user->name ?? 'Utente sconosciuto'}}</a>, il {{$article->created_at->format('d/m/Y')}}</p>
-                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-contact2 mb-4">{{__('ui.DettagliCard')}}</a>
+                            <p>{{__('ui.create')}} <a class="txSec" href="{{route('profile', ['user' => $article->user->id])}}">{{$article->user->name ?? 'Utente sconosciuto'}}</a>, il {{$article->created_at->format('d/m/Y')}}</p>
+                            <a href="{{route('article.show', compact('article'))}}" class="btn btn-contact2 mb-4">{{__('ui.details')}}</a>
                         </div>
                     </div>
                 </div>
