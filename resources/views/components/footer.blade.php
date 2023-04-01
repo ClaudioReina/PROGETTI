@@ -12,14 +12,12 @@
       <li><i class="bi bi-twitter mx-2 text-white fs-3"></i></li>
       <li><i class="bi bi-instagram mx-2 text-white fs-3"></i></li>
       <li><i class="bi bi-whatsapp mx-2 text-white fs-3"></i></li>
-      <li><i class="bi bi-linkedin mx-2 text-white fs-3"></i></li>
-      <li><i class="bi bi-github ms-2 text-white fs-3"></i></li>
-      
+      <li><i class="bi bi-linkedin mx-2 text-white fs-3"></i></li>   
     </ul>
     
     <ul class="small d-flex ms-2 fw-bold justify-content-center">
-      <li><a class="text-white mx-2" href="{{route('homepage')}}">{{__('ui.Home')}}</a></li>
-      <li><a class="text-white mx-2" href="{{ route('article.index') }}">{{__('ui.Index')}}</a></li>
+      <li><a class="text-white mx-2" href="{{route('homepage')}}">{{__('ui.home')}}</a></li>
+      <li><a class="text-white mx-2" href="{{ route('article.index') }}">{{__('ui.index')}}</a></li>
       <li><a class="text-white mx-2" href="{{ route('login') }}">{{__('ui.subscribe')}}</a></li>
     </ul>
     

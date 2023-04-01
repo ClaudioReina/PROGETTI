@@ -420,8 +420,8 @@ a {
 
 /* CREAZIONE ARTICOLO */
 .img-preview{
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   background-size: cover;
   background-position: center;
   object-fit: cover;

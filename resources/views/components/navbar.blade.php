@@ -6,7 +6,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <li class="nav-item">
-                <a class="nav-link active linkCustom linkCustomActive" aria-current="page" href="{{ route('homepage') }}">{{__('ui.Home')}}</a>
+                <a class="nav-link active linkCustom linkCustomActive" aria-current="page" href="{{ route('homepage') }}">{{__('ui.home')}}</a>
             </li>
             <ul class="navbar-nav mt-3  m-auto">         
                 <li class="nav-item">

@@ -67,6 +67,7 @@
             <div class="row mt-3">
                 <div class="col-md-9">
                     <h5 class="card-title mt-3"><span class="fw-bold">{{__('ui.title')}}: </span>{{ $article_to_check->title }}</h5>
+                    <p class="card-text mt-2"><span class="fw-bold">{{__('ui.publishedBy')}}: </span>{{ $article_to_check->user->name }}</p>
                     <p class="card-text mt-2"><span class="fw-bold">{{__('ui.description')}}: </span>{{ $article_to_check->description }}</p>
                     <p class="card-footer mt-2"><span class="fw-bold">{{__('ui.published')}}: </span>{{ $article_to_check->created_at->format('d/m/Y') }}</p>
                     <div class="d-flex">
