@@ -45,7 +45,7 @@
         </div>
             
         <div class="row justify-content-center">
-            <div class="col-1 d-flex bg-dark rounded">
+            <div class="col-1 d-flex lead fw-bold mt-3 rounded">
                 @if ($articles->currentPage() > 1)
                     <div class="text-center text-white"><a href="{{ $articles->previousPageUrl() }}"><i class="fa fa-angle-left text-white"></i></a></div>
                 @endif

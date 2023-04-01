@@ -61,6 +61,9 @@
     .centerModPlus{
         margin-right: 50px;
     }
+    .centerModPlus2{
+      margin-right: 30px;
+  }
 
     .img-custom{
         width: 93vw;
@@ -71,6 +74,11 @@
 
       .CardMobileIndex{
        flex-direction: column;
+      }
+
+      .evenlyCust{
+        justify-content: space-around;
+        
       }
 }
 

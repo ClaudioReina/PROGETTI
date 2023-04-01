@@ -18,17 +18,17 @@
     <x-messages />
 
     @if ($article_to_check)
-        <div class="container-fluid shadow">
+        <div class="container-fluid bg-transparent">
             <div class="row text-center bg-light py-5">
                 <div class="col-12 col-md-6 fw-bold display-6">{{__('ui.revisionImg')}}</div>
                 <div class="col-12 col-md-6 fw-bold display-6">{{__('ui.tags')}}</div>
             </div>
-            <div class="row text-center bg-light pb-5">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner d-flex align-items-center">
+            <div class="row text-center bg-light">
+                <div id="carouselExampleControls" class="carousel carousel-fade backGroundRevisor" data-bs-ride="carousel">
+                    <div class="carousel-inner d-flex">
                         @foreach ($article_to_check->image as $key => $image)
-                            <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
-                                <div class="card-body bg-light d-flex">
+                            <div class="carousel-item  {{ $key === 0 ? 'active' : '' }}">
+                                <div class="card-body d-flex text-white">
                                     <div class="col-md-6">
                                         <p>Adulti: <span class="{{ $image->adult }} shadow"></span></p>
                                         <p>Satira: <span class="{{ $image->spoof }} shadow"></span></p>
@@ -36,8 +36,8 @@
                                         <p>Violenza: <span class="{{ $image->violence }} shadow"></span></p>
                                         <p>Contenuto Esplicito: <span class="{{ $image->racy }} shadow"></span></p>
                                     </div>
-                                    <div class="col-md-6 me-5 pe-5">
-                                        <div>
+                                    <div class="col-md-4 me-5 pe-5 d-flex">
+                                        <div class="my-auto">
                                             @if ($image->labels)
                                                 @foreach ($image->labels as $label)
                                                 <p class="d-inline">{{$label}},</p>
@@ -46,7 +46,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <img src="{{!$article_to_check->image()->get()->isEmpty() ? $image->getUrl(500, 500) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top img-custom rounded-5" alt="...">
+                                <img src="{{!$article_to_check->image()->get()->isEmpty() ? $image->getUrl(500, 500) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top img-custom rounded-5 mt-5" alt="...">
                             </div>
                         @endforeach
                     </div>

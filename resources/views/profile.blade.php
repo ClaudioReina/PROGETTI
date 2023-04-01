@@ -172,10 +172,13 @@
         @auth
             @if(Auth::user()->is_admin)
                 <div class="row py-5">
-                    <div class="col-12 mb-5 d-flex justify-content-center">
-                        <h3 class="display-6 mb-3">{{__('ui.category')}}</h3>
-                        <div class="pt-2 ms-5">
-                            <a class="btn btn-warning linkCustom" href="{{ route('category.create') }}">{{__('ui.createCategory')}}</a>
+                    <div class="col-12 mb-5 justify-content-center">
+                        <div>
+                            <h3 class="display-6 mb-3 text-center">{{__('ui.categories')}}</h3>
+                        </div>
+                        
+                        <div class="pt-2 text-center">
+                            <a class="btn btn-warning linkCustom " href="{{ route('category.create') }}">{{__('ui.createCategory')}}</a>
                         </div>
                     </div>
                     <div class="col-12">

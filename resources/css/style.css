@@ -157,6 +157,23 @@ a {
   z-index: 1;
 }
 
+.backGroundRevisor{
+  background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/SfondoPerIndex.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding-top: 6rem;
+  z-index: 1;
+}
+
+
 
 
 .createBackground{
@@ -438,7 +455,3 @@ a {
 
 /* END TITOLO PRINCIPALE */
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #000;
-}
