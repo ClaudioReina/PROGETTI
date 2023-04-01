@@ -98,6 +98,11 @@
         height: 30vh !important;
        margin-top:5vh ;
       }
+
+      .profileMod{
+        margin-left: 5vw;
+      }
+     
 }
 
 .spaced{

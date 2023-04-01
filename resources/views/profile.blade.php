@@ -2,7 +2,7 @@
     
     <div class="container py-5">
         {{-- SEZIONE AVATAR --}}
-        <div class="row">
+        <div class="row profileMod">
             <div class="col-12 col-md-6 d-flex align-items-center ms-5 pt-4">
                 @if(!$user->avatar)
                     <img src="/media/ImmagineSalvaposto.jpg" class="avatar-image" alt="immagine non trovata" onclick="document.getElementById('avatar-input').click();" >
@@ -18,7 +18,7 @@
                 @endif
             </div>
                 
-                <div class="col-12 col-md-6 d-flex">
+                <div class="col-12 col-md-6 d-flex ">
                     @if(Auth::user()->name == $user->name)
                         <h1 class="ms-5 me-2 mt-2">{{Auth::user()->name}}</h1>
                     @else
@@ -117,7 +117,7 @@
                 <div class="row justify-content-center">
                     @if(Auth::user()->articles->count() > 0)
                         @foreach($articles as $article)
-                            <div class="col-12 col-md-4 pb-5">
+                            <div class="col-12 col-md-6 col-lg-4 pb-5">
                                 <div class="card cardCust shadow cardElements">
                                 <img src="{{!$article->image()->get()->isEmpty() ? Storage::url($article->image()->first()->path) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top" alt="...">
                                     <div class="card-body p-2">                                           
