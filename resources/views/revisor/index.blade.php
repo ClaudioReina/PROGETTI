@@ -46,7 +46,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <img src="{{!$article_to_check->image()->get()->isEmpty() ? $image->getUrl(500, 500) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top img-custom rounded-5 mt-5" alt="...">
+                                <img src="{{!$article_to_check->image()->get()->isEmpty() ? $image->getUrl(500, 500) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top img-custom rounded-5 mt-5 immagineResp" alt="...">
                             </div>
                         @endforeach
                     </div>
