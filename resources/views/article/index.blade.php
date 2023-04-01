@@ -19,24 +19,6 @@
             </div>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-1 d-flex bg-danger rounded ">
-                @if ($articles->currentPage() > 1)
-                    <div class="text-center text-white"><a href="{{ $articles->previousPageUrl() }}"><i class="fa fa-angle-left text-white"></i></a></div>
-                @endif
-        
-                @for ($i = 1; $i <= $articles->lastPage(); $i++)
-                    <div  class="text-center mx-auto text-white {{ ($i == $articles->currentPage()) ? ' active' : '' }}">
-                        <a class="text-white" href="{{ $articles->url($i) }}">{{ $i }}</a>
-                    </div>
-                @endfor
-
-                @if ($articles->hasMorePages())
-                    <div><a href="{{ $articles->nextPageUrl() }}"><i class="fa fa-angle-right text-white"></i></a></div>
-                @endif
-            </div>
-        </div>
-
         <div class="row py-5 hidden justify-content-around centerMod">
             @forelse ($articles as $article)
                 <div class="col-12 col-md-10 col-lg-5 py-2 mb-3 text-white d-flex justify-content-center CardMobileIndex">
@@ -63,7 +45,7 @@
         </div>
             
         <div class="row justify-content-center">
-            <div class="col-1 d-flex bg-danger rounded ">
+            <div class="col-1 d-flex bg-dark rounded">
                 @if ($articles->currentPage() > 1)
                     <div class="text-center text-white"><a href="{{ $articles->previousPageUrl() }}"><i class="fa fa-angle-left text-white"></i></a></div>
                 @endif
@@ -76,8 +58,7 @@
 
                 @if ($articles->hasMorePages())
                     <div><a href="{{ $articles->nextPageUrl() }}"><i class="fa fa-angle-right text-white"></i></a></div>
-                @endif
-        
+                @endif        
             </div>
         </div>
 

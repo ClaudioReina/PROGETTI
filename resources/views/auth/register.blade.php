@@ -17,7 +17,7 @@
                 @csrf
                 <p id="heading">{{__('ui.signIn')}}</p>
                 <div class="field">
-                    <label for="name">{{__('ui.Name')}}</label>
+                    <label for="name">{{__('ui.name')}}</label>
                     <input type="name" name="name" id="name" class="form-control input-field" placeholder="Mario Rossi" />
                 </div>
                 <div class="field">

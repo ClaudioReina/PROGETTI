@@ -2,7 +2,7 @@
     <form class="shadow p-5 mt-5 rounded" wire:submit.prevent="becomeRevisor">
         @csrf
         <div class="mb-3">
-          <label wire:model="name" for="name" class="form-label">{{__('ui.Name')}}</label>
+          <label wire:model="name" for="name" class="form-label">{{__('ui.name')}}</label>
           <input type="text" class="form-control" id="name">
         </div>
 

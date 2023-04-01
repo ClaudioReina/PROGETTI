@@ -19,7 +19,7 @@
                                         <p class="my-5 text-center">Modifica annuncio</p>
                                         
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="title">{{__('ui.Name')}}</label>
+                                            <label class="form-label" for="title">{{__('ui.name')}}</label>
                                             <input value="{{old('title')}}" type="title" wire:model="title" id="title"
                                             class="form-control"/>
                                         </div>
@@ -27,7 +27,7 @@
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="categories">{{__('ui.category')}}:</label>
                                             <select wire:model="category" id="categories">
-                                                <option value="">{{__(ui.selectCategory)}}</option>
+                                                <option value="">{{$category}}</option>
                                                 @foreach ($categories as $category)
                                                 <option value="{{$category->name}}">
                                                     {{$category->name}}
@@ -49,7 +49,7 @@
                                         </div>
                                         
                                         <div class="text-center pt-1 mb-5 pb-1">
-                                            <button class="btn text-white btn-block fa-lg gradient-custom-2 mb-3" type="submit">{{__('ui.editAds')}}</button>
+                                            <button class="btn text-white btn-block gradient-custom-2 mb-3" type="submit">{{__('ui.editAds')}}</button>
                                         </div>
                                         
                                     </form>

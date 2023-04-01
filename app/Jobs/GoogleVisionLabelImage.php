@@ -40,12 +40,11 @@ class GoogleVisionLabelImage implements ShouldQueue
         putenv('GOOGLE_APPLICATION_CREDENTIALS='.base_path('google_credentials.json'));
 
         $imageAnnotator = new ImageAnnotatorClient();
-        $response = $imageAnnotator->safeSearchDetection($image);
+        $response = $imageAnnotator->labelDetection($image);
         $labels = $response->getLabelAnnotations();
 
         if($labels){
             $result = [];
-
             foreach($labels as $label){
                 $result[] = $label->getDescription();
             }

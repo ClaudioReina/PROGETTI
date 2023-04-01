@@ -53,8 +53,6 @@ class GoogleVisionSafeSearch implements ShouldQueue
         $violence = $safe->getViolence();
         $racy = $safe->getRacy();
 
-        echo json_encode([$adult, $medical]);
-
         $likelihoodName =[
             'text-secondary fas fa-circle', 
             'text-success fas fa-circle',

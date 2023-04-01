@@ -15,7 +15,7 @@
                             <form method="POST" action="{{route('user.update', compact('user'))}}" enctype="multipart/form-data">
                                 @csrf                                            
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="name">{{__('ui.Name')}}</label>
+                                    <label class="form-label" for="name">{{__('ui.name')}}</label>
                                     <input type="name" name="name" id="name" class="form-control"/>
                                 </div>
                                 <div class="text-center pt-1 mb-5 pb-1">

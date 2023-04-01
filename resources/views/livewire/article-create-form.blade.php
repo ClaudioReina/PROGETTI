@@ -31,7 +31,7 @@
                                         <h4 class="my-5 text-center">{{__('ui.createAds')}}</h4>
 
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="title">{{__('ui.Name')}}</label>
+                                            <label class="form-label" for="title">{{__('ui.name')}}</label>
                                             <input type="title" wire:model="title" id="title" class="form-control" />
                                         </div>
 

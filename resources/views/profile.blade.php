@@ -97,7 +97,7 @@
         @auth
             @if(Auth::user()->id == $user->id && Auth::user()->is_revisor)
                 <h4 class="display-6 text-center py-3">{{__('ui.titleRevisor')}}</h4>
-                <div class="revisione">
+                <div class="revisione rounded-5">
                     <a href="{{route('revisor.list')}}" class="nav-link btn_rev">{{__('ui.revisorList')}}</a>
                     <a class="btn_rev position-relative" aria-current="page" href="{{route('revisor.index')}}">{{__('ui.revisorZone')}}
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -147,7 +147,7 @@
                                                 <button type="submit" class="btn btn-primary">{{__('ui.show')}}</button>
                                             </form>
                                             @if(Auth::user() && Auth::id() == $article->user_id)
-                                            <a href="{{ route('article.edit', $article) }}" class="btn btn-dark">{{__('ui.Edit')}}</a>
+                                            <a href="{{ route('article.edit', $article) }}" class="btn btn-dark">{{__('ui.edit')}}</a>
                                             <form action="{{ route('article.destroy', $article) }}" method="POST" class="">
                                                 @csrf
                                                 @method('delete')
@@ -191,7 +191,7 @@
                                                     <button type="submit" class="btn btn-primary">{{__('ui.show')}}</button>
                                                 </form>
                                                 @if(Auth::user() && Auth::id() == $category->user_id)
-                                                    <a href="{{route('category.edit', $category)}}" class="btn btn-dark">{{__('ui.Edit')}}</a>
+                                                    <a href="{{route('category.edit', $category)}}" class="btn btn-dark">{{__('ui.edit')}}</a>
                                                     <form action="{{route('category.destroy', $category)}}" method="POST" class="d-inline-block">
                                                         @csrf
                                                         @method('delete')

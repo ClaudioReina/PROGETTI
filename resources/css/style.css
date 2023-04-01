@@ -437,3 +437,8 @@ a {
 }
 
 /* END TITOLO PRINCIPALE */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+}

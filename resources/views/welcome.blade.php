@@ -150,8 +150,8 @@
         </div>
     </div>
 
-    <div class="container-fluid form_bg">
-        <div class="row">
+    <div class="container-fluid form_bg ps-5">
+        <div class="row ps-5">
             <div class="col-12 hidden-right col-md-6 col-lg-7 text-white">
                 <h4 class="display-4">{{__('ui.sloganFive')}}</h4>
                 <h5 class="display-6">{{__('ui.sloganSix')}}

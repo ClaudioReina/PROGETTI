@@ -26,7 +26,7 @@
             @endforeach
         @else
         <div class="col-12 text-center mt-5 text-white hidden">
-            <h4>{{__('ui.NessunArticoloIndex')}}</h4>
+            <h4>{{__('ui.noAds')}}</h4>
         </div>
         @endif
     </div>

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('images', function (Blueprint $table) {
             $table->text('labels')->nullable();
+            
             $table->string('adult')->nullable();
             $table->string('spoof')->nullable();
             $table->string('medical')->nullable();

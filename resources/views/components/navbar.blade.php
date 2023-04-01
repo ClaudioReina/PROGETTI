@@ -10,7 +10,10 @@
             </li>
             <ul class="navbar-nav mt-3  m-auto">         
                 <li class="nav-item">
-                    <a class="nav-link linkCustom linkCustomActive" href="{{ route('article.index') }}">{{__('ui.Index')}}</a>
+                    <a class="nav-link linkCustom linkCustomActive" href="{{ route('article.index') }}">{{__('ui.index')}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link linkCustom linkCustomActive mb-2" href="{{ route('article.create') }}">{{__('ui.createAds')}}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle linkCustom linkCustomActive mb-2" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{__('ui.category')}}</a>           
@@ -21,9 +24,6 @@
                             </li>
                         @endforeach
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link linkCustom linkCustomActive mb-2" href="{{ route('article.create') }}">{{__('ui.createAds')}}</a>
                 </li>
                 @auth
                     @if(!Auth::user()->is_revisor)
@@ -57,7 +57,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item" href="{{ route('profile', Auth::id())}}">{{__('ui.Profile')}}</a>
+                            <a class="dropdown-item" href="{{ route('profile', Auth::id())}}">{{__('ui.profile')}}</a>
                         </li>
                         <li>
                             <button class="dropdown-item" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">{{__('ui.logOut')}}
@@ -67,9 +67,9 @@
                     </ul>
                 @endguest
             </div>
-            <li class="nav-item dropdown mx-3">
+            <li class="nav-item dropdown mx-3 linkCustom linkCustomActive">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{__('ui.Languages')}}
+                    {{__('ui.languages')}}
                 </a>
                 <ul class="dropdown-menu dropdowndimention">
                     <li class="nav-item dropdown-item">

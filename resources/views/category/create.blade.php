@@ -23,7 +23,7 @@
                                                 <div class="form-outline mb-4">
                                                     <input type="name" name="name" id="name"
                                                     class="form-control"/>
-                                                    <label class="form-label" for="name">{{__('ui.Name')}}</label>
+                                                    <label class="form-label" for="name">{{__('ui.name')}}</label>
                                                 </div>
                                                 
                                                 <div class="mb-3">
