@@ -4,9 +4,13 @@ namespace App\Http\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use Livewire\WithPagination;
+use Illuminate\Support\Facades\DB;
 
 class ArticleList extends Component
 {
+    use WithPagination;
+
     public function listArticle(){
         $article =  Article::where('is_accepted', null)->first();
         return view ('revisor.list');
@@ -31,6 +35,8 @@ class ArticleList extends Component
     {
         $articles = Article::all();
         
-        return view('livewire.article-list', compact('articles'));
+        return view('livewire.article-list', [
+            'articles' => Article::paginate(10),
+        ]);
     }
 }
