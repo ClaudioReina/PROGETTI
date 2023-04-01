@@ -50,7 +50,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        $articles = Article::where('is_accepted', true)->get();
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->get();
 
         $articles = $articles->filter(function ($articles) use ($category) {
             return $articles->category == $category->name;
