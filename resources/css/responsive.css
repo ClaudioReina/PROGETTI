@@ -15,17 +15,22 @@
         object-fit: cover;
       }
       
-      
+      .FormatImg{
+        margin: auto;
+        width: 20vw !important;
+        height: 30vh !important;
+       margin-top:5vh ;
+      }
 
 }
 
 
-@media (min-width:1025px) and (max-width:1200px){
+/* @media (min-width:1025px) and (max-width:1200px){
   .colonnaDaSpostare{
    
     padding-right: 100px;
    }
-}
+} */
 
 @media (min-width:481px) and (max-width:769px){
     .cardCustom{
@@ -43,6 +48,12 @@
         margin-left: 5px;
       }
 
+      .FormatImg{
+        margin: auto;
+        width: 30vw !important;
+        height: 20vh !important;
+       margin-top:5vh ;
+      }
 }
 
 @media only screen and (max-width: 480px) {
@@ -64,13 +75,20 @@
 
     .img-custom{
         width: 93vw;
-          height: 135px;
+        height: 135px;
         object-fit: cover;
        margin-top:10vh ;
       }
 
       .CardMobileIndex{
        flex-direction: column;
+      }
+
+      .FormatImg{
+        margin: auto;
+        width: 60vw !important;
+        height: 30vh !important;
+       margin-top:5vh ;
       }
 }
 

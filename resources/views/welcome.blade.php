@@ -122,12 +122,9 @@
             </div>
             @foreach ($articles as $article)
                 <div class="col-10 col-md-5 col-lg-3 mx-auto mb-5">
-                    <div class="card cardCust shadow round cardElements">
-                        @if (!$article->cover)
-                            <img src="/media/ImmagineSalvaposto.jpg" class="img-fluid card-img-top" alt="immagine non trovata">
-                        @else
-                            <img src="{{ Storage::url($article->cover) }}" class="img-fluid card-img-top" alt="{{ $article->name }}">
-                        @endif
+                    <div class="card cardCust shadow round cardElements">                        
+                            <img src="{{!$article->image()->get()->isEmpty() ? $article->image()->first()->getUrl(500, 500) : '/media/ImmagineSalvaposto.jpg'}}" style="height: 325px; width: 325px;" class="card-img-top FormatImg img-custom " alt="...">
+                     
                         <div class="card-body">
                             <h5 class="card-title animate__animated animate__bounceIn robotoFont fs-4 text-center">
                                 {{ $article->title }}
