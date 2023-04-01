@@ -24,14 +24,11 @@
 
 }
 
-
-/* @media (min-width:1025px) and (max-width:1200px){
-  .colonnaDaSpostare{
-   
-    padding-right: 100px;
-   }
-} */
-
+/* 
+@media (min-width:1025px) and (max-width:1200px){
+  
+}
+ */
 @media (min-width:481px) and (max-width:769px){
     .cardCustom{
         width: 60vh;
@@ -59,7 +56,9 @@
 @media only screen and (max-width: 480px) {
 
 
-  
+  .prova{
+   margin-right:30px;
+  }
     
     .centerMod{
         justify-content: center;
