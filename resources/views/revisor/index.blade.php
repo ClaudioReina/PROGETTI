@@ -25,9 +25,9 @@
             </div>
             <div class="row text-center bg-light">
                 <div id="carouselExampleControls" class="carousel carousel-fade backGroundRevisor" data-bs-ride="carousel">
-                    <div class="carousel-inner d-flex">
+                    <div class="carousel-inner d-flex align-items-center">
                         @foreach ($article_to_check->image as $key => $image)
-                            <div class="carousel-item  {{ $key === 0 ? 'active' : '' }}">
+                            <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
                                 <div class="card-body d-flex text-white">
                                     <div class="col-md-6">
                                         <p>Adulti: <span class="{{ $image->adult }} shadow"></span></p>
