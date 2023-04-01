@@ -6,7 +6,7 @@ return [
     'adult' => 'Adulti',
     'articles' => 'Articoli',
     'cancel' => 'Cancella',
-    'Categories' => 'Categorie',
+    'categories' => 'Categorie',
     'category' => 'Categoria',
     'close' => 'Chiudi',
     'confirmPwd' => 'Conferma password',

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PublicController extends Controller
 {
    public function homepage() {
-        $articles = Article::latest()->take(3)->get();
+        $articles = Article::latest()->where('is_accepted', true)->take(3)->get();
 
         return view('welcome' , compact('articles'));
     }
