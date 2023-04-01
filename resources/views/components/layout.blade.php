@@ -18,7 +18,29 @@
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+          width: 12px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #2a2a2a91; 
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #2ccc77;
+          border-radius: 10px 
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #00A97F; 
+        }
+        </style>
+        
     <x-navbar />
 
 <div class="min-vh-100">
