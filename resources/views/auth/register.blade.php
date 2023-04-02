@@ -10,7 +10,7 @@
   </div>
 @endif
 
-<div class="container-fluid">
+<div class="container-fluid createBackground">
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 col-lg-4 mt-4">
             <form class="form formLogin p-4" method="POST" action="{{route('register')}}">
@@ -44,10 +44,10 @@
             </form>            
         </div>
     </div>
-</div>
-
     <div class="container-fluid spaced">
         
     </div>
+</div>
+
 
 </x-layout>

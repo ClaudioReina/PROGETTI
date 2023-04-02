@@ -102,12 +102,12 @@
                         <h4 class="my-4">{{__('ui.previously_uploaded_images')}}</h4>
                         @if($article->image)
                         <div class="d-flex bg-white border border-dark rounded shadow py-4">
-                            @foreach ($article->image as $key => $image)
+                            @foreach ($paths as $path)
                                 <div class="d-inline mx-auto">
-                                    <img src="{{!$article->image()->get()->isEmpty() ? $image->getUrl(500, 500) : '/media/ImmagineSalvaposto.jpg'}}" class="img-preview rounded-5 immagineResp" alt="...">
-                                    <!-- <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{ $article->image }})">
-                                        {{__('ui.cancel')}}
-                                    </button> -->
+                                    
+                                    <img class="img-preview mx-auto shadow rounded" src="{{ asset('storage/' . $path) }}" alt="">
+                                    <button class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removePath('{{ $path }}')">Elimina</button>
+                                    
                                 </div>
                             @endforeach
                         </div>

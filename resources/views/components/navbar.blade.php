@@ -28,7 +28,7 @@
                 @auth
                     @if(!Auth::user()->is_revisor)
                         <li class="nav-item">
-                            <a class="nav-link linkCustom linkCustomActive" href="{{ route('become-revisor') }}">{{__('ui.Revisor')}}</a>
+                            <a class="nav-link linkCustom linkCustomActive" href="{{ route('become-revisor') }}">{{__('ui.becameRevisor')}}</a>
                         </li>
                     @endif
                 @endauth

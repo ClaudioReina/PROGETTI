@@ -31,6 +31,7 @@ class ArticleEditForm extends Component
     public $images;
     public $temporary_images;
     public $newImages;
+    public $paths;
 
     public function mount(Article $article)
     {
@@ -41,6 +42,7 @@ class ArticleEditForm extends Component
         $this->category = $article->category;
         $this->price = $article->price;
         $this->description = $article->description;
+        $this->paths = $this->article->image->pluck('path')->toArray();
     }
 
     public function updatedTemporaryImages()
@@ -74,7 +76,7 @@ class ArticleEditForm extends Component
             'price' => $this->price,
             'description' => $this->description,
         ]);
-        // il metodo carica le immagini nuove ma non elimina le precedenti, non modifica gli altri campi e non torna null il campo is_accepted = Buon Lavoro Carmelo.
+        // non torna null il campo is_accepted = Buon Lavoro Carmelo.
 
 
         if (count($this->images)){
@@ -97,8 +99,32 @@ class ArticleEditForm extends Component
         return redirect(route('article.index'));
     }
 
+    public function removePath($path)
+    {
+        $index = array_search($path, $this->paths);
+        if ($index !== false) {
+            unset($this->paths[$index]);
+            $this->render();
+        }
+
+        $image = Image::where('path', $path)->first();
+
+        if ($image) {
+
+            $image->delete();
+        }
+    }
+
     public function render()
     {
-        return view('livewire.article-edit-form');
+        $images = $this->article->image;
+        $paths = [];
+        
+        foreach ($images as $image) {
+            $paths[] = $image->path; 
+        }
+
+
+        return view('livewire.article-edit-form', compact('paths'));
     }
 }
