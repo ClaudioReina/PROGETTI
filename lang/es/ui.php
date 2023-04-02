@@ -61,6 +61,7 @@ return [
     'editAds' => 'Editar Anuncio',
     'loadedAds' => 'Anuncios Cargados',
     'noAds' => 'No hay Anuncios',
+    'previously_uploaded_images' => 'Imágenes Cargadas Previamente',
 
     // Crea nuovo annuncio
     'title1' => 'Algunos consejos del equipo Presto.it',

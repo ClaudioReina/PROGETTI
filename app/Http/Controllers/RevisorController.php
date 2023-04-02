@@ -26,17 +26,17 @@ class RevisorController extends Controller
 
     public function acceptArticle(Article $article){
         $article->setAccepted(true);
-        return redirect()->back()->with('revisionAccepted', 'Prodotto accettato!');
+        return redirect()->back()->with('revisionAccepted', 'Annuncio accettato!');
     }
 
     public function rejectArticle(Article $article){
         $article->setAccepted(false);
-        return redirect()->back()->with('revisionDeleted', 'Prodotto rifiutato!');
+        return redirect()->back()->with('revisionDeleted', 'Annuncio rifiutato!');
     }
 
     public function undoArticle(Article $article){
         $article->setAccepted(null);
-        return redirect()->back()->with('revisionUndo', 'Prodotto da revisionare!');
+        return redirect()->back()->with('revisionUndo', 'Annuncio da revisionare!');
     }
 
     

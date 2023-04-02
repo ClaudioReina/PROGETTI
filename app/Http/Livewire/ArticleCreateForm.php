@@ -93,7 +93,6 @@ class ArticleCreateForm extends Component
         
         if (count($this->images)){
             foreach($this->images as $image){
-                // $this->article->image()->create(['path'=>$image->store('images', 'public')]);
                 $newFileName = "article/{$this->article->id}";
                 $newImage = $this->article->image()->create(['path' => $image->store($newFileName , 'public')]);
 

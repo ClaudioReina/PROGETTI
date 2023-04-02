@@ -19,7 +19,7 @@ class ArticleList extends Component
     public function destroy(Article $article) 
     {
         $article->delete();
-        session()->flash('articleDestroyed', 'Articolo eliminato correttamente');
+        session()->flash('articleDestroyed', 'Annuncio eliminato correttamente');
     }
     
     public function undoArticle(Article $article)
@@ -27,7 +27,7 @@ class ArticleList extends Component
         $article->setAccepted(null);
         $this->articles = $this->articles->where('id', '<>', $article->id);
         $this->emit('refresh');
-        return redirect()->back()->with('revisionUndo', 'Prodotto da revisionare!');
+        return redirect()->back()->with('revisionUndo', 'Annuncio da revisionare!');
     }
     
     

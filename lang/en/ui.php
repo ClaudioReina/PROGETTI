@@ -61,6 +61,7 @@ return [
     'editAds' => 'Edit Ad',
     'loadedAds' => 'Loaded Ads',
     'noAds' => 'No Ads',
+    'previously_uploaded_images' => 'Previously Uploaded Images',
 
     // Crea nuovo annuncio
     'title1' => 'Some tips from the Presto.it Team',

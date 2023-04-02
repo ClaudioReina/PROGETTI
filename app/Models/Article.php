@@ -56,8 +56,9 @@ class Article extends Model
     public static function toBeRevisionedCount(){
         return Article::where('is_accepted', null)->count();
     }
-        public function image()
-        {
-            return $this->hasMany(Image::class);
-        }
+    
+    public function image()
+    {
+        return $this->hasMany(Image::class);
+    }
 }
