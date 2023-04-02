@@ -24,11 +24,11 @@
 
 }
 
-/* 
+
 @media (min-width:1025px) and (max-width:1200px){
-  
+ 
 }
- */
+
 @media (min-width:481px) and (max-width:769px){
     .cardCustom{
         width: 60vh;
