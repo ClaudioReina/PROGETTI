@@ -1,5 +1,5 @@
 <div>
-    <form class="shadow p-5 mt-5 rounded" wire:submit.prevent="becomeRevisor">
+    <form class="shadow p-5 mt-5 rounded-5 navbarColor" wire:submit.prevent="becomeRevisor">
         @csrf
         <div class="mb-3">
           <label wire:model="name" for="name" class="form-label">{{__('ui.name')}}</label>
@@ -16,6 +16,9 @@
             <textarea wire:model="message" id="message" class="form-control" cols="30" rows="10"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">{{__('ui.submit')}}</button>
+        <button type="submit" class="btn btn-contact2">{{__('ui.submit')}}</button>
     </form>
+
+    <div class="container-fluid spacedSm">
+    </div>
 </div>

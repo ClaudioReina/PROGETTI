@@ -37,6 +37,7 @@ return [
     'register' => 'Register',
     'refuse' => 'Refuse',
     'refused' => 'Refused',
+    'rememberMe' => 'Remember me',
     'search' => 'Search',
     'show' => 'Show',
     'signIn' => 'Sign in',

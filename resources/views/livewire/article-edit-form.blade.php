@@ -98,19 +98,17 @@
                         </div>
                     </div>
                     <!-- ANTEPRIMA VECCHIE IMMAGINI -->  
-                    <div class="row mt-5">
-                        <h4 class="my-4">{{__('ui.previously_uploaded_images')}}</h4>
+                    <div class="row mt-5 navbarColor border border-dark rounded shadow py-4">
+                        <h4 class="text-center my-4">{{__('ui.previously_uploaded_images')}}</h4>
                         @if($article->image)
-                        <div class="d-flex bg-white border border-dark rounded shadow py-4">
                             @foreach ($paths as $path)
-                                <div class="d-inline mx-auto">
-                                    
+                            <div class="col-12 col-md-3 mx-auto">
+                                <div class="d-flex flex-column mb-2">
                                     <img class="img-preview mx-auto shadow rounded" src="{{ asset('storage/' . $path) }}" alt="">
-                                    <button class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removePath('{{ $path }}')">Elimina</button>
-                                    
+                                    <button class="btn btn-danger shadow text-center mt-2 mx-auto" wire:click="removePath('{{ $path }}')">Elimina</button>
                                 </div>
+                            </div>
                             @endforeach
-                        </div>
                         @endif
                     </div>                                      
                 </div>

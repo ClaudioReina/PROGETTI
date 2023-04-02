@@ -37,6 +37,7 @@ return [
     'register' => 'Registrati',
     'refuse' => 'rifiuta',
     'refused' => 'Rifiutato',
+    'rememberMe' => 'Ricordami',
     'search' => 'Cerca',
     'show' => 'Visualizza',
     'signIn' => 'Registrati',

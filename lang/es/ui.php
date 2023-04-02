@@ -37,6 +37,7 @@ return [
     'register' => 'registrarse',
     'refuse' => 'rechazar',
     'refused' => 'rechazado',
+    'rememberMe' => 'Recuérdame',
     'search' => 'buscar',
     'show' => 'mostrar',
     'signIn' => 'registrarse',

@@ -15,12 +15,16 @@
         </svg>
         <input type="password" placeholder="Password" name="password" id="password" class="form-control input-field" />
     </div>
+    <div class="form-check ms-2 mt-2">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+           {{__('ui.rememberMe')}}
+        </label>
+      </div>
     <div class="btnLogin">
     <button type="submit" class="buttonLogin1 text-center"><span class="mx-3">{{__('ui.logIn')}}</span></button>
-    {{-- <button class="buttonLogin2">Sign Up</button> --}}
     <a href="{{route('register')}}"><button type="button"
         class="buttonLogin2">{{__('ui.signIn')}}!</button></a>
     </div>
     <a class="underline text-center my-2 text-white" href="#">{{__('ui.forgottenPassword')}}?</a>
-    {{-- <button class="buttonLogin3">{{__('ui.Password')}}?</button> --}}
 </form>

@@ -32,6 +32,7 @@ class ArticleEditForm extends Component
     public $temporary_images;
     public $newImages;
     public $paths;
+    public $is_accepted;
 
     public function mount(Article $article)
     {
@@ -64,22 +65,23 @@ class ArticleEditForm extends Component
     public function edit($id)
     {
         $article = Article::with('images')->findOrFail($id);
-        $article->setAccepted(null);
+        // $article->setAccepted(null);
 
         return view('edit', compact('article', 'images'));
     }
 
     public function update(Article $article){
-        $article->update([
+        $this->article->update([
             'title' => $this->title,
             'category' => $this->category,
             'price' => $this->price,
             'description' => $this->description,
+            'is_accepted' => $this->is_accepted,
         ]);
-        // non torna null il campo is_accepted = Buon Lavoro Carmelo.
 
+        $this->article->setAccepted(null);
 
-        if (count($this->images)){
+        if (is_array($this->images) && count($this->images)){
             foreach($this->images as $image){
                 $newFileName = "article/{$this->article->id}";
                 $newImage = $this->article->image()->create(['path' => $image->store($newFileName , 'public')]);
@@ -90,9 +92,11 @@ class ArticleEditForm extends Component
                     new GoogleVisionLabelImage($newImage->id),
                 ])->dispatch($newImage->id);
             
-            }
+            } 
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
+        } else {
+            $newImage = null;
         }
     
         session()->flash('articleUpdated', 'Annuncio modificato con successo!');
