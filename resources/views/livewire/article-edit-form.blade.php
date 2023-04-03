@@ -79,7 +79,7 @@
                                     
                                 </div>
                             </div>
-                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2 d-none d-lg-block">
                                 <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                                     <h4 class="mb-4">{{__('ui.title1')}}</h4>
                                     <ol>
