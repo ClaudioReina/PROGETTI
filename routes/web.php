@@ -21,6 +21,7 @@ use App\Http\Controllers\CategoryController;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/contattaci', [PublicController::class, 'contact_us'])->name('contact_us');
 Route::get('/diventa-revisore', [PublicController::class, 'becomeRevisor'])->name('become-revisor');
+Route::get('/chi-siamo', [PublicController::class, 'aboutUs'])->name('aboutUs');
 
 // ROTTA LINGUA
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');

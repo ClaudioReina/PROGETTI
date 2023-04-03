@@ -34,6 +34,7 @@
                 @endauth
             </ul>
             {{-- GUEST --}}
+            <a class="nav-link linkCustom linkCustomActive me-4" href="{{route('aboutUs')}}">Chi siamo</a>
             <div class="nav-item dropdown text-black">
                 @guest
                     <a class="nav-link dropdown-toggle me-5 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
