@@ -1,0 +1,204 @@
+.roundProfile {
+    background-image: url(/public/media/fotoProfilo.jpg);
+    width: 17vh;
+    height: 17vh;
+    border-radius: 50%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s ease-in-out; 
+    
+}
+.roundProfile p{
+    display: none;
+}
+
+
+
+
+
+
+
+.custom-p{
+    
+    font-size: 0.6em;
+    width: 17vh;
+    height: 17vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.roundProfile:hover {
+    transform: scale(2.6); 
+    
+}
+.roundProfile:hover>.custom-p{
+    backdrop-filter: brightness(37%);
+    transition: 1.5s;
+   
+}
+.roundProfile:hover p{
+    display: block;
+}
+
+
+
+
+.roundProfile2 {
+    background-image: url(/public/media/nico.jpg);
+    width: 17vh;
+    height: 17vh;
+    border-radius: 50%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s ease-in-out; 
+}
+.roundProfile2 p{
+    display: none;
+}
+.roundProfile2:hover {
+    transform: scale(2.6); 
+}
+.roundProfile2:hover>.custom-p{
+    backdrop-filter: brightness(37%);
+    transition: 1.5s;
+   
+}
+.roundProfile2:hover p{
+    display: block;
+}
+
+
+
+
+.roundProfile3 {
+    background-image: url(/public/media/francé.jpg);
+    width: 17vh;
+    height: 17vh;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s ease-in-out; 
+}
+.roundProfile3 p{
+    display: none;
+}
+.roundProfile3:hover {
+    transform: scale(2.6); 
+}
+.roundProfile3:hover>.custom-p{
+    backdrop-filter: brightness(37%);
+    transition: 1.5s;
+   
+}
+.roundProfile3:hover p{
+    display: block;
+}
+
+
+
+.roundProfile4 {
+    background-image: url(/public/media/carmé.jpg);
+    width: 17vh;
+    height: 17vh;
+    border-radius: 50%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 1s ease-in-out; 
+}
+.roundProfile4 p{
+    display: none;
+}
+.roundProfile4:hover {
+    transform: scale(2.6); 
+}
+.roundProfile4:hover>.custom-p{
+    backdrop-filter: brightness(37%);
+    transition: 1.5s;
+   
+}
+.roundProfile4:hover p{
+    display: block;
+}
+
+
+
+.roundProfile5 {
+    background-image: url(/public/media/ioan.jpg);
+    width: 17vh;
+    height: 17vh;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s ease-in-out; 
+}
+.roundProfile5 p{
+    display: none;
+}
+.roundProfile5:hover {
+    transform: scale(2.6); 
+}
+.roundProfile5:hover>.custom-p{
+    backdrop-filter: brightness(37%);
+    transition: 1.5s;
+   
+}
+.roundProfile5:hover p{
+    display: block;
+}
+
+
+.roundProfile6 {
+    background-image: url(/public/media/claudio.jpg);
+    width: 17vh;
+    height: 17vh;
+    border-radius: 50%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 1s ease-in-out; 
+}
+.roundProfile6 p{
+    display: none;
+}
+.roundProfile6:hover {
+    transform: scale(2.6); 
+}
+
+.roundProfile6:hover>.custom-p{
+    backdrop-filter: brightness(37%);
+    transition: 1.5s;
+   
+}
+.roundProfile6:hover p{
+    display: block;
+}
+
+
+
+
+
+
+
+.aboutUsBackground{
+
+    background-image: linear-gradient(rgba(33, 37, 41, 0.559), rgba(33, 37, 41, 0.559)), url(/public/media/aboutUs2.jpg) ;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 6rem;
+    z-index: 1;
+}
