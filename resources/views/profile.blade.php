@@ -68,7 +68,7 @@
                                         <p>{{__('ui.deleteUserModal')}}?</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('ui.chiudi')}}</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('ui.close')}}</button>
                                         <a class="" href="#">
                                             @if(Auth::user()->id == $user->id)
                                             <form method="POST" action="{{route('user.destroy')}}">
@@ -170,7 +170,7 @@
 
         {{-- SEZIONE CATEGORIE --}}
         @auth
-            @if(Auth::user()->is_admin)
+            @if(Auth::user()->is_admin && Auth::user()->id == $user->id)
                 <div class="row py-5">
                     <div class="col-12 mb-5 justify-content-center">
                         <div>
@@ -189,10 +189,7 @@
                                         <div class="card shadow text-center cardCust">
                                             <h3>{{$category->name}}</h3>
                                             <div class="card-body p-2 d-flex justify-content-around">
-                                                <form action="{{route('category.show', $category)}}" method="POST" class="d-inline-block">
-                                                    @csrf
-                                                    <button type="submit" class="btn btn-primary">{{__('ui.show')}}</button>
-                                                </form>
+                                                <a href="{{route('category.show', $category)}}" type="submit"  class="btn btn-primary">{{__('ui.show')}}</a>
                                                 @if(Auth::user() && Auth::id() == $category->user_id)
                                                     <a href="{{route('category.edit', $category)}}" class="btn btn-dark">{{__('ui.edit')}}</a>
                                                     <form action="{{route('category.destroy', $category)}}" method="POST" class="d-inline-block">

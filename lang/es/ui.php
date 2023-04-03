@@ -89,6 +89,7 @@ return [
     'createCategory'=> 'Crear Categoría',
     'descrCategory' => 'Como administrador, aquí puede agregar una nueva categoría.',
     'newCategory' => 'Nueva Categoría',
+    'updateCategory' => 'Cambio de categoría',
     'noCategory' => 'No ha cargado ninguna categoría.',
     'selectCategory' => 'Seleccione una categoría',
     'textEdit' => 'Aquí puede editar las categorías existentes en la base de datos',

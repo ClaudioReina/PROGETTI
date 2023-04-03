@@ -19,22 +19,20 @@
                                             <form method="POST" action="{{route('category.update', compact('category'))}}" enctype="multipart/form-data">
                                                 @csrf
                                                 @method('put')
-                                                <p>{{__('ui.Edit')}}</p>
                                                 <div class="form-outline mb-4">
-                                                    <input type="name" name="name" id="name"
-                                                        class="form-control"/>
-                                                    <label class="form-label" for="name">{{__('ui.name')}}</label>
+                                                    <label class="form-label" for="name">{{__('ui.edit')}}</label>
+                                                    <input type="name" name="name" id="name" class="form-control"/>
                                                 </div>
 
-                                                <div class="mb-3">
+                                                {{-- <div class="mb-3">
                                                     <label for="cover" class="form-label">Carica Immagine</label>
                                                     <input class="form-control" name="cover" type="file" id="cover">
-                                                </div>
+                                                </div> --}}
 
                                                 <div class="text-center pt-1 mb-5 pb-1">
                                                     <button
-                                                        class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                                                        type="submit">{{__('ui.createCategory')}}</button>
+                                                        class="btn btn-primary btn-block gradient-custom-2 mb-3"
+                                                        type="submit">{{__('ui.updateCategory')}}</button>
                                                 </div>
                                                 
                                             </form>

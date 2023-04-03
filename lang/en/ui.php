@@ -89,6 +89,7 @@ return [
     'createCategory'=> 'Create Category',
     'descrCategory' => 'As an administrator, you can add a new category here.',
     'newCategory' => 'New Category',
+    'updateCategory' => 'Edit Category',
     'noCategory' => 'You haven\'t uploaded any category yet.',
     'selectCategory' => 'Select Category',
     'textEdit' => 'Here you can edit existing categories within the database.',
