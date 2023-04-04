@@ -119,7 +119,7 @@
                         @foreach($articles as $article)
                             <div class="col-12 col-md-6 col-lg-4 pb-5">
                                 <div class="card cardCust shadow cardElements">
-                                <img src="{{!$article->image()->get()->isEmpty() ? $article->image()->first()->getUrl(500, 500) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top img-custom mx-auto rounded-3" alt="...">
+                                <img src="{{!$article->image()->get()->isEmpty() ? $article->image()->first()->getUrl(500, 500) : '/media/ImmagineSalvaposto.jpg'}}" class="card-img-top img-custom2 mx-auto rounded-3" alt="...">
                                     <div class="card-body p-2">                                           
                                         <div class="mb-3">
                                             <h5 class="text-center fs-4">

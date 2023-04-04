@@ -84,7 +84,14 @@
   }
 
     .img-custom{
-        width: 93vw;
+        width: 94vw;
+        height: 135px;
+        object-fit: cover;
+       margin-top:10vh ;
+      }
+
+      .img-custom2{
+        width: 83vw;
         height: 135px;
         object-fit: cover;
        margin-top:10vh ;
